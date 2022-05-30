@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:House23.UI.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="DeveloperPage">
+      Title="DeveloperPage" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
         <Grid.RowDefinitions>

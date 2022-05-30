@@ -21,7 +21,7 @@
                    Style="{StaticResource PlaceholderTextBox}" Tag="Введите ФИО для поиска">
             </TextBox>
         </Grid>
-        <DataGrid x:Name="DdEmployeee" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="2">
+        <DataGrid x:Name="DdEmployee" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}" Width="*" MinWidth="120"></DataGridTextColumn>
                 <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}" Width="*" MinWidth="120"></DataGridTextColumn>

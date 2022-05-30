@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using House23.Logic.Handlers;
+using House23.Logic.DataBase;
+
 namespace House23.UI.Pages
 {
     /// <summary>
@@ -23,11 +26,18 @@ namespace House23.UI.Pages
         public MenuRealtorPage()
         {
             InitializeComponent();
+            FrameHandler.RealtorContentFrame = RealtorContentFrame;
+            RealtorContentFrame.Navigate(new DeveloperPage());
         }
 
         private void BtnChangeAccount_Click(object sender, RoutedEventArgs e)
         {
+            FrameHandler.MainFrame.Navigate(new AuthorizationPage());
+        }
 
+        private void BtnDevelopers_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHandler.RealtorContentFrame.Navigate(new DeveloperPage());
         }
     }
 }
