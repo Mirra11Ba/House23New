@@ -70,21 +70,17 @@ namespace House23.UI.Pages
 
         private void UpdateDeveloper()
         {
-            //как отредачить без свитча
             var currentShearchDeveloper = House23Entities.GetContext().Developers.ToList();
-            string[] nameList = TbSearch.Text.Split(' ');
+            currentShearchDeveloper = currentShearchDeveloper.Where(p => ContainsText(p.Name, TbSearch.Text)).ToList();
+            DdDeveloper.ItemsSource = currentShearchDeveloper;
 
-            switch (nameList.Length)
-            {
-                case 1:
-                    currentShearchDeveloper = currentShearchDeveloper.Where(p => p.Name.Contains(nameList[0]).ToList();
-                    DdDeveloper.ItemsSource = currentShearchDeveloper;
-                    break;
+        }
 
-                default:
-                    DdDeveloper.ItemsSource = currentShearchDeveloper;
-                    break;
-            }
+        private bool ContainsText(string text1, string text2)
+        {
+            text1 = text1.ToLower();
+            text2 = text2.ToLower();
+            return text1.Contains(text2);
         }
 
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)

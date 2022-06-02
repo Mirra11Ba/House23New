@@ -45,10 +45,10 @@ namespace House23.UI.Pages
             else MessageBox.Show("Введите логин", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
-        private void UserAuthorization(in string login, in string password)
+        private void UserAuthorization(string login, string password)
         {
             var emloyee = House23Entities.GetContext().Employees;
-            var currentEmployee = emloyee.Where(p => p.Login.Equals(TbLoginName.Text)).ToList();//почему нельзя передать login
+            var currentEmployee = emloyee.Where(p => p.Login.Equals(login)).ToList();
             if (currentEmployee.Count == 1)
             {
                 if (currentEmployee[0].Password.Equals(password))

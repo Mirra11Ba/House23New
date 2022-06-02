@@ -32,6 +32,26 @@ namespace House23.UI.Pages
             DataContext = currentEmployee;
             CbRole.ItemsSource = House23Entities.GetContext().Roles.ToList();
         }
+        private void BtnGeneratePasswd_Click(object sender, RoutedEventArgs e)
+        {
+            GetPass();
+            string generatePass = GetPass();
+            tbPass.Text = generatePass;
+            tbPass.Focus();
+        }
+        private static string GetPass()
+        {
+            int passLenth = 10;
+            string generatePass = "";
+            var r = new Random();
+            while (generatePass.Length < passLenth)
+            {
+                Char c = (char)r.Next(33, 125);
+                if (Char.IsLetterOrDigit(c))
+                    generatePass += c;
+            }
+            return generatePass;
+        }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
@@ -62,12 +82,13 @@ namespace House23.UI.Pages
             {
                 House23Entities.GetContext().SaveChanges();
                 MessageBox.Show("Информация сохранена");
-                FrameHandler.MainFrame.GoBack(); //мб hrmanager
+                FrameHandler.MainFrame.GoBack();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
             }
         }
+
     }
 }

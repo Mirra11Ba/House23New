@@ -214,6 +214,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="UI\Pages\General\" />
+    <Folder Include="UI\Pages\HRManager\" />
+    <Folder Include="UI\Pages\Realtor\" />
     <Folder Include="UI\Views\" />
   </ItemGroup>
   <ItemGroup>

@@ -23,10 +23,10 @@
         </Grid>
         <DataGrid x:Name="DdEmployee" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="2">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}" Width="*" MinWidth="120"></DataGridTextColumn>
-                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}" Width="*" MinWidth="120"></DataGridTextColumn>
-                <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}" Width="*" MinWidth="140"></DataGridTextColumn>
-                <DataGridTextColumn Header="Телефон" Binding="{Binding Phone}" Width="90"></DataGridTextColumn>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}" Width="*" MinWidth="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}" Width="*" MinWidth="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}" Width="*" MinWidth="120"></DataGridTextColumn>
+                <DataGridTextColumn Header="Телефон" Binding="{Binding Phone}" Width="*" MinWidth="100"></DataGridTextColumn>
                 <DataGridTextColumn Header="Логин" Binding="{Binding Login}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Пароль" Binding="{Binding Password}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Роль" Binding="{Binding Role.Name}" Width="*"></DataGridTextColumn>

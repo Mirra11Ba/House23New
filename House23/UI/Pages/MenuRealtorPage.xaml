@@ -16,7 +16,7 @@
 
         <Frame NavigationUIVisibility="Hidden" x:Name="RealtorContentFrame" Grid.Column="1" Grid.Row="0"></Frame>
 
-        <Grid Background="#FFB6F2FF" Grid.Column="0"></Grid>
+        <Grid Background="#eaf4ff" Grid.Column="0"></Grid>
         <StackPanel Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Height="auto" Width="195">
             <TextBlock Text="Меню:" HorizontalAlignment="Center" FontSize="20"></TextBlock>
             <Button Content="Клиенты"></Button>

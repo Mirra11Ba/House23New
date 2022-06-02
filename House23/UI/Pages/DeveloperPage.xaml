@@ -24,7 +24,14 @@
         <DataGrid x:Name="DdDeveloper" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название организации" Binding="{Binding Name}" Width="*" MinWidth="120"></DataGridTextColumn>
-                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="*" MinWidth="120"></DataGridTextColumn>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="*" MinWidth="120">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap"></Setter>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+               
                 <DataGridTemplateColumn Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
