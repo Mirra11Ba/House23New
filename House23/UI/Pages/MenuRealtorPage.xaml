@@ -16,14 +16,14 @@
 
         <Frame NavigationUIVisibility="Hidden" x:Name="RealtorContentFrame" Grid.Column="1" Grid.Row="0"></Frame>
 
-        <Grid Background="#FFB6F2FF" Grid.Column="0"></Grid>
+        <Grid Background="#eaf4ff" Grid.Column="0"></Grid>
         <StackPanel Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Height="auto" Width="195">
             <TextBlock Text="Меню:" HorizontalAlignment="Center" FontSize="20"></TextBlock>
-            <Button Content="Риелтор"></Button>
-            <Button Content="Риелтор"></Button>
-            <Button Content="Риелтор"></Button>
-            <Button Content="Риелтор"></Button>
-            <Button Content="Риелтор"></Button>
+            <Button Content="Клиенты"></Button>
+            <Button Content="Заявки"></Button>
+            <Button Content="Квартиры"></Button>
+            <Button Content="Высотные дома"></Button>
+            <Button x:Name="BtnDevelopers" Content="Застройщики" Click="BtnDevelopers_Click"></Button>
             <Button x:Name="BtnChangeAccount" Content="Сменить аккаунт" Click="BtnChangeAccount_Click" Margin="5 25 5 5"/>
             <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="7" Text="Роль: риелтор" VerticalAlignment="Top" FontSize="15" TextWrapping="Wrap"/>
         </StackPanel>
