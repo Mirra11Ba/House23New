@@ -57,9 +57,32 @@ namespace House23.UI.Pages
                     {
                         case "Риелтор":
                             FrameHandler.MainFrame.Navigate(new MenuRealtorPage());
+                            //история входа
+                            using (House23Entities context = new House23Entities())
+                            {
+                                LoginHistory lhRe = new LoginHistory
+                                {
+                                    Date = DateTime.Now,
+                                    Employee = currentEmployee[0]
+                                };
+
+                                context.LoginHistories.Add(lhRe);
+                                context.SaveChanges();
+                            }
+
                             break;
                         case "Кадровик":
                             FrameHandler.MainFrame.Navigate(new MenuHRManagerPage());
+                            //история входа
+                            using (House23Entities context = new House23Entities())
+                            {
+                                LoginHistory lhHR = new LoginHistory();
+                                lhHR.Date = DateTime.Now;
+                                lhHR.Employee = context.Employees.Attach(currentEmployee[0]);
+
+                                context.LoginHistories.Add(lhHR);
+                                context.SaveChanges();
+                            }
                             break;
                         default:
                             MessageBox.Show("Ошибка авторизации", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);

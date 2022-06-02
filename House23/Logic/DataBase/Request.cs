@@ -21,11 +21,11 @@ namespace House23.Logic.DataBase
         }
     
         public int IdRequest { get; set; }
-        public decimal MinimumPrice { get; set; }
+        public Nullable<decimal> MinimumPrice { get; set; }
         public decimal MaximumPrice { get; set; }
         public int NumberOfRooms { get; set; }
         public int MinimumArea { get; set; }
-        public int MaximumArea { get; set; }
+        public Nullable<int> MaximumArea { get; set; }
         public System.DateTime RequestDate { get; set; }
         public int IdDistrict { get; set; }
         public int IdEmployee { get; set; }

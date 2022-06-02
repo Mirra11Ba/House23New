@@ -20,6 +20,7 @@ namespace House23.Logic.DataBase
             : base("name=House23Entities")
         {
         }
+
         public static House23Entities GetContext()
         {
             if (_context == null)
