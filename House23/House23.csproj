@@ -83,6 +83,7 @@
     <Compile Include="Logic\DataBase\Client.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Logic\DataBase\ContextManager.cs" />
     <Compile Include="Logic\DataBase\Developer.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
@@ -117,6 +118,7 @@
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Logic\Handlers\FrameHandler.cs" />
+    <Compile Include="Logic\Utils\StringUtil.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

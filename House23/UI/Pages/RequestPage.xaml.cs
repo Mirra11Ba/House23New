@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 using House23.Logic.Handlers;
 using House23.Logic.DataBase;
+using static House23.Logic.Utils.StringUtil;
 
 namespace House23.UI.Pages
 {
@@ -52,8 +53,8 @@ namespace House23.UI.Pages
         {
             if (Visibility == Visibility.Visible)
             {
-                House23Entities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DdRequest.ItemsSource = House23Entities.GetContext().Requests.ToList();
+                ContextManager.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                DdRequest.ItemsSource = ContextManager.GetContext().Requests.ToList();
             }
         }
     }

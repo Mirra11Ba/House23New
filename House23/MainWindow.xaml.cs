@@ -14,7 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using House23.UI.Pages;
-//using House23.UI.Views;
 using House23.Logic.Handlers;
 using House23.Logic.DataBase;
 
@@ -29,12 +28,33 @@ namespace House23
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new AuthorizationPage());//EditRealtorPage       была AuthorizationPage
+            MainFrame.Navigate(new AuthorizationPage());
             FrameHandler.MainFrame = MainFrame;
         }
+        /// <summary>
+        /// Метод очистки журнала переходов для MainFrame
+        /// </summary>
+        private void RefreshHistory()
+        {
+            if (!MainFrame.CanGoBack && !MainFrame.CanGoForward)
+            {
+                return;
+            }
 
+            var entry = MainFrame.RemoveBackEntry();
+            while (entry != null)
+            {
+                entry = MainFrame.RemoveBackEntry();
+            }
+
+        }
         private void MainFrame_ContentRendered(object sender, EventArgs e)
         {
+            if (MainFrame.Content is AuthorizationPage)
+            {
+
+                RefreshHistory();
+            }
             if (MainFrame.CanGoBack)
             {
                 BtnBack.Visibility = Visibility.Visible;

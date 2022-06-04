@@ -18,6 +18,7 @@ namespace House23.Logic.DataBase
         public Client()
         {
             this.Requests = new HashSet<Request>();
+            this.Employees = new HashSet<Employee>();
         }
     
         public int IdClient { get; set; }
@@ -29,5 +30,7 @@ namespace House23.Logic.DataBase
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Request> Requests { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }

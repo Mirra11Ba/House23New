@@ -19,6 +19,7 @@ namespace House23.Logic.DataBase
         {
             this.LoginHistories = new HashSet<LoginHistory>();
             this.Requests = new HashSet<Request>();
+            this.Clients = new HashSet<Client>();
         }
     
         public int IdEmployee { get; set; }
@@ -35,5 +36,7 @@ namespace House23.Logic.DataBase
         public virtual ICollection<LoginHistory> LoginHistories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Request> Requests { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Client> Clients { get; set; }
     }
 }

@@ -13,8 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using House23.Logic.Handlers;
 using House23.Logic.DataBase;
+using House23.Logic.Handlers;
+using static House23.Logic.Utils.StringUtil;
 
 namespace House23.UI.Pages
 {
@@ -47,10 +48,10 @@ namespace House23.UI.Pages
             {
                 try
                 {
-                    House23Entities.GetContext().Employees.RemoveRange(emloyeesForRemoving);
-                    House23Entities.GetContext().SaveChanges();
+                    ContextManager.GetContext().Employees.RemoveRange(emloyeesForRemoving);
+                    ContextManager.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены!");
-                    DdEmployee.ItemsSource = House23Entities.GetContext().Employees.ToList();
+                    DdEmployee.ItemsSource = ContextManager.GetContext().Employees.ToList();
                 }
                 catch (Exception ex)
                 {
@@ -63,15 +64,15 @@ namespace House23.UI.Pages
         {
             if (Visibility == Visibility.Visible)
             {
-                House23Entities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DdEmployee.ItemsSource = House23Entities.GetContext().Employees.ToList();
+                ContextManager.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                DdEmployee.ItemsSource = ContextManager.GetContext().Employees.ToList();
             }
         }
         
         //метод для поиска сотрудника по ФИО
         private void UpdateEmloyee()
         {
-            var currentShearchEmployee = House23Entities.GetContext().Employees.ToList();
+            var currentShearchEmployee = ContextManager.GetContext().Employees.ToList();
             string[] nameList = TbSearch.Text.Split(' ');
 
             switch (nameList.Length)
@@ -95,13 +96,6 @@ namespace House23.UI.Pages
                     DdEmployee.ItemsSource = currentShearchEmployee;
                     break;
             }
-        }
-        //метод для поиска с маленькой буквы
-        private bool ContainsText(string text1, string text2)
-        {
-            text1 = text1.ToLower();
-            text2 = text2.ToLower();
-            return text1.Contains(text2);
         }
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {

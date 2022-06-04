@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 using House23.Logic.Handlers;
 using House23.Logic.DataBase;
+using static House23.Logic.Utils.StringUtil;
 
 namespace House23.UI.Pages
 {
@@ -26,8 +27,6 @@ namespace House23.UI.Pages
         public ViewFlatPage()
         {
             InitializeComponent();
-
-
         }
 
         private void TbSearchNumberOfRooms_TextChanged(object sender, TextChangedEventArgs e)

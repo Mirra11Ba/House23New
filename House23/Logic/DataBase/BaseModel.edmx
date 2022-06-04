@@ -16,6 +16,14 @@
           <Property Name="Phone" Type="nvarchar" MaxLength="11" Nullable="false" />
           <Property Name="Comment" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="ClientEmpoyee">
+          <Key>
+            <PropertyRef Name="IdClient" />
+            <PropertyRef Name="IdEmployee" />
+          </Key>
+          <Property Name="IdClient" Type="int" Nullable="false" />
+          <Property Name="IdEmployee" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Developer">
           <Key>
             <PropertyRef Name="IdDeveloper" />
@@ -136,6 +144,30 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <Association Name="FK_ClientEmpoyee_Client">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
+          <End Role="ClientEmpoyee" Type="Self.ClientEmpoyee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="ClientEmpoyee">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClientEmpoyee_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="ClientEmpoyee" Type="Self.ClientEmpoyee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="IdEmployee" />
+            </Principal>
+            <Dependent Role="ClientEmpoyee">
+              <PropertyRef Name="IdEmployee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Employee_Role">
           <End Role="Role" Type="Self.Role" Multiplicity="1" />
           <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
@@ -284,6 +316,7 @@
         </Association>
         <EntityContainer Name="Хранилище House23ModelContainer">
           <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClientEmpoyee" EntityType="Self.ClientEmpoyee" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Developer" EntityType="Self.Developer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="District" EntityType="Self.District" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
@@ -296,6 +329,14 @@
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Skyscraper" EntityType="Self.Skyscraper" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ClientEmpoyee_Client" Association="Self.FK_ClientEmpoyee_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="ClientEmpoyee" EntitySet="ClientEmpoyee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClientEmpoyee_Employee" Association="Self.FK_ClientEmpoyee_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="ClientEmpoyee" EntitySet="ClientEmpoyee" />
+          </AssociationSet>
           <AssociationSet Name="FK_Employee_Role" Association="Self.FK_Employee_Role">
             <End Role="Role" EntitySet="Role" />
             <End Role="Employee" EntitySet="Employee" />
@@ -361,6 +402,7 @@
           <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Requests" Relationship="Self.FK_Request_Client" FromRole="Client" ToRole="Request" />
+          <NavigationProperty Name="Employees" Relationship="Self.ClientEmpoyee" FromRole="Client" ToRole="Employee" />
         </EntityType>
         <EntityType Name="Developer">
           <Key>
@@ -395,6 +437,7 @@
           <NavigationProperty Name="Role" Relationship="Self.FK_Employee_Role" FromRole="Employee" ToRole="Role" />
           <NavigationProperty Name="LoginHistories" Relationship="Self.FK_LoginHistory_Employee" FromRole="Employee" ToRole="LoginHistory" />
           <NavigationProperty Name="Requests" Relationship="Self.FK_Request_Employee1" FromRole="Employee" ToRole="Request" />
+          <NavigationProperty Name="Clients" Relationship="Self.ClientEmpoyee" FromRole="Employee" ToRole="Client" />
         </EntityType>
         <EntityType Name="Flat">
           <Key>
@@ -617,6 +660,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="ClientEmpoyee">
+          <End Role="Client" Type="Self.Client" Multiplicity="*" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+        </Association>
         <Association Name="RequestFlat">
           <End Role="Flat" Type="Self.Flat" Multiplicity="*" />
           <End Role="Request" Type="Self.Request" Multiplicity="*" />
@@ -673,6 +720,10 @@
           <AssociationSet Name="FK_Request_RequestStatus" Association="Self.FK_Request_RequestStatus">
             <End Role="RequestStatus" EntitySet="RequestStatus1" />
             <End Role="Request" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="ClientEmpoyee" Association="Self.ClientEmpoyee">
+            <End Role="Client" EntitySet="Clients" />
+            <End Role="Employee" EntitySet="Employees" />
           </AssociationSet>
           <AssociationSet Name="RequestFlat" Association="Self.RequestFlat">
             <End Role="Flat" EntitySet="Flats" />
@@ -820,6 +871,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <AssociationSetMapping Name="ClientEmpoyee" TypeName="House23Model.ClientEmpoyee" StoreEntitySet="ClientEmpoyee">
+            <EndProperty Name="Client">
+              <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+            </EndProperty>
+            <EndProperty Name="Employee">
+              <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+            </EndProperty>
+          </AssociationSetMapping>
           <AssociationSetMapping Name="RequestFlat" TypeName="House23Model.RequestFlat" StoreEntitySet="RequestFlat">
             <EndProperty Name="Flat">
               <ScalarProperty Name="IdFlat" ColumnName="IdFlat" />

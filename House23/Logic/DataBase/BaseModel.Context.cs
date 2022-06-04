@@ -15,20 +15,11 @@ namespace House23.Logic.DataBase
     
     public partial class House23Entities : DbContext
     {
-        private static House23Entities _context;
         public House23Entities()
             : base("name=House23Entities")
         {
         }
-
-        public static House23Entities GetContext()
-        {
-            if (_context == null)
-            {
-                _context = new House23Entities();
-            }
-            return _context;
-        }
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

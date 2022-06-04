@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 using House23.Logic.Handlers;
 using House23.Logic.DataBase;
+using House23.Logic.Utils;
 
 namespace House23.UI.Pages
 {

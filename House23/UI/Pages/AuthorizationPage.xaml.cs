@@ -1,21 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using House23.Logic.DataBase;
+using House23.Logic.Handlers;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-
-using House23.Logic.Handlers;
-using House23.Logic.DataBase;
 
 namespace House23.UI.Pages
 {
@@ -27,27 +16,28 @@ namespace House23.UI.Pages
         public AuthorizationPage()
         {
             InitializeComponent();
+
         }
 
         private void BtnLoginIn_Click(object sender, RoutedEventArgs e)
         {
 
-            if (TbLoginName.Text.Length > 0)    
+            if (TbLoginName.Text.Length > 0)
             {
-                if (PbPassword.Password.Length > 0)     
+                if (PbPassword.Password.Length > 0)
                 {
                     string login = TbLoginName.Text.Trim();
                     string password = PbPassword.Password.Trim();
                     UserAuthorization(login, password);
                 }
-                else MessageBox.Show("Введите пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error); 
+                else MessageBox.Show("Введите пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else MessageBox.Show("Введите логин", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private void UserAuthorization(string login, string password)
         {
-            var emloyee = House23Entities.GetContext().Employees;
+            var emloyee = ContextManager.GetContext().Employees;
             var currentEmployee = emloyee.Where(p => p.Login.Equals(login)).ToList();
             if (currentEmployee.Count == 1)
             {
@@ -57,43 +47,26 @@ namespace House23.UI.Pages
                     {
                         case "Риелтор":
                             FrameHandler.MainFrame.Navigate(new MenuRealtorPage());
-                            //история входа
-                            //using (House23Entities context = new House23Entities())
-                            //{
-                            //    LoginHistory lhRe = new LoginHistory
-                            //    {
-                            //        Date = DateTime.Now,
-                            //        Employee = currentEmployee[0]
-                            //    };
-
-                            //    context.LoginHistories.Add(lhRe);
-                            //    context.SaveChanges();
-                            //}
-
                             break;
                         case "Кадровик":
                             FrameHandler.MainFrame.Navigate(new MenuHRManagerPage());
-                            //история входа
-                            //using (House23Entities context = new House23Entities())
-                            //{
-                            //    LoginHistory lhHR = new LoginHistory();
-                            //    lhHR.Date = DateTime.Now;
-                            //    lhHR.Employee = context.Employees.Attach(currentEmployee[0]);
-
-                            //    context.LoginHistories.Add(lhHR);
-                            //    context.SaveChanges();
-                            //}
-                            break;
-                        default:
-                            MessageBox.Show("Ошибка авторизации", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                             break;
                     }
+                    //история входа
+                    var context = ContextManager.GetContext();
+                    LoginHistory lh = new LoginHistory
+                    {
+                        Date = DateTime.Now,
+                        Employee = currentEmployee[0]
+                    };
+                    context.LoginHistories.Add(lh);
+                    context.SaveChanges();
                 }
                 else
                     MessageBox.Show("Некорректный пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
-                MessageBox.Show("Некорректный логин", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error); 
+                MessageBox.Show("Некорректный логин", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private void BtnHelp_Click(object sender, RoutedEventArgs e)

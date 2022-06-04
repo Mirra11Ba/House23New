@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 using House23.Logic.Handlers;
 using House23.Logic.DataBase;
+using static House23.Logic.Utils.StringUtil;
 
 namespace House23.UI.Pages
 {
@@ -47,10 +48,10 @@ namespace House23.UI.Pages
             {
                 try
                 {
-                    House23Entities.GetContext().Developers.RemoveRange(developersForRemoving);
-                    House23Entities.GetContext().SaveChanges();
+                    ContextManager.GetContext().Developers.RemoveRange(developersForRemoving);
+                    ContextManager.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены!");
-                    DdDeveloper.ItemsSource = House23Entities.GetContext().Developers.ToList();
+                    DdDeveloper.ItemsSource = ContextManager.GetContext().Developers.ToList();
                 }
                 catch (Exception ex)
                 {
@@ -63,14 +64,14 @@ namespace House23.UI.Pages
         {
             if (Visibility == Visibility.Visible)
             {
-                House23Entities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DdDeveloper.ItemsSource = House23Entities.GetContext().Developers.ToList();
+                ContextManager.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                DdDeveloper.ItemsSource = ContextManager.GetContext().Developers.ToList();
             }
         }
 
         private void UpdateDeveloper()
         {
-            var currentShearchDeveloper = House23Entities.GetContext().Developers.ToList();
+            var currentShearchDeveloper = ContextManager.GetContext().Developers.ToList();
             currentShearchDeveloper = currentShearchDeveloper.Where(p => ContainsText(p.Name, TbSearch.Text)).ToList();
             DdDeveloper.ItemsSource = currentShearchDeveloper;
 

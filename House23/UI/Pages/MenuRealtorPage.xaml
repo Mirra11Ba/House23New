@@ -25,7 +25,7 @@
             <Button x:Name="BtnSkyscraper" Content="Высотные дома" Click="BtnSkyscraper_Click"></Button>
             <Button x:Name="BtnDevelopers" Content="Застройщики" Click="BtnDevelopers_Click"></Button>
             
-            <Button x:Name="BtnViewFlat" Content="Подобрать квартиру" Click="BtnViewFlat_Click" Margin="5 25 5 5"></Button>
+            <Button x:Name="BtnViewFlat" Content="Подобор квартиры" Click="BtnViewFlat_Click" Margin="5 25 5 5"></Button>
             
             <Button x:Name="BtnChangeAccount" Content="Сменить аккаунт" Click="BtnChangeAccount_Click" Margin="5 25 5 5"/>
             <Button x:Name="BtnExit" Content="Выйти" Click="BtnExit_Click"></Button>

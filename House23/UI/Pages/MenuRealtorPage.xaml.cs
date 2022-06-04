@@ -49,8 +49,6 @@ namespace House23.UI.Pages
         {
             FrameHandler.RealtorContentFrame.Navigate(new DeveloperPage());
         }
-
-
         private void BtnViewFlat_Click(object sender, RoutedEventArgs e)
         {
             FrameHandler.RealtorContentFrame.Navigate(new ViewFlatPage());
@@ -59,7 +57,6 @@ namespace House23.UI.Pages
         {
             FrameHandler.MainFrame.Navigate(new AuthorizationPage());
         }
-
         private void BtnExit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();

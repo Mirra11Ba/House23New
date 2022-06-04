@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 using House23.Logic.Handlers;
 using House23.Logic.DataBase;
+using House23.Logic.Utils;
 
 namespace House23.UI.Pages
 {
@@ -46,12 +47,12 @@ namespace House23.UI.Pages
             }
 
             if (currentDeveloper.IdDeveloper == 0)
-                House23Entities.GetContext().Developers.Add(currentDeveloper);
+                ContextManager.GetContext().Developers.Add(currentDeveloper);
             try
             {
-                House23Entities.GetContext().SaveChanges();
+                ContextManager.GetContext().SaveChanges();
                 MessageBox.Show("Информация сохранена");
-                FrameHandler.MainFrame.GoBack(); //мб hrmanager
+                FrameHandler.MainFrame.GoBack();
             }
             catch (Exception ex)
             {

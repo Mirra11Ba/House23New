@@ -12,9 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 using House23.Logic.Handlers;
 using House23.Logic.DataBase;
+using House23.Logic.Utils;
 
 namespace House23.UI.Pages
 {
@@ -30,7 +32,7 @@ namespace House23.UI.Pages
             if (selectedEmployee != null)
                 currentEmployee = selectedEmployee;
             DataContext = currentEmployee;
-            CbRole.ItemsSource = House23Entities.GetContext().Roles.ToList();
+            CbRole.ItemsSource = ContextManager.GetContext().Roles.ToList();
         }
         private void BtnGeneratePasswd_Click(object sender, RoutedEventArgs e)
         {
@@ -77,10 +79,10 @@ namespace House23.UI.Pages
             }
 
             if (currentEmployee.IdEmployee == 0)
-                House23Entities.GetContext().Employees.Add(currentEmployee);
+                ContextManager.GetContext().Employees.Add(currentEmployee);
             try
             {
-                House23Entities.GetContext().SaveChanges();
+                ContextManager.GetContext().SaveChanges();
                 MessageBox.Show("Информация сохранена");
                 FrameHandler.MainFrame.GoBack();
             }
@@ -90,5 +92,20 @@ namespace House23.UI.Pages
             }
         }
 
+        private void TbPhone_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            CheckIsNumeric(e);
+        }
+        private void CheckIsNumeric(TextCompositionEventArgs e)
+        {
+            string pattern = "^[0-9]*$";
+            Regex regexNumber = new Regex(pattern);
+
+            if (!regexNumber.IsMatch(e.Text))
+            {
+                e.Handled = true;
+                MessageBox.Show("Можно вводить только 11 цифр в формате\n7XXXXXXXXXX\n8XXXXXXXXXX", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
     }
 }
