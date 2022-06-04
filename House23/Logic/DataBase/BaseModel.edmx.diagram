@@ -13,7 +13,7 @@
         <EntityTypeShape EntityType="House23Model.LoginHistory" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
         <EntityTypeShape EntityType="House23Model.Material" Width="1.5" PointX="3.75" PointY="9.25" IsExpanded="true" />
         <EntityTypeShape EntityType="House23Model.Request" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="House23Model.RequestStatu" Width="1.5" PointX="0.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="House23Model.RequestStatus" Width="1.5" PointX="0.75" PointY="19.875" IsExpanded="true" />
         <EntityTypeShape EntityType="House23Model.Role" Width="1.5" PointX="1.5" PointY="16.75" IsExpanded="true" />
         <EntityTypeShape EntityType="House23Model.Skyscraper" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="House23Model.sysdiagram" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />

@@ -450,7 +450,7 @@
           <NavigationProperty Name="RequestStatu" Relationship="Self.FK_Request_RequestStatus" FromRole="Request" ToRole="RequestStatus" />
           <NavigationProperty Name="Flats" Relationship="Self.RequestFlat" FromRole="Request" ToRole="Flat" />
         </EntityType>
-        <EntityType Name="RequestStatu">
+        <EntityType Name="RequestStatus">
           <Key>
             <PropertyRef Name="IdRequestStatus" />
           </Key>
@@ -606,7 +606,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Request_RequestStatus">
-          <End Role="RequestStatus" Type="Self.RequestStatu" Multiplicity="1" />
+          <End Role="RequestStatus" Type="House23Model.RequestStatus" Multiplicity="1" />
           <End Role="Request" Type="Self.Request" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="RequestStatus">
@@ -630,7 +630,7 @@
           <EntitySet Name="LoginHistories" EntityType="Self.LoginHistory" />
           <EntitySet Name="Materials" EntityType="Self.Material" />
           <EntitySet Name="Requests" EntityType="Self.Request" />
-          <EntitySet Name="RequestStatus" EntityType="Self.RequestStatu" />
+          <EntitySet Name="RequestStatus1" EntityType="House23Model.RequestStatus" />
           <EntitySet Name="Roles" EntityType="Self.Role" />
           <EntitySet Name="Skyscrapers" EntityType="Self.Skyscraper" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
@@ -671,7 +671,7 @@
             <End Role="Skyscraper" EntitySet="Skyscrapers" />
           </AssociationSet>
           <AssociationSet Name="FK_Request_RequestStatus" Association="Self.FK_Request_RequestStatus">
-            <End Role="RequestStatus" EntitySet="RequestStatus" />
+            <End Role="RequestStatus" EntitySet="RequestStatus1" />
             <End Role="Request" EntitySet="Requests" />
           </AssociationSet>
           <AssociationSet Name="RequestFlat" Association="Self.RequestFlat">
@@ -777,8 +777,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="RequestStatus">
-            <EntityTypeMapping TypeName="House23Model.RequestStatu">
+          <EntitySetMapping Name="RequestStatus1">
+            <EntityTypeMapping TypeName="House23Model.RequestStatus">
               <MappingFragment StoreEntitySet="RequestStatus">
                 <ScalarProperty Name="IdRequestStatus" ColumnName="IdRequestStatus" />
                 <ScalarProperty Name="Status" ColumnName="Status" />

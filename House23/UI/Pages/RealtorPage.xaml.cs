@@ -103,10 +103,10 @@ namespace House23.UI.Pages
             text2 = text2.ToLower();
             return text1.Contains(text2);
         }
-
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
             UpdateEmloyee();
         }
+
     }
 }

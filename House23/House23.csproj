@@ -104,7 +104,7 @@
     <Compile Include="Logic\DataBase\Request.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Logic\DataBase\RequestStatu.cs">
+    <Compile Include="Logic\DataBase\RequestStatus.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Logic\DataBase\Role.cs">
@@ -125,14 +125,32 @@
     <Compile Include="UI\Pages\AuthorizationPage.xaml.cs">
       <DependentUpon>AuthorizationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Pages\ClientPage.xaml.cs">
+      <DependentUpon>ClientPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\Pages\DeveloperPage.xaml.cs">
       <DependentUpon>DeveloperPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\EditClientPage.xaml.cs">
+      <DependentUpon>EditClientPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\Pages\EditDeveloperPage.xaml.cs">
       <DependentUpon>EditDeveloperPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Pages\EditFlatPage.xaml.cs">
+      <DependentUpon>EditFlatPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\Pages\EditRealtorPage.xaml.cs">
       <DependentUpon>EditRealtorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\EditRequestPage.xaml.cs">
+      <DependentUpon>EditRequestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\EditSkyscraperPage.xaml.cs">
+      <DependentUpon>EditSkyscraperPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\FlatPage.xaml.cs">
+      <DependentUpon>FlatPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\Pages\MenuHRManagerPage.xaml.cs">
       <DependentUpon>MenuHRManagerPage.xaml</DependentUpon>
@@ -142,6 +160,15 @@
     </Compile>
     <Compile Include="UI\Pages\RealtorPage.xaml.cs">
       <DependentUpon>RealtorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\RequestPage.xaml.cs">
+      <DependentUpon>RequestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\SkyscraperPage.xaml.cs">
+      <DependentUpon>SkyscraperPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pages\ViewFlatPage.xaml.cs">
+      <DependentUpon>ViewFlatPage.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -159,7 +186,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UI\Pages\ClientPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\Pages\DeveloperPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\EditClientPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -167,7 +202,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UI\Pages\EditFlatPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\Pages\EditRealtorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\EditRequestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\EditSkyscraperPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\FlatPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,6 +231,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\Pages\RealtorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\RequestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\SkyscraperPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\ViewFlatPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -29,15 +29,40 @@ namespace House23.UI.Pages
             FrameHandler.RealtorContentFrame = RealtorContentFrame;
             RealtorContentFrame.Navigate(new DeveloperPage());
         }
+        private void BtnClient_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHandler.RealtorContentFrame.Navigate(new ClientPage());
+        }
+        private void BtnRequest_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHandler.RealtorContentFrame.Navigate(new RequestPage());
+        }
+        private void BtnFlat_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHandler.RealtorContentFrame.Navigate(new FlatPage());
+        }
+        private void BtnSkyscraper_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHandler.RealtorContentFrame.Navigate(new SkyscraperPage());
+        }
+        private void BtnDevelopers_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHandler.RealtorContentFrame.Navigate(new DeveloperPage());
+        }
 
+
+        private void BtnViewFlat_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHandler.RealtorContentFrame.Navigate(new ViewFlatPage());
+        }
         private void BtnChangeAccount_Click(object sender, RoutedEventArgs e)
         {
             FrameHandler.MainFrame.Navigate(new AuthorizationPage());
         }
 
-        private void BtnDevelopers_Click(object sender, RoutedEventArgs e)
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
         {
-            FrameHandler.RealtorContentFrame.Navigate(new DeveloperPage());
+            Application.Current.Shutdown();
         }
     }
 }
