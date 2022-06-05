@@ -24,9 +24,9 @@
         <DataGrid x:Name="DdFlat" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Строительный №" Binding="{Binding BuildingNumberOfRoom}" Width="*" MinWidth="100"></DataGridTextColumn>
-                <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="*" MinWidth="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена (руб)" Binding="{Binding Price}" Width="*" MinWidth="100"></DataGridTextColumn>
                 <DataGridTextColumn Header="Кол-во комнат" Binding="{Binding NumberOfRooms}" Width="*" MinWidth="120"></DataGridTextColumn>
-                <DataGridTextColumn Header="Площадь" Binding="{Binding Area}" Width="*" MinWidth="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Площадь (м²)" Binding="{Binding Area}" Width="*" MinWidth="100"></DataGridTextColumn>
                 <DataGridTextColumn Header="Этаж" Binding="{Binding FloorNumber}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Подъезд" Binding="{Binding EntranceNumber}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Высотный дом" Binding="{Binding Skyscraper.Name}"  Width="*"></DataGridTextColumn>

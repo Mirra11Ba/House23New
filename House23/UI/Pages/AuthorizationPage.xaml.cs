@@ -61,6 +61,7 @@ namespace House23.UI.Pages
                     };
                     context.LoginHistories.Add(lh);
                     context.SaveChanges();
+                    EmployeeHandler.EmployeeActive = currentEmployee[0];
                 }
                 else
                     MessageBox.Show("Некорректный пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);

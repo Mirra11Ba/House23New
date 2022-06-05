@@ -46,8 +46,8 @@ namespace House23.UI.Pages
         {
             if (Visibility == Visibility.Visible)
             {
-                ContextManager.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DdClient.ItemsSource = ContextManager.GetContext().Clients.ToList();
+               
+                DdClient.ItemsSource = EmployeeHandler.EmployeeActive.Clients; /*ContextManager.GetContext().Clients.ToList();*/
             }
         }
 

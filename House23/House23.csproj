@@ -117,6 +117,7 @@
     <Compile Include="Logic\DataBase\sysdiagram.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Handlers\EmployeeHandler.cs" />
     <Compile Include="Logic\Handlers\FrameHandler.cs" />
     <Compile Include="Logic\Utils\StringUtil.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -266,6 +267,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BaseModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Logic\DataBase\BaseModel.edmx.diagram">
       <DependentUpon>BaseModel.edmx</DependentUpon>
     </None>
