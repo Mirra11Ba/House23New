@@ -32,12 +32,12 @@ namespace House23.UI.Pages
 
         private void BtnAddRealtor_Click(object sender, RoutedEventArgs e)
         {
-            FrameHandler.HRManagerContentFrame.Navigate(new EditRealtorPage(null));
+            FrameHandler.MainFrame.Navigate(new EditRealtorPage(null));
         }
 
         private void BtnEditRealtor_Click(object sender, RoutedEventArgs e)
         {
-            FrameHandler.HRManagerContentFrame.Navigate(new EditRealtorPage((sender as Button).DataContext as Employee));
+            FrameHandler.MainFrame.Navigate(new EditRealtorPage((sender as Button).DataContext as Employee));
         }
 
         private void BtnDeleteRealtor_Click(object sender, RoutedEventArgs e)

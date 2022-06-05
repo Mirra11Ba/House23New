@@ -46,7 +46,7 @@
                 </Button>
             </Grid>
 
-            <Button x:Name="BtnLoginIn" Margin="20" Content="Войти" Click="BtnLoginIn_Click"/>
+            <Button x:Name="BtnLoginIn" Margin="20" Content="Войти" Click="BtnLoginIn_Click" />
         </StackPanel>
     </Grid>
 </Page>

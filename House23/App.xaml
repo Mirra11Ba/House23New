@@ -88,6 +88,12 @@
             <Setter Property="FontFamily" Value="Microsoft YaHei Light"></Setter>
             <Setter Property="FontSize" Value="13"></Setter>
         </Style>
+
+        <Style TargetType="DatePicker">
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontFamily" Value="Microsoft YaHei Light"></Setter>
+            <Setter Property="FontSize" Value="13"></Setter>
+        </Style>
        
         <!--Плейсхолдер-->
         <Style x:Key="PlaceholderTextBox" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
