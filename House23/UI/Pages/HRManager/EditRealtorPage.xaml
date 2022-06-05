@@ -36,14 +36,12 @@
             <TextBlock Text="Роль" Grid.Row="7" Style="{StaticResource TbEditPageText}"></TextBlock>
 
 
-                <TextBox Text="{Binding LastName}" MaxLength="30" Grid.Column="1" Grid.Row="0" Width="500" HorizontalAlignment="Left" 
-                         x:Name="TbLastName" PreviewTextInput="TbLastName_PreviewTextInput"></TextBox>
-                <TextBox Text="{Binding FirstName}" MaxLength="20" Grid.Column="1" Grid.Row="1" Width="500" HorizontalAlignment="Left"
-                         x:Name="TbFirstName" PreviewTextInput="TbFirstName_PreviewTextInput"></TextBox>
-                <TextBox Text="{Binding Patronymic}" MaxLength="20" Grid.Column="1" Grid.Row="2" Width="500" HorizontalAlignment="Left"
-                         Name="TbPatronymic" PreviewTextInput="TbPatronymic_PreviewTextInput"></TextBox>
+                <TextBox Text="{Binding LastName}" MaxLength="30" Grid.Column="1" Grid.Row="0" Width="500" HorizontalAlignment="Left" ></TextBox>
+                <TextBox Text="{Binding FirstName}" MaxLength="20" Grid.Column="1" Grid.Row="1" Width="500" HorizontalAlignment="Left"></TextBox>
+                <TextBox Text="{Binding Patronymic}" MaxLength="20" Grid.Column="1" Grid.Row="2" Width="500" HorizontalAlignment="Left"></TextBox>
                 <TextBox Text="{Binding Phone}" MaxLength="11" Grid.Column="1" Grid.Row="3" Width="500" HorizontalAlignment="Left"
-                             x:Name="TbPhone" PreviewTextInput="TbPhone_PreviewTextInput"></TextBox>
+                         x:Name="TbPhone" PreviewTextInput="TbPhone_PreviewTextInput"></TextBox>
+
                 <TextBox Text="{Binding Login}" MaxLength="15" Grid.Column="1" Grid.Row="4" Width="500" HorizontalAlignment="Left"></TextBox>
                 <TextBox x:Name="tbPass" Text="{Binding Password}" MaxLength="15" Grid.Column="1" Grid.Row="5" Width="500" HorizontalAlignment="Left" ></TextBox>
                 <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal">

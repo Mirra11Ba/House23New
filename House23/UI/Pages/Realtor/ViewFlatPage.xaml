@@ -16,38 +16,32 @@
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="TbSearchRoomNumber" VerticalAlignment="Center" TextChanged="TbSearchRoomNumber_TextChanged" 
-                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите № квартиры" Width="220" Height="28"
-                         PreviewTextInput="TbSearchRoomNumber_PreviewTextInput">
+                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите № квартиры" Width="220" Height="28">
                 </TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="TbSearchNumberOfRooms" VerticalAlignment="Center" TextChanged="TbSearchNumberOfRooms_TextChanged"
-                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите кол-во комнат" Width="220" Height="28"
-                         PreviewTextInput="TbSearchNumberOfRooms_PreviewTextInput">
+                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите кол-во комнат" Width="220" Height="28">
                 </TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="TbSearchMinPrice" VerticalAlignment="Center" TextChanged="TbSearchMinPrice_TextChanged"
-                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите min цену" Width="220" Height="28"
-                         PreviewTextInput="TbSearchMinPrice_PreviewTextInput">
+                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите min цену" Width="220" Height="28">
                 </TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="TbSearchMaxPrice" VerticalAlignment="Center" TextChanged="TbSearchMaxPrice_TextChanged"
-                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите max цену" Width="220" Height="28"
-                         PreviewTextInput="TbSearchMaxPrice_PreviewTextInput">
+                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите max цену" Width="220" Height="28">
                 </TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="TbSearchMinArea" VerticalAlignment="Center" TextChanged="TbSearchMinArea_TextChanged"
-                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите min площадь" Width="220" Height="28"
-                         PreviewTextInput="TbSearchMinArea_PreviewTextInput">
+                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите min площадь" Width="220" Height="28">
                 </TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="TbSearchMaxArea" VerticalAlignment="Center" TextChanged="TbSearchMaxArea_TextChanged"
-                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите max площадь" Width="220" Height="28"
-                         PreviewTextInput="TbSearchMaxArea_PreviewTextInput">
+                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите max площадь" Width="220" Height="28">
                 </TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">

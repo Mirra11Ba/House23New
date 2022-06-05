@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 using House23.Logic.Handlers;
 using House23.Logic.DataBase;
-using static House23.Logic.Utils.StringUtil;
+using House23.Logic.Utils;
 
 namespace House23.UI.Pages
 {
@@ -32,27 +32,6 @@ namespace House23.UI.Pages
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("v razraboyke");
-        }
-
-        private void TbLastName_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            CheckIsLetter(e);
-        }
-
-        private void TbFirstName_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            CheckIsLetter(e);
-        }
-
-        private void TbPatronymic_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            CheckIsLetter(e);
-        }
-        private void TbPhone_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            string messageText = "Можно вводить только 11 цифр в формате\n7XXXXXXXXXX\n8XXXXXXXXXX";
-            string messageTitle = "Внимание";
-            CheckIsNumeric(e, messageText, messageTitle);
         }
     }
 }

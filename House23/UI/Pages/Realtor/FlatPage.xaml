@@ -1,0 +1,58 @@
+﻿<Page x:Class="House23.UI.Pages.FlatPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:House23.UI.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="FlatPage" IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Управление квартирами" Style="{StaticResource TbBigSlimTitle}" HorizontalAlignment="Center"></TextBlock>
+        <Grid Grid.Row="1">
+            <TextBox x:Name="TbSearch" Width="Auto" VerticalAlignment="Center" TextChanged="TbSearch_TextChanged" 
+                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите строительный №">
+            </TextBox>
+        </Grid>
+        <DataGrid x:Name="DdFlat" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Строительный №" Binding="{Binding BuildingNumberOfRoom}" Width="*" MinWidth="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="*" MinWidth="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Кол-во комнат" Binding="{Binding NumberOfRooms}" Width="*" MinWidth="120"></DataGridTextColumn>
+                <DataGridTextColumn Header="Площадь" Binding="{Binding Area}" Width="*" MinWidth="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Этаж" Binding="{Binding FloorNumber}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Подъезд" Binding="{Binding EntranceNumber}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Высотный дом" Binding="{Binding Skyscraper.Name}"  Width="*"></DataGridTextColumn>
+
+                <DataGridTemplateColumn Header="Изображение" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image>
+                                <Image.Source>
+                                    <Binding Path="ImagePreview"></Binding>
+                                </Image.Source>
+                            </Image>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <DataGridTemplateColumn Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="BtnEditFlat" Content="Редактировать" Click="BtnEditFlat_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="BtnAddFlat" Content="Добавить" Grid.Row="3" HorizontalAlignment="Left" Click="BtnAddFlat_Click"></Button>
+        <Button Name="BtnDeleteFlat" Content="Удалить" Grid.Row="3" HorizontalAlignment="Right" Click="BtnDeleteFlat_Click"></Button>
+    </Grid>
+</Page>
