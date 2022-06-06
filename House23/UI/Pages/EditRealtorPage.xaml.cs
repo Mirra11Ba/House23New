@@ -16,7 +16,7 @@ using System.Text.RegularExpressions;
 
 using House23.Logic.Handlers;
 using House23.Logic.DataBase;
-using House23.Logic.Utils;
+using static House23.Logic.Utils.StringUtil;
 
 namespace House23.UI.Pages
 {
@@ -34,13 +34,18 @@ namespace House23.UI.Pages
             DataContext = currentEmployee;
             CbRole.ItemsSource = ContextManager.GetContext().Roles.ToList();
         }
+
         private void BtnGeneratePasswd_Click(object sender, RoutedEventArgs e)
         {
             GetPass();
             string generatePass = GetPass();
-            tbPass.Text = generatePass;
-            tbPass.Focus();
+            TbPassword.Text = generatePass;
+            TbPassword.Focus();
         }
+        /// <summary>
+        /// Метод рандомной генерации пароля состаящего из цифр и букв
+        /// </summary>
+        /// <returns>generatePass</returns>
         private static string GetPass()
         {
             int passLenth = 10;
@@ -59,10 +64,10 @@ namespace House23.UI.Pages
         {
             StringBuilder errors = new StringBuilder();
 
-            if (string.IsNullOrWhiteSpace(currentEmployee.FirstName))
-                errors.AppendLine("Укажите имя сотрудника");
             if (string.IsNullOrWhiteSpace(currentEmployee.LastName))
                 errors.AppendLine("Укажите фамилию сотрудника");
+            if (string.IsNullOrWhiteSpace(currentEmployee.FirstName))
+                errors.AppendLine("Укажите имя сотрудника");
             if (string.IsNullOrWhiteSpace(currentEmployee.Phone))
                 errors.AppendLine("Укажите телефон");
             if (string.IsNullOrWhiteSpace(currentEmployee.Login))
@@ -92,20 +97,23 @@ namespace House23.UI.Pages
             }
         }
 
+        private void TbLastName_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            CheckIsLetter(e);
+        }
+        private void TbFirstName_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            CheckIsLetter(e);
+        }
+        private void TbPatronymic_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            CheckIsLetter(e);
+        }
         private void TbPhone_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            CheckIsNumeric(e);
-        }
-        private void CheckIsNumeric(TextCompositionEventArgs e)
-        {
-            string pattern = "^[0-9]*$";
-            Regex regexNumber = new Regex(pattern);
-
-            if (!regexNumber.IsMatch(e.Text))
-            {
-                e.Handled = true;
-                MessageBox.Show("Можно вводить только 11 цифр в формате\n7XXXXXXXXXX\n8XXXXXXXXXX", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
+            string messageText = "Можно вводить только 11 цифр в формате\n7XXXXXXXXXX\n8XXXXXXXXXX";
+            string messageTitle = "Внимание";
+            CheckIsNumeric(e, messageText, messageTitle);
         }
     }
 }

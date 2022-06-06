@@ -30,21 +30,41 @@ namespace House23.UI.Pages
         }
         private void BtnAddFlat_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            FrameHandler.MainFrame.Navigate(new EditFlatPage(null));
         }
 
         private void BtnEditFlat_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            FrameHandler.MainFrame.Navigate(new EditFlatPage((sender as Button).DataContext as Flat));
         }
         private void BtnDeleteFlat_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
-        }
+            var flatsForRemoving = DdFlat.SelectedItems.Cast<Flat>().ToList();
 
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {flatsForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    ContextManager.GetContext().Flats.RemoveRange(flatsForRemoving);
+                    ContextManager.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены!");
+                    DdFlat.ItemsSource = ContextManager.GetContext().Flats.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
+        private void UpdateFlat()
+        {
+            var currentShearchFlat = ContextManager.GetContext().Flats.ToList();
+            currentShearchFlat = currentShearchFlat.Where(p => ContainsText(p.BuildingNumberOfRoom.ToString(), TbSearch.Text)).ToList();
+            DdFlat.ItemsSource = currentShearchFlat;
+        }
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            UpdateFlat();
         }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)

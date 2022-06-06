@@ -76,14 +76,6 @@ namespace House23.UI.Pages
             DdDeveloper.ItemsSource = currentShearchDeveloper;
 
         }
-
-        private bool ContainsText(string text1, string text2)
-        {
-            text1 = text1.ToLower();
-            text2 = text2.ToLower();
-            return text1.Contains(text2);
-        }
-
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
             UpdateDeveloper();

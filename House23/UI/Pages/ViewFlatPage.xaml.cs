@@ -78,5 +78,47 @@ namespace House23.UI.Pages
         {
             MessageBox.Show("в разработке");
         }
+
+        private void TbSearchRoomNumber_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            string messageText = "Можно вводить только цифры";
+            string messageTitle = "Внимание";
+            CheckIsNumeric(e, messageText, messageTitle);
+        }
+
+        private void TbSearchNumberOfRooms_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            string messageText = "Можно вводить только цифры";
+            string messageTitle = "Внимание";
+            CheckIsNumeric(e, messageText, messageTitle);
+        }
+
+        private void TbSearchMinPrice_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            string messageText = "Можно вводить только цифры";
+            string messageTitle = "Внимание";
+            CheckIsNumeric(e, messageText, messageTitle);
+        }
+
+        private void TbSearchMaxPrice_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            string messageText = "Можно вводить только цифры";
+            string messageTitle = "Внимание";
+            CheckIsNumeric(e, messageText, messageTitle);
+        }
+
+        private void TbSearchMinArea_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            string messageText = "Можно вводить только цифры";
+            string messageTitle = "Внимание";
+            CheckIsNumeric(e, messageText, messageTitle);
+        }
+
+        private void TbSearchMaxArea_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            string messageText = "Можно вводить только цифры";
+            string messageTitle = "Внимание";
+            CheckIsNumeric(e, messageText, messageTitle);
+        }
     }
 }

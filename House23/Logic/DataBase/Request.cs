@@ -35,7 +35,7 @@ namespace House23.Logic.DataBase
         public virtual Client Client { get; set; }
         public virtual District District { get; set; }
         public virtual Employee Employee { get; set; }
-        public virtual RequestStatus RequestStatu { get; set; }
+        public virtual RequestStatu RequestStatu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Flat> Flats { get; set; }
     }

@@ -23,6 +23,7 @@
         </Grid>
         <DataGrid x:Name="DdRequest" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="2">
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding Client.FullName}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Min цена" Binding="{Binding MinimumPrice}" Width="*" MinWidth="100"></DataGridTextColumn>
                 <DataGridTextColumn Header="Max цена" Binding="{Binding MaximumPrice}" Width="*" MinWidth="100"></DataGridTextColumn>
                 <DataGridTextColumn Header="Кол-во комнат" Binding="{Binding NumberOfRooms}" Width="*" MinWidth="120"></DataGridTextColumn>
@@ -36,8 +37,7 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTextColumn Header="Район" Binding="{Binding District.Name}" Width="*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Сотрудник" Binding="{Binding Employee.LastName}" Width="*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Клиент" Binding="{Binding Client.LastName}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Сотрудник" Binding="{Binding Employee.FullName}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Статус" Binding="{Binding RequestStatu.Status}" Width="*"></DataGridTextColumn>
                 <DataGridTemplateColumn Width="auto">
                     <DataGridTemplateColumn.CellTemplate>

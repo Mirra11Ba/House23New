@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="House23.App" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.Logic.DataBase.House23Entities" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAAAQAAEAAAAAAAACAAAAAAGgAIAAAAAAACEBAAAAA=</HashCode>
+      <FileName>Logic\DataBase\BaseModel.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.DataBase.Client" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAGAEAAAAAAAAAAAAAAAACAAAAAAAAAAAJBAAAAg=</HashCode>
+      <FileName>Logic\DataBase\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.DataBase.Developer" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAQAAAAAAAQAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Logic\DataBase\Developer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.DataBase.District" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAAAAAEBAAAAA=</HashCode>
+      <FileName>Logic\DataBase\District.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.DataBase.Employee" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAGAAAAAAAAAQECAAAAAAAAAAIAACAAASIBAAAAg=</HashCode>
+      <FileName>Logic\DataBase\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.DataBase.Flat" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAQAAAAAIAgAAAAEAAAAAAAIAgAABARAAAAA=</HashCode>
+      <FileName>Logic\DataBase\Flat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.DataBase.LoginHistory" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAACAAAABABAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\DataBase\LoginHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.DataBase.Material" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAEAIAAAA=</HashCode>
+      <FileName>Logic\DataBase\Material.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.DataBase.Request" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAUIAAAAACAAAAEAAgAAESACAIAAAAAAADAAAQAQ=</HashCode>
+      <FileName>Logic\DataBase\Request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.DataBase.RequestStatus" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Logic\DataBase\RequestStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.DataBase.Role">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAQAAAAAAQACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\DataBase\Role.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.DataBase.Skyscraper">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAAAQAAACAAAAQAAgAAIAQEAIAAAAACAAAAAAJAAAA=</HashCode>
+      <FileName>Logic\DataBase\Skyscraper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.DataBase.sysdiagram" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAIAAAAAAAAAAAAAAAQAAAFAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\DataBase\sysdiagram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.DataBase.ContextManager" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Logic\DataBase\ContextManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.Handlers.EmployeeHandler" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Handlers\EmployeeHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.Handlers.FrameHandler" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAUAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Handlers\FrameHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Logic.Utils.StringUtil">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAACAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Utils\StringUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Properties.Resources" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAgCAREAABAQAAAAAACAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.Properties.Settings" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="House23.UI.Pages.AuthorizationPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAQCAAAAAAAAAAAAAAAEAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>UI\Pages\AuthorizationPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.ClientPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAARAAAAAAAAA=</HashCode>
+      <FileName>UI\Pages\ClientPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.DeveloperPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAQAAAAAAAEAAAAAAAAAAAAAIAIAAAAABAAAAAAAAA=</HashCode>
+      <FileName>UI\Pages\DeveloperPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.EditClientPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAACgAAAAAAIAAAIAAAAAAAAA=</HashCode>
+      <FileName>UI\Pages\EditClientPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.EditDeveloperPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Pages\EditDeveloperPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.EditFlatPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAUAAAAAAAgAAAAAAAAAEAAIAAEIAAAAAIAEAAAAAA=</HashCode>
+      <FileName>UI\Pages\EditFlatPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.EditRealtorPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAQAAAACgAAAQAAIAEAIAAAAAAAAA=</HashCode>
+      <FileName>UI\Pages\EditRealtorPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.EditRequestPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgUAAAAAAQAAAAAAAAAAAAAAAAACAAAAAAAAAAQAAA=</HashCode>
+      <FileName>UI\Pages\EditRequestPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.EditSkyscraperPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAACAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Pages\EditSkyscraperPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.FlatPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAAAAAAAAAAAAAAAAAAgAAAAAAAEAAAAABAAAAAAgAA=</HashCode>
+      <FileName>UI\Pages\FlatPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.MenuHRManagerPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAIAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>UI\Pages\MenuHRManagerPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.MenuRealtorPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAAAAAAAIIAAAAAAMAAAAAAAAQAABAAAA=</HashCode>
+      <FileName>UI\Pages\MenuRealtorPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.RealtorPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAgBABAAAAAAA=</HashCode>
+      <FileName>UI\Pages\RealtorPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.RequestPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAACAAAAAAAAAAAAAAABAAAAgBAAAAAAAAA=</HashCode>
+      <FileName>UI\Pages\RequestPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.SkyscraperPage" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAgAAAIAAAAAAAAAAAAAAAEAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>UI\Pages\SkyscraperPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="House23.UI.Pages.ViewFlatPage" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCAAQIgAAAAAAAAAABIAAAAAAiEAgAQAABAAIAAAAk=</HashCode>
+      <FileName>UI\Pages\ViewFlatPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

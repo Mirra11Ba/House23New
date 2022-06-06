@@ -68,8 +68,10 @@ namespace House23.UI.Pages
                 DdEmployee.ItemsSource = ContextManager.GetContext().Employees.ToList();
             }
         }
-        
-        //метод для поиска сотрудника по ФИО
+
+        /// <summary>
+        /// Метод обновляющий список сотрудников в соответсвии с веденными в поле поиска ФИО
+        /// </summary>
         private void UpdateEmloyee()
         {
             var currentShearchEmployee = ContextManager.GetContext().Employees.ToList();

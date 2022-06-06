@@ -37,9 +37,15 @@
 
             <TextBox Text="{Binding Name}" Grid.Column="1" Grid.Row="0" Width="500" HorizontalAlignment="Left" ></TextBox>
             <TextBox Text="{Binding Address}" Grid.Column="1" Grid.Row="1" Width="500" HorizontalAlignment="Left"></TextBox>
-            <TextBox Text="{Binding NumberOfFloors}" Grid.Column="1" Grid.Row="2" Width="500" HorizontalAlignment="Left"></TextBox>
-            <TextBox Text="{Binding NumberOfEntrances}" Grid.Column="1" Grid.Row="3" Width="500" HorizontalAlignment="Left"></TextBox>
-            <TextBox Text="{Binding NumberOfApartments}" Grid.Column="1" Grid.Row="4" Width="500" HorizontalAlignment="Left"></TextBox>
+            <TextBox Text="{Binding NumberOfFloors}" Grid.Column="1" Grid.Row="2" Width="500" HorizontalAlignment="Left"
+                     Name="TbNumberOfFloors"
+                     PreviewTextInput="TbNumberOfFloors_PreviewTextInput"></TextBox>
+            <TextBox Text="{Binding NumberOfEntrances}" Grid.Column="1" Grid.Row="3" Width="500" HorizontalAlignment="Left"
+                     Name="TbNumberOfEntrances"
+                     PreviewTextInput="TbNumberOfEntrances_PreviewTextInput"></TextBox>
+            <TextBox Text="{Binding NumberOfApartments}" Grid.Column="1" Grid.Row="4" Width="500" HorizontalAlignment="Left"
+                     Name="TbNumberOfApartments"
+                     PreviewTextInput="TbNumberOfApartments_PreviewTextInput"></TextBox>
             <ComboBox SelectedItem="{Binding District}" x:Name="CbDistrict" DisplayMemberPath="Name" Grid.Row="5" Grid.Column="1" Width="500" HorizontalAlignment="Left"></ComboBox>
             <ComboBox SelectedItem="{Binding Material}" x:Name="CbMaterial" DisplayMemberPath="Name" Grid.Row="6" Grid.Column="1" Width="500" HorizontalAlignment="Left"></ComboBox>
             <ComboBox SelectedItem="{Binding Developer}" x:Name="CbDeveloper" DisplayMemberPath="Name" Grid.Row="7" Grid.Column="1" Width="500" HorizontalAlignment="Left"></ComboBox>

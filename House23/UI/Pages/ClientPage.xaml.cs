@@ -28,32 +28,76 @@ namespace House23.UI.Pages
         public ClientPage()
         {
             InitializeComponent();
+            UpdateClient();
         }
         private void BtnAddClient_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            FrameHandler.MainFrame.Navigate(new EditClientPage(null));
         }
         private void BtnEditClient_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            FrameHandler.MainFrame.Navigate(new EditClientPage((sender as Button).DataContext as Client));
         }
         private void BtnDeleteClient_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            var emloyeesForRemoving = DdClient.SelectedItems.Cast<Employee>().ToList();
+
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {emloyeesForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    ContextManager.GetContext().Employees.RemoveRange(emloyeesForRemoving);
+                    ContextManager.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены!");
+                    DdClient.ItemsSource = ContextManager.GetContext().Clients.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             if (Visibility == Visibility.Visible)
             {
-                ContextManager.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DdClient.ItemsSource = ContextManager.GetContext().Clients.ToList();
+                DdClient.ItemsSource = EmployeeHandler.EmployeeActive.Clients;
+            }
+        }
+
+
+        private void UpdateClient()
+        {
+            var currentShearchClient = EmployeeHandler.EmployeeActive.Clients;
+            string[] nameList = TbSearch.Text.Split(' ');
+
+            switch (nameList.Length)
+            {
+                case 1:
+                    currentShearchClient = currentShearchClient.Where(p => ContainsText(p.LastName, nameList[0])).ToList();
+                    DdClient.ItemsSource = currentShearchClient;
+                    break;
+                case 2:
+                    currentShearchClient = currentShearchClient.Where(p => ContainsText(p.LastName, nameList[0])).
+                        Where(p => ContainsText(p.FirstName, nameList[1])).ToList();
+                    DdClient.ItemsSource = currentShearchClient;
+                    break;
+                case 3:
+                    currentShearchClient = currentShearchClient.Where(p => ContainsText(p.LastName, nameList[0])).
+                        Where(p => ContainsText(p.FirstName, nameList[1])).
+                            Where(p => ContainsText(p.Patronymic, nameList[2])).ToList();
+                    DdClient.ItemsSource = currentShearchClient;
+                    break;
+                default:
+                    DdClient.ItemsSource = currentShearchClient;
+                    break;
             }
         }
 
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            UpdateClient();
         }
     }
 }
