@@ -33,7 +33,7 @@ namespace House23.Logic.DataBase
         public virtual DbSet<LoginHistory> LoginHistories { get; set; }
         public virtual DbSet<Material> Materials { get; set; }
         public virtual DbSet<Request> Requests { get; set; }
-        public virtual DbSet<RequestStatus> RequestStatus1 { get; set; }
+        public virtual DbSet<RequestStatu> RequestStatus { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Skyscraper> Skyscrapers { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }

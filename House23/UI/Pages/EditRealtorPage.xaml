@@ -45,7 +45,7 @@
                 <TextBox Text="{Binding Phone}" MaxLength="11" Grid.Column="1" Grid.Row="3" Width="500" HorizontalAlignment="Left"
                              x:Name="TbPhone" PreviewTextInput="TbPhone_PreviewTextInput"></TextBox>
                 <TextBox Text="{Binding Login}" MaxLength="15" Grid.Column="1" Grid.Row="4" Width="500" HorizontalAlignment="Left"></TextBox>
-                <TextBox x:Name="tbPass" Text="{Binding Password}" MaxLength="15" Grid.Column="1" Grid.Row="5" Width="500" HorizontalAlignment="Left" ></TextBox>
+                <TextBox x:Name="TbPassword" Text="{Binding Password}" MaxLength="15" Grid.Column="1" Grid.Row="5" Width="500" HorizontalAlignment="Left" ></TextBox>
                 <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
                     <Button Content="Сгенирировать" x:Name="BtnGeneratePasswd" Grid.Row="6" Grid.Column="1" Click="BtnGeneratePasswd_Click"></Button>
                 </StackPanel>

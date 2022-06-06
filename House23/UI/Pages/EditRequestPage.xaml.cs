@@ -68,5 +68,10 @@ namespace House23.UI.Pages
             string messageTitle = "Внимание";
             CheckIsNumeric(e, messageText, messageTitle);
         }
+
+        private void CbEmployee_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //var selectedEmployee = CbEmployee.SelectedItem as ContextManager.GetContext().Employee;
+        }
     }
 }

@@ -39,8 +39,8 @@ namespace House23.UI.Pages
         {
             GetPass();
             string generatePass = GetPass();
-            tbPass.Text = generatePass;
-            tbPass.Focus();
+            TbPassword.Text = generatePass;
+            TbPassword.Focus();
         }
         /// <summary>
         /// Метод рандомной генерации пароля состаящего из цифр и букв
@@ -64,10 +64,10 @@ namespace House23.UI.Pages
         {
             StringBuilder errors = new StringBuilder();
 
-            if (string.IsNullOrWhiteSpace(currentEmployee.FirstName))
-                errors.AppendLine("Укажите имя сотрудника");
             if (string.IsNullOrWhiteSpace(currentEmployee.LastName))
                 errors.AppendLine("Укажите фамилию сотрудника");
+            if (string.IsNullOrWhiteSpace(currentEmployee.FirstName))
+                errors.AppendLine("Укажите имя сотрудника");
             if (string.IsNullOrWhiteSpace(currentEmployee.Phone))
                 errors.AppendLine("Укажите телефон");
             if (string.IsNullOrWhiteSpace(currentEmployee.Login))

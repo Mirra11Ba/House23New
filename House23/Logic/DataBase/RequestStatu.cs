@@ -12,10 +12,10 @@ namespace House23.Logic.DataBase
     using System;
     using System.Collections.Generic;
     
-    public partial class RequestStatus
+    public partial class RequestStatu
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RequestStatus()
+        public RequestStatu()
         {
             this.Requests = new HashSet<Request>();
         }

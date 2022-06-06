@@ -82,6 +82,7 @@ namespace House23.UI.Pages
             if (dialog.ShowDialog() == true)
             {
                 currentFlat.ImagePreview = File.ReadAllBytes(dialog.FileName);
+                MessageBox.Show("Картинка добавлена");
             }
         }
 
