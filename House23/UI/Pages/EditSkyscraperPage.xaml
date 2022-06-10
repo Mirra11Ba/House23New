@@ -35,8 +35,8 @@
             <TextBlock Text="Материал" Grid.Row="6" Style="{StaticResource TbEditPageText}"></TextBlock>
             <TextBlock Text="Застройщик" Grid.Row="7" Style="{StaticResource TbEditPageText}"></TextBlock>
 
-            <TextBox Text="{Binding Name}" Grid.Column="1" Grid.Row="0" Width="500" HorizontalAlignment="Left" ></TextBox>
-            <TextBox Text="{Binding Address}" Grid.Column="1" Grid.Row="1" Width="500" HorizontalAlignment="Left"></TextBox>
+            <TextBox Text="{Binding Name}" Grid.Column="1" Grid.Row="0" MaxLength="20" Width="500" HorizontalAlignment="Left" ></TextBox>
+            <TextBox Text="{Binding Address}" Grid.Column="1" Grid.Row="1" MaxLength="50" Width="500" HorizontalAlignment="Left"></TextBox>
             <TextBox Text="{Binding NumberOfFloors}" Grid.Column="1" Grid.Row="2" Width="500" HorizontalAlignment="Left"
                      Name="TbNumberOfFloors"
                      PreviewTextInput="TbNumberOfFloors_PreviewTextInput"></TextBox>

@@ -26,13 +26,16 @@ namespace House23.UI.Pages
     public partial class EditClientPage : Page
     {
         private Client currentClient = new Client(); // создание объекта класса
-        public EditClientPage(Client selectedClient)
+        private readonly RefreshContent refreshContent;
+
+        public delegate void RefreshContent();
+        public EditClientPage(Client selectedClient, RefreshContent refreshContent)
         {
             InitializeComponent();
             if (selectedClient != null)
                 currentClient = selectedClient;
             DataContext = currentClient;
-          
+            this.refreshContent = refreshContent;
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
@@ -46,9 +49,10 @@ namespace House23.UI.Pages
             if (string.IsNullOrWhiteSpace(currentClient.Phone))
                 errors.AppendLine("Укажите телефон");
             
-            if (true)
+            if (TbPhone.Text.Length < 11)
             {
                 MessageBox.Show("Телефон не может быть меньше 11 цифр","Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
             }
 
             if (errors.Length > 0)
@@ -57,10 +61,10 @@ namespace House23.UI.Pages
                 return;
             }
 
-            if (currentClient.IdClient == 0)
+            bool flag = currentClient.IdClient == 0;
+            if (flag)
             {
                 ContextManager.GetContext().Clients.Add(currentClient);
-                //ContextManager.GetContext().Employees.Add(EmployeeActive);
             }
 
             try
@@ -68,6 +72,12 @@ namespace House23.UI.Pages
                 ContextManager.GetContext().SaveChanges();
                 MessageBox.Show("Информация сохранена");
                 FrameHandler.MainFrame.GoBack();
+                if (flag)
+                {
+                    EmployeeActive.Clients.Add(currentClient);
+                    ContextManager.GetContext().SaveChanges();
+                }
+                refreshContent();
             }
             catch (Exception ex)
             {

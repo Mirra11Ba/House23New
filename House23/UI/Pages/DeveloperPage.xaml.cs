@@ -39,7 +39,6 @@ namespace House23.UI.Pages
             FrameHandler.RealtorContentFrame.Navigate(new EditDeveloperPage((sender as Button).DataContext as Developer));
         }
 
-
         private void BtnDeleteDeveloper_Click(object sender, RoutedEventArgs e)
         {
             var developersForRemoving = DdDeveloper.SelectedItems.Cast<Developer>().ToList();
@@ -69,12 +68,21 @@ namespace House23.UI.Pages
             }
         }
 
+
+        private string lastText;
         private void UpdateDeveloper()
         {
+            bool flag = lastText == null || lastText.Length < TbSearch.Text.Length;
+            lastText = TbSearch.Text;
+
             var currentShearchDeveloper = ContextManager.GetContext().Developers.ToList();
             currentShearchDeveloper = currentShearchDeveloper.Where(p => ContainsText(p.Name, TbSearch.Text)).ToList();
             DdDeveloper.ItemsSource = currentShearchDeveloper;
 
+            if (flag && currentShearchDeveloper.Count == 0)
+            {
+                MessageBox.Show("Застройщик не найден", "Внимание", MessageBoxButton.OK, MessageBoxImage.Hand);
+            }
         }
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {

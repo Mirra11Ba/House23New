@@ -46,13 +46,25 @@
                 <DataGridTemplateColumn Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Name="BtnEditFlat" Content="Редактировать" Click="BtnEditFlat_Click"></Button>
+                            <Button Name="BtnEditFlat" Click="BtnEditFlat_Click"
+                                     Background="white" BorderBrush="Transparent" 
+                                    Width="40" Height="40" Foreground="Black">
+                                <Image Source="/Resources/pen.png" Width="20" Height="20"></Image>
+                            </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="BtnAddFlat" Content="Добавить" Grid.Row="3" HorizontalAlignment="Left" Click="BtnAddFlat_Click"></Button>
-        <Button Name="BtnDeleteFlat" Content="Удалить" Grid.Row="3" HorizontalAlignment="Right" Click="BtnDeleteFlat_Click"></Button>
+        <Button Name="BtnAddFlat" Grid.Row="3" HorizontalAlignment="Left" Click="BtnAddFlat_Click"
+                 Background="white" BorderBrush="Transparent" 
+                Width="40" Height="40" Foreground="Black">
+            <Image Source="/Resources/plus.png" Width="25" Height="25"></Image>
+        </Button>
+        <Button Name="BtnDeleteFlat" Grid.Row="3" HorizontalAlignment="Right" Click="BtnDeleteFlat_Click"
+                Background="white" BorderBrush="Transparent" 
+                Width="40" Height="40" Foreground="Black">
+            <Image Source="/Resources/black-rem.png" Width="25" Height="25"></Image>
+        </Button>
     </Grid>
 </Page>

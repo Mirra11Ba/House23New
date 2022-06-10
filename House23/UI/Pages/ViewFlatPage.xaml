@@ -5,63 +5,50 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:House23.UI.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="800"
       Title="ViewFlatPage">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <StackPanel Orientation="Horizontal">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="561*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <WrapPanel Orientation="Vertical" HorizontalAlignment="Left" Width="230" Grid.Column="0" VerticalAlignment="Center" Margin="5">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Height="auto">
+                <TextBlock Text="Фильтры" Style="{StaticResource TbBigSlimTitle}" HorizontalAlignment="Center"></TextBlock>
                 <TextBox x:Name="TbSearchRoomNumber" VerticalAlignment="Center" TextChanged="TbSearchRoomNumber_TextChanged" 
                    Style="{StaticResource PlaceholderTextBox}" Tag="Введите № квартиры" Width="220" Height="28"
-                         PreviewTextInput="TbSearchRoomNumber_PreviewTextInput">
+                   PreviewTextInput="TbSearchRoomNumber_PreviewTextInput">
                 </TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="TbSearchNumberOfRooms" VerticalAlignment="Center" TextChanged="TbSearchNumberOfRooms_TextChanged"
                    Style="{StaticResource PlaceholderTextBox}" Tag="Введите кол-во комнат" Width="220" Height="28"
                          PreviewTextInput="TbSearchNumberOfRooms_PreviewTextInput">
                 </TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="TbSearchMinPrice" VerticalAlignment="Center" TextChanged="TbSearchMinPrice_TextChanged"
                    Style="{StaticResource PlaceholderTextBox}" Tag="Введите min цену" Width="220" Height="28"
                          PreviewTextInput="TbSearchMinPrice_PreviewTextInput">
                 </TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="TbSearchMaxPrice" VerticalAlignment="Center" TextChanged="TbSearchMaxPrice_TextChanged"
                    Style="{StaticResource PlaceholderTextBox}" Tag="Введите max цену" Width="220" Height="28"
                          PreviewTextInput="TbSearchMaxPrice_PreviewTextInput">
                 </TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="TbSearchMinArea" VerticalAlignment="Center" TextChanged="TbSearchMinArea_TextChanged"
                    Style="{StaticResource PlaceholderTextBox}" Tag="Введите min площадь" Width="220" Height="28"
                          PreviewTextInput="TbSearchMinArea_PreviewTextInput">
                 </TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="TbSearchMaxArea" VerticalAlignment="Center" TextChanged="TbSearchMaxArea_TextChanged"
                    Style="{StaticResource PlaceholderTextBox}" Tag="Введите max площадь" Width="220" Height="28"
                          PreviewTextInput="TbSearchMaxArea_PreviewTextInput">
                 </TextBox>
+                <TextBlock VerticalAlignment="Center" Text="Выберите район:" Width="175" TextAlignment="Left"></TextBlock>
+                <ComboBox VerticalAlignment="Center" x:Name="CbDistrict" SelectionChanged="CbDistrict_SelectionChanged" DisplayMemberPath="Name"></ComboBox>
+                <TextBlock VerticalAlignment="Center" Text="Выберите ЖК:" Width="175" TextAlignment="Left"></TextBlock>
+                <ComboBox VerticalAlignment="Center" x:Name="CbSkyscraper" SelectionChanged="CbSkyscraper_SelectionChanged" DisplayMemberPath="Name"></ComboBox>
+                <Button x:Name="BtnSelectFlat" Content="Выбрать квартиру" Click="BtnSelectFlat_Click" Margin="5,10,5,5"></Button>
+                <Button x:Name="BtnSaveListOfFlat" Content="Сохранить список" Click="BtnSaveListOfFlat_Click" Margin="5,25,5,5"></Button>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Text="Выберите район:" Width="175" TextAlignment="Right"></TextBlock>
-                <ComboBox Margin="0 5" VerticalAlignment="Center" Width="220" Height="30" x:Name="CbxDistrict" SelectionChanged="CbxDistrict_SelectionChanged" DisplayMemberPath="Name"></ComboBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Text="Выберите ЖК:" Width="175" TextAlignment="Right"></TextBlock>
-                <ComboBox Margin="0 5" VerticalAlignment="Center" Width="220" Height="30" x:Name="CbxSkyscraper" SelectionChanged="CbxSkyscraper_SelectionChanged" DisplayMemberPath="Name"></ComboBox>
-            </StackPanel>
-            <Button x:Name="BtnSelectFlat" Content="Выбрать квартиру" Click="BtnSelectFlat_Click"></Button>
-            <Button x:Name="BtnSaveListOfFlat" Content="Сохранить список" Click="BtnSaveListOfFlat_Click"></Button>
         </WrapPanel>
-        <ListView SelectionMode="Single" Grid.Row="1" Name="LViewFlats" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
+        <ListView SelectionMode="Single" Grid.Column="1" Name="LvFlats" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
@@ -69,10 +56,13 @@
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Margin="20" Width="400">
+                    <Grid Margin="20" Width="400" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="70"></RowDefinition>
                             <RowDefinition Height="310"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
@@ -85,13 +75,13 @@
                                 </Binding>
                             </Image.Source>
                         </Image>
-                        <TextBlock x:Name="TblBuildingNumberOfRoom" Text="{Binding BuildingNumberOfRoom}" VerticalAlignment="Center" Width="380" TextWrapping="Wrap" TextAlignment="Justify" HorizontalAlignment="Center" Margin="5 5" FontSize="26" Grid.Row="0"></TextBlock>
+                        <TextBlock x:Name="TblBuildingNumberOfRoom" Text="{Binding BuildingNumberOfRoom, StringFormat={}Номер квартиры – {0}}" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" Margin="5 5" FontSize="27" Grid.Row="0"></TextBlock>
                         <TextBlock Text="{Binding Price, StringFormat={}{0:N2} РУБ}" Grid.Row="2" Margin="5 5 5 15" HorizontalAlignment="Center" FontSize="26" FontWeight="Bold"></TextBlock>
-                        <TextBlock Text="{Binding District}" Grid.Row="3" HorizontalAlignment="Right"></TextBlock>
-                        <TextBlock Text="{Binding Skyscraper}" Grid.Row="3" HorizontalAlignment="Left"></TextBlock>
-                        <TextBlock Text="{Binding NumberOfRooms}" Grid.Row="3" HorizontalAlignment="Left"></TextBlock>
-                        <TextBlock Text="{Binding Area}" Grid.Row="3" HorizontalAlignment="Left"></TextBlock>
-                        <TextBlock Text="{Binding FloorNumber}" Grid.Row="3" HorizontalAlignment="Left"></TextBlock>
+                        <!--<TextBlock Text="{Binding District.Name}" Grid.Row="7" HorizontalAlignment="Right"></TextBlock>-->
+                        <TextBlock Text="{Binding Skyscraper.Name, StringFormat={}Высотное здание: {0}}" Grid.Row="3" HorizontalAlignment="Right"></TextBlock>
+                        <TextBlock Text="{Binding NumberOfRooms, StringFormat={}Количество комнат: {0}}" Grid.Row="4" HorizontalAlignment="Left"></TextBlock>
+                        <TextBlock Text="{Binding Area, StringFormat={}Площадь: {0}}" Grid.Row="5" HorizontalAlignment="Left"></TextBlock>
+                        <TextBlock Text="{Binding FloorNumber, StringFormat={}Этаж: {0}}" Grid.Row="6" HorizontalAlignment="Left"></TextBlock>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

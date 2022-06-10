@@ -24,14 +24,57 @@ namespace House23.UI.Pages
     /// </summary>
     public partial class EditSkyscraperPage : Page
     {
-        public EditSkyscraperPage()
+        private Skyscraper currentSkyscraper = new Skyscraper();
+        public EditSkyscraperPage(Skyscraper selectedSkyscraper)
         {
             InitializeComponent();
+            if (selectedSkyscraper != null)
+                currentSkyscraper = selectedSkyscraper;
+            DataContext = currentSkyscraper;
+            CbDistrict.ItemsSource = ContextManager.GetContext().Districts.ToList();
+            CbMaterial.ItemsSource = ContextManager.GetContext().Materials.ToList();
+            CbDeveloper.ItemsSource = ContextManager.GetContext().Developers.ToList();
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("v razraboyke");
+            StringBuilder errors = new StringBuilder();
+
+            if (string.IsNullOrWhiteSpace(currentSkyscraper.Name))
+                errors.AppendLine("Укажите название ЖК");
+            if (string.IsNullOrWhiteSpace(currentSkyscraper.Address))
+                errors.AppendLine("Укажите адресс высотного дома");
+            if (currentSkyscraper.NumberOfFloors == 0)
+                errors.AppendLine("Укажите количество этажей");
+            if (currentSkyscraper.NumberOfEntrances == 0)
+                errors.AppendLine("Укажите количество подъездов");
+            if (currentSkyscraper.NumberOfApartments == 0)
+                errors.AppendLine("Укажите количество квартир");
+            if (currentSkyscraper.District == null)
+                errors.AppendLine("Выберите район");
+            if (currentSkyscraper.Material == null)
+                errors.AppendLine("Выберите материал");
+            if (currentSkyscraper.Developer == null)
+                errors.AppendLine("Выберите застройщика");
+
+            if (errors.Length > 0)
+            {
+                MessageBox.Show(errors.ToString(), "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (currentSkyscraper.IdSkyscraper == 0)
+                ContextManager.GetContext().Skyscrapers.Add(currentSkyscraper);
+            try
+            {
+                ContextManager.GetContext().SaveChanges();
+                MessageBox.Show("Информация сохранена");
+                FrameHandler.MainFrame.GoBack();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
 
         private void TbNumberOfFloors_PreviewTextInput(object sender, TextCompositionEventArgs e)

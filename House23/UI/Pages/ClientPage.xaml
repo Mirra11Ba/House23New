@@ -31,13 +31,25 @@
                 <DataGridTemplateColumn Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Name="BtnEditClient" Content="Редактировать" Click="BtnEditClient_Click"></Button>
+                            <Button Name="BtnEditClient" Click="BtnEditClient_Click"
+                                    Background="white" BorderBrush="Transparent" 
+                                    Width="40" Height="40" Foreground="Black">
+                                <Image Source="/Resources/pen.png" Width="20" Height="20"></Image>
+                            </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="BtnAddClient" Content="Добавить" Grid.Row="3" HorizontalAlignment="Left" Click="BtnAddClient_Click"></Button>
-        <Button Name="BtnDeleteClient" Content="Удалить" Grid.Row="3" HorizontalAlignment="Right" Click="BtnDeleteClient_Click"></Button>
+        <Button Name="BtnAddClient" Grid.Row="3" HorizontalAlignment="Left" Click="BtnAddClient_Click"
+                Background="white" BorderBrush="Transparent" 
+                Width="40" Height="40" Foreground="Black">
+            <Image Source="/Resources/plus.png" Width="25" Height="25"></Image>
+        </Button>
+        <Button Name="BtnDeleteClient" Grid.Row="3" HorizontalAlignment="Right" Click="BtnDeleteClient_Click"
+                 Background="white" BorderBrush="Transparent" 
+                Width="40" Height="40" Foreground="Black">
+            <Image Source="/Resources/black-rem.png" Width="25" Height="25"></Image>
+        </Button>
     </Grid>
 </Page>

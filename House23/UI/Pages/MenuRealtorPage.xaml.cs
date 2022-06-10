@@ -51,7 +51,7 @@ namespace House23.UI.Pages
         }
         private void BtnViewFlat_Click(object sender, RoutedEventArgs e)
         {
-            FrameHandler.RealtorContentFrame.Navigate(new ViewFlatPage());
+            FrameHandler.MainFrame.Navigate(new ViewFlatPage());
         }
         private void BtnChangeAccount_Click(object sender, RoutedEventArgs e)
         {

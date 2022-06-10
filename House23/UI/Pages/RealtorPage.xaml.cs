@@ -72,8 +72,12 @@ namespace House23.UI.Pages
         /// <summary>
         /// Метод обновляющий список сотрудников в соответсвии с веденными в поле поиска ФИО
         /// </summary>
+        private string lastText;
         private void UpdateEmloyee()
         {
+            bool flag = lastText == null || lastText.Length < TbSearch.Text.Length;
+            lastText = TbSearch.Text;
+
             var currentShearchEmployee = ContextManager.GetContext().Employees.ToList();
             string[] nameList = TbSearch.Text.Split(' ');
 
@@ -97,6 +101,10 @@ namespace House23.UI.Pages
                 default:
                     DdEmployee.ItemsSource = currentShearchEmployee;
                     break;
+            }
+            if (flag && currentShearchEmployee.Count == 0)
+            {
+                MessageBox.Show("Сотрудник не найден", "Внимание", MessageBoxButton.OK, MessageBoxImage.Hand);
             }
         }
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
