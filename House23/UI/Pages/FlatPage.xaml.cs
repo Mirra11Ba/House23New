@@ -56,17 +56,6 @@ namespace House23.UI.Pages
                 }
             }
         }
-        private void UpdateFlat()
-        {
-            var currentShearchFlat = ContextManager.GetContext().Flats.ToList();
-            currentShearchFlat = currentShearchFlat.Where(p => ContainsText(p.BuildingNumberOfRoom.ToString(), TbSearch.Text)).ToList();
-            DdFlat.ItemsSource = currentShearchFlat;
-        }
-        private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            UpdateFlat();
-        }
-
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             if (Visibility == Visibility.Visible)
@@ -75,5 +64,27 @@ namespace House23.UI.Pages
                 DdFlat.ItemsSource = ContextManager.GetContext().Flats.ToList();
             }
         }
+
+
+        private string lastText;
+        private void UpdateFlat()
+        {
+            bool flag = lastText == null || lastText.Length < TbSearch.Text.Length;
+            lastText = TbSearch.Text;
+
+            var currentShearchFlat = ContextManager.GetContext().Flats.ToList();
+            currentShearchFlat = currentShearchFlat.Where(p => ContainsText(p.BuildingNumberOfRoom.ToString(), TbSearch.Text)).ToList();
+            DdFlat.ItemsSource = currentShearchFlat;
+
+            if (flag && currentShearchFlat.Count == 0)
+            {
+                MessageBox.Show("Кварнтира не найдена", "Внимание", MessageBoxButton.OK, MessageBoxImage.Hand);
+            }
+        }
+        private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            UpdateFlat();
+        }
+
     }
 }

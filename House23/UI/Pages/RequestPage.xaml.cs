@@ -27,34 +27,65 @@ namespace House23.UI.Pages
         public RequestPage()
         {
             InitializeComponent();
+            (DgRequest.Columns[6] as DataGridTextColumn).Binding.StringFormat = "dd.MM.yyyy";
+            UpdateRequest();
+        }
+        private void BtnAddRequest_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHandler.MainFrame.Navigate(new EditRequestPage(null));
+        }
+        private void BtnEditRequest_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHandler.MainFrame.Navigate(new EditRequestPage((sender as Button).DataContext as Request));
+        }
+        private void BtnDeleteRequest_Click(object sender, RoutedEventArgs e)
+        {
+            var requestsForRemoving = DgRequest.SelectedItems.Cast<Flat>().ToList();
+
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {requestsForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    ContextManager.GetContext().Flats.RemoveRange(requestsForRemoving);
+                    ContextManager.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены!");
+                    DgRequest.ItemsSource = ContextManager.GetContext().Requests.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
 
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            UpdateRequest();
         }
 
-        private void BtnEditRequest_Click(object sender, RoutedEventArgs e)
+        private string lastText;
+        private void UpdateRequest()
         {
+            bool flag = lastText == null || lastText.Length < TbSearch.Text.Length;
+            lastText = TbSearch.Text;
 
+            var currentShearchRequest = ContextManager.GetContext().Flats.ToList();
+            currentShearchRequest = currentShearchRequest.Where(p => ContainsText(p.BuildingNumberOfRoom.ToString(), TbSearch.Text)).ToList();
+            DgRequest.ItemsSource = currentShearchRequest;
+
+            if (flag && currentShearchRequest.Count == 0)
+            {
+                MessageBox.Show("Кварнтира не найдена", "Внимание", MessageBoxButton.OK, MessageBoxImage.Hand);
+            }
         }
 
-        private void BtnAddRequest_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnDeleteRequest_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             if (Visibility == Visibility.Visible)
             {
                 ContextManager.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DdRequest.ItemsSource = ContextManager.GetContext().Requests.ToList();
+                DgRequest.ItemsSource = ContextManager.GetContext().Requests.ToList();
             }
         }
     }

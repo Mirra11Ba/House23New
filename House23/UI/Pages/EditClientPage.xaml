@@ -37,7 +37,7 @@
                      Name="TbPatronymic" PreviewTextInput="TbPatronymic_PreviewTextInput"></TextBox>
             <TextBox Text="{Binding Phone}" MaxLength="11" Grid.Column="1" Grid.Row="3" Width="500" HorizontalAlignment="Left"
                      Name="TbPhone" PreviewTextInput="TbPhone_PreviewTextInput"></TextBox>
-            <TextBox Text="{Binding Comment}" MaxLength="15" Grid.Column="1" Grid.Row="4" Width="500" Height="80"
+            <TextBox Text="{Binding Comment}" Grid.Column="1" Grid.Row="4" Width="500" Height="80"
                          HorizontalAlignment="Left"  VerticalScrollBarVisibility="Visible" TextWrapping="Wrap">
             </TextBox>
             <Button Name="BtnSave" Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="5" Click="BtnSave_Click"></Button>

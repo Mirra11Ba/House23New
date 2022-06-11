@@ -65,62 +65,63 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Logic\DataBase\BaswModel.Context.cs">
+    <Compile Include="Logic\DataBase\BaseModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BaswModel.Context.tt</DependentUpon>
+      <DependentUpon>BaseModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Logic\DataBase\BaswModel.cs">
+    <Compile Include="Logic\DataBase\BaseModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BaswModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Logic\DataBase\BaswModel.Designer.cs">
+    <Compile Include="Logic\DataBase\BaseModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BaswModel.edmx</DependentUpon>
+      <DependentUpon>BaseModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Logic\DataBase\Client.cs">
-      <DependentUpon>BaswModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Logic\DataBase\ClientPartial.cs" />
     <Compile Include="Logic\DataBase\ContextManager.cs" />
     <Compile Include="Logic\DataBase\Developer.cs">
-      <DependentUpon>BaswModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Logic\DataBase\District.cs">
-      <DependentUpon>BaswModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Logic\DataBase\Employee.cs">
-      <DependentUpon>BaswModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Logic\DataBase\EmployeePartial.cs" />
     <Compile Include="Logic\DataBase\Flat.cs">
-      <DependentUpon>BaswModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Logic\DataBase\LoginHistory.cs">
-      <DependentUpon>BaswModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Logic\DataBase\Material.cs">
-      <DependentUpon>BaswModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Logic\DataBase\Request.cs">
-      <DependentUpon>BaswModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Logic\DataBase\RequestStatu.cs">
-      <DependentUpon>BaswModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Logic\DataBase\Role.cs">
-      <DependentUpon>BaswModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Logic\DataBase\Skyscraper.cs">
-      <DependentUpon>BaswModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Logic\DataBase\sysdiagram.cs">
-      <DependentUpon>BaswModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Logic\Handlers\EmployeeHandler.cs" />
     <Compile Include="Logic\Handlers\FrameHandler.cs" />
+    <Compile Include="Logic\Utils\Linq\LinqBetween.cs" />
     <Compile Include="Logic\Utils\StringUtil.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -266,12 +267,12 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
-    <EntityDeploy Include="Logic\DataBase\BaswModel.edmx">
+    <EntityDeploy Include="Logic\DataBase\BaseModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BaswModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>BaseModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Logic\DataBase\BaswModel.edmx.diagram">
-      <DependentUpon>BaswModel.edmx</DependentUpon>
+    <None Include="Logic\DataBase\BaseModel.edmx.diagram">
+      <DependentUpon>BaseModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -302,19 +303,26 @@
     <Resource Include="Resources\quest.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Logic\DataBase\BaswModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BaswModel.edmx</DependentUpon>
-      <LastGenOutput>BaswModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Logic\DataBase\BaswModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BaswModel.edmx</DependentUpon>
-      <LastGenOutput>BaswModel.cs</LastGenOutput>
-    </Content>
+    <Resource Include="Resources\black-rem.png" />
+    <Resource Include="Resources\del.png" />
+    <Resource Include="Resources\x.png" />
+    <Resource Include="Resources\plus.png" />
+    <Resource Include="Resources\pen.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UI\Pages\HRManager\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logic\DataBase\BaseModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BaseModel.edmx</DependentUpon>
+      <LastGenOutput>BaseModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Logic\DataBase\BaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BaseModel.edmx</DependentUpon>
+      <LastGenOutput>BaseModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

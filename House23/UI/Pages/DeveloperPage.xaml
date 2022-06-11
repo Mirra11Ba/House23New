@@ -35,13 +35,25 @@
                 <DataGridTemplateColumn Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Name="BtnEditDeveloper" Content="Редактировать" Click="BtnEditDeveloper_Click"></Button>
+                            <Button Name="BtnEditDeveloper" Click="BtnEditDeveloper_Click"
+                                     Background="white" BorderBrush="Transparent" 
+                                    Width="40" Height="40" Foreground="Black">
+                                <Image Source="/Resources/pen.png" Width="20" Height="20"></Image>
+                            </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="BtnAddDeveloper" Content="Добавить" Grid.Row="3" HorizontalAlignment="Left" Click="BtnAddDeveloper_Click"></Button>
-        <Button Name="BtnDeleteDeveloperr" Content="Удалить" Grid.Row="3" HorizontalAlignment="Right" Click="BtnDeleteDeveloper_Click"></Button>
+        <Button Name="BtnAddDeveloper" Grid.Row="3" HorizontalAlignment="Left" Click="BtnAddDeveloper_Click"
+                Background="white" BorderBrush="Transparent" 
+                Width="40" Height="40" Foreground="Black">
+            <Image Source="/Resources/plus.png" Width="25" Height="25"></Image>
+        </Button>
+        <Button Name="BtnDeleteDeveloperr" Grid.Row="3" HorizontalAlignment="Right" Click="BtnDeleteDeveloper_Click"
+                Background="white" BorderBrush="Transparent" 
+                Width="40" Height="40" Foreground="Black">
+            <Image Source="/Resources/black-rem.png" Width="25" Height="25"></Image>
+        </Button>
     </Grid>
 </Page>

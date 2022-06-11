@@ -1,20 +1,12 @@
-﻿using System;
+﻿using House23.Logic.DataBase;
+using House23.Logic.Handlers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-using House23.Logic.Handlers;
-using House23.Logic.DataBase;
 using static House23.Logic.Utils.StringUtil;
 
 namespace House23.UI.Pages
@@ -24,14 +16,72 @@ namespace House23.UI.Pages
     /// </summary>
     public partial class EditRequestPage : Page
     {
-        public EditRequestPage()
+
+        private Request currentRequest = new Request();
+        public EditRequestPage(Request selectedRequest)
         {
             InitializeComponent();
+            if (selectedRequest != null)
+                currentRequest = selectedRequest;
+            DataContext = currentRequest;
+            var clients = ContextManager.GetContext().Clients.ToList();
+            var clientsFil = new List<Client>();
+            foreach (var item in clients)
+            {
+                var clientAttach = ContextManager.GetContext().Clients.Attach(item);
+                Employee[] employeesArray = clientAttach.Employees.ToArray();
+                if (employeesArray.Length == 1 && employeesArray[0].IdEmployee == (EmployeeHandler.EmployeeActive.IdEmployee))
+                {
+                    clientsFil.Add(clientAttach);
+                }
+            }
+
+            CbClient.ItemsSource = clientsFil;
+            CbClient.SelectedIndex = 0;
+            CbDistrict.ItemsSource = ContextManager.GetContext().Districts.ToList();
+            CbRequestStatus.ItemsSource = ContextManager.GetContext().RequestStatus.ToList();
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("в разработке");
+            StringBuilder errors = new StringBuilder();
+
+            if (currentRequest.Client == null)
+                errors.AppendLine("Выберите клиента");
+            if (currentRequest.MaximumPrice == 0)
+                errors.AppendLine("Укажите max стоимость квартиры");
+            if (currentRequest.NumberOfRooms == 0)
+                errors.AppendLine("Укажите количество комнат");
+            if (currentRequest.MinimumArea == 0)
+                errors.AppendLine("Укажите min площадь");
+            if (DpDateOfRequest.SelectedDate == null)
+                errors.AppendLine("Укажите дату заявки");
+            if (currentRequest.District == null)
+                errors.AppendLine("Укажите район");
+            if (currentRequest.District == null)
+                errors.AppendLine("Укажите подъезд");
+            if (currentRequest.RequestStatu == null)
+                errors.AppendLine("Выберите статус заявки");
+
+            if (errors.Length > 0)
+            {
+                MessageBox.Show(errors.ToString(), "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (currentRequest.IdRequest == 0)
+                currentRequest.Employee = ContextManager.GetContext().Employees.Attach(EmployeeHandler.EmployeeActive);
+                ContextManager.GetContext().Requests.Add(currentRequest);
+            try
+            {
+                ContextManager.GetContext().SaveChanges();
+                MessageBox.Show("Информация сохранена");
+                FrameHandler.MainFrame.GoBack();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
 
         private void TbMinimumPrice_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -69,9 +119,9 @@ namespace House23.UI.Pages
             CheckIsNumeric(e, messageText, messageTitle);
         }
 
-        private void CbEmployee_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CbClient_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //var selectedEmployee = CbEmployee.SelectedItem as ContextManager.GetContext().Employee;
+            currentRequest.Client = (Client)CbClient.SelectedItem;
         }
     }
 }

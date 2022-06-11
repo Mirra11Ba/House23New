@@ -77,6 +77,12 @@ namespace House23.UI.Pages
             if (currentEmployee.Role == null)
                 errors.AppendLine("Выберите роль");
 
+            if (TbPhone.Text.Length < 11)
+            {
+                MessageBox.Show("Телефон не может быть меньше 11 цифр", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString(), "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);

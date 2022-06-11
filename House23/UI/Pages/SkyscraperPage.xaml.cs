@@ -30,30 +30,61 @@ namespace House23.UI.Pages
         }
         private void BtnAddSkyscraper_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            FrameHandler.MainFrame.Navigate(new EditSkyscraperPage(null));
         }
         private void BtnEditSkyscraper_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            FrameHandler.MainFrame.Navigate(new EditSkyscraperPage((sender as Button).DataContext as Skyscraper));
         }
         private void BtnDeleteSkyscraper_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке");
+            var skyscraperForRemoving = DgSkyscraper.SelectedItems.Cast<Skyscraper>().ToList();
+
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {skyscraperForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    ContextManager.GetContext().Skyscrapers.RemoveRange(skyscraperForRemoving);
+                    ContextManager.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены!");
+                    DgSkyscraper.ItemsSource = ContextManager.GetContext().Skyscrapers.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
 
+        private string lastText;
+        private void UpdateSkyscraper()
+        {
+            bool flag = lastText == null || lastText.Length < TbSearch.Text.Length;
+            lastText = TbSearch.Text;
+
+            var currentShearchSkyscraper = ContextManager.GetContext().Skyscrapers.ToList();
+            currentShearchSkyscraper = currentShearchSkyscraper.Where(p => ContainsText(p.Name.ToString(), TbSearch.Text)).ToList();
+            DgSkyscraper.ItemsSource = currentShearchSkyscraper;
+
+            if (flag && currentShearchSkyscraper.Count == 0)
+            {
+                MessageBox.Show("Высотный дом не найден", "Внимание", MessageBoxButton.OK, MessageBoxImage.Hand);
+            }
+        }
+        private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            UpdateSkyscraper();
+        }
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             if (Visibility == Visibility.Visible)
             {
                 ContextManager.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DdSkyscraper.ItemsSource = ContextManager.GetContext().Skyscrapers.ToList();
+                DgSkyscraper.ItemsSource = ContextManager.GetContext().Skyscrapers.ToList();
             }
         }
 
-        private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            MessageBox.Show("В разработке");
-        }
+
 
     }
 }

@@ -25,7 +25,6 @@
                 <RowDefinition Height="85"></RowDefinition>
                 <RowDefinition Height="85"></RowDefinition>
                 <RowDefinition Height="85"></RowDefinition>
-                <RowDefinition Height="85"></RowDefinition>
             </Grid.RowDefinitions>
             <TextBlock Text="Клиент" Grid.Row="0" Style="{StaticResource TbEditPageText}"></TextBlock>
             <TextBlock Text="Min цена" Grid.Row="1" Style="{StaticResource TbEditPageText}"></TextBlock>
@@ -35,11 +34,10 @@
             <TextBlock Text="Max площадь" Grid.Row="5" Style="{StaticResource TbEditPageText}"></TextBlock>
             <TextBlock Text="Дата заявки" Grid.Row="6" Style="{StaticResource TbEditPageText}"></TextBlock>
             <TextBlock Text="Район" Grid.Row="7" Style="{StaticResource TbEditPageText}"></TextBlock>
-            <TextBlock Text="Сотрудник" Grid.Row="8" Style="{StaticResource TbEditPageText}"></TextBlock>
-            <TextBlock Text="Статус" Grid.Row="9" Style="{StaticResource TbEditPageText}"></TextBlock>
+            <TextBlock Text="Статус" Grid.Row="8" Style="{StaticResource TbEditPageText}"></TextBlock>
 
 
-            <ComboBox x:Name="CbClient" DisplayMemberPath="FullName" Grid.Row="0" Grid.Column="1" Width="500" HorizontalAlignment="Left"></ComboBox>
+            <ComboBox x:Name="CbClient" DisplayMemberPath="FullName" Grid.Row="0" Grid.Column="1" Width="500" HorizontalAlignment="Left" SelectionChanged="CbClient_SelectionChanged"></ComboBox>
             <TextBox Text="{Binding MinimumPrice}" MaxLength="30" Grid.Column="1" Grid.Row="1" Width="500" HorizontalAlignment="Left" 
                      Name="TbMinimumPrice"
                      PreviewTextInput="TbMinimumPrice_PreviewTextInput"></TextBox>
@@ -57,8 +55,7 @@
                      PreviewTextInput="TbMaximumArea_PreviewTextInput"></TextBox>
             <DatePicker Name="DpDateOfRequest" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left"></DatePicker>
             <ComboBox x:Name="CbDistrict" SelectedItem="{Binding District}" DisplayMemberPath="Name" Grid.Row="7" Grid.Column="1" Width="500" HorizontalAlignment="Left"></ComboBox>
-            <ComboBox x:Name="CbEmployee" DisplayMemberPath="FullName" Grid.Row="8" Grid.Column="1" Width="500" HorizontalAlignment="Left" SelectionChanged="CbEmployee_SelectionChanged"></ComboBox>
-            <ComboBox x:Name="CbRequestStatus" SelectedItem="{Binding RequestStatus}"  DisplayMemberPath="Status" Grid.Row="9" Grid.Column="1" Width="500" HorizontalAlignment="Left"></ComboBox>
+            <ComboBox x:Name="CbRequestStatus" SelectedItem="{Binding RequestStatu}"  DisplayMemberPath="Status" Grid.Row="8" Grid.Column="1" Width="500" HorizontalAlignment="Left"></ComboBox>
             <Button Name="BtnSave" Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="10" Click="BtnSave_Click"></Button>
         </Grid>
     </ScrollViewer>

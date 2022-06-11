@@ -1,23 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using House23.Logic.DataBase;
+using House23.Logic.Handlers;
+using Microsoft.Win32;
+using System;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-using House23.Logic.Handlers;
-using House23.Logic.DataBase;
 using static House23.Logic.Utils.StringUtil;
-using Microsoft.Win32;
-using System.IO;
 
 namespace House23.UI.Pages
 {
@@ -38,8 +31,7 @@ namespace House23.UI.Pages
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
-            
-            //if (!validField(TbFirstName.Text)) errors.AppendLine("Укажите имя сотрудника");
+
             if (currentFlat.BuildingNumberOfRoom == 0)
                 errors.AppendLine("Укажите строительный № квартиры");
             if (currentFlat.Price == 0)
@@ -82,8 +74,27 @@ namespace House23.UI.Pages
             if (dialog.ShowDialog() == true)
             {
                 currentFlat.ImagePreview = File.ReadAllBytes(dialog.FileName);
+
+                ImDynamicFlat.Source = LoadImage(currentFlat.ImagePreview);
                 MessageBox.Show("Картинка добавлена");
             }
+        }
+
+        private BitmapImage LoadImage(byte[] imageData)
+        {
+            var image = new BitmapImage();
+            using (var mem = new MemoryStream(imageData))
+            {
+                mem.Position = 0;
+                image.BeginInit();
+                image.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
+                image.CacheOption = BitmapCacheOption.OnLoad;
+                image.UriSource = null;
+                image.StreamSource = mem;
+                image.EndInit();
+            }
+            image.Freeze();
+            return image;
         }
 
         private void TbBuildingNumberOfRoom_PreviewTextInput(object sender, TextCompositionEventArgs e)
