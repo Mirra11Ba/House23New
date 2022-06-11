@@ -25,21 +25,46 @@ namespace House23.UI.Pages
     /// </summary>
     public partial class ViewFlatPage : Page
     {
+        private bool constructorFinal = false;
+
         public ViewFlatPage()
         {
             InitializeComponent();
-            var allSkyscrapers = ContextManager.GetContext().Skyscrapers.ToList();
-            allSkyscrapers.Insert(0, new Skyscraper
+            try
             {
-                Name = "Все ЖК"
-            });
-            CbSkyscraper.ItemsSource = allSkyscrapers;
-            CbSkyscraper.SelectedIndex = 0;
+                var allDistricts = ContextManager.GetContext().Districts.ToList();
+                var allSkyscrapers = ContextManager.GetContext().Skyscrapers.ToList();
+                
+                allDistricts.Insert(0, new District
+                {
+                    Name = "Все Районы"
+                });
+                allSkyscrapers.Insert(0, new Skyscraper
+                {
+                    Name = "Все ЖК"
+                });
+
+                CbDistrict.ItemsSource = allDistricts;
+                CbSkyscraper.ItemsSource = allSkyscrapers;
+
+                CbDistrict.SelectedIndex = 0;
+                CbSkyscraper.SelectedIndex = 0;
+                constructorFinal = true;
+            }
+            catch (Exception e)
+            {
+                System.Console.WriteLine(e);
+                throw;
+            }
 
             UpdateFlats();
         }
         private void UpdateFlats()
         {
+            if (!constructorFinal)
+            {
+                return;
+            }
             var currentFlats = ContextManager.GetContext().Flats.ToList();
 
             if (CbSkyscraper.SelectedIndex > 0)
@@ -73,9 +98,46 @@ namespace House23.UI.Pages
                 
                 } 
              ).ToList();
-            currentFlats = currentFlats.Where(p => p.Price.ToString().Contains(TbSearchMaxPrice.Text.ToLower())).ToList();
-            currentFlats = currentFlats.Where(p => p.Area.ToString().Contains(TbSearchMinArea.Text.ToLower())).ToList();
-            currentFlats = currentFlats.Where(p => p.Area.ToString().Contains(TbSearchMaxArea.Text.ToLower())).ToList();
+
+            currentFlats = currentFlats.Where(p =>
+                {
+                    var textMinArea = TbSearchMinArea.Text;
+                    var textMaxArea = TbSearchMaxArea.Text;
+                    var minArea = 0m;
+                    var maxArea = decimal.MaxValue;
+                    if (textMinArea.Length != 0)
+                    {
+                        if (decimal.TryParse(TbSearchMinArea.Text, out decimal minAreaTemp))
+                        {
+                            minArea = minAreaTemp;
+                        }
+                    }
+                    if (textMaxArea.Length != 0)
+                    {
+                        if (decimal.TryParse(TbSearchMaxArea.Text, out decimal maxAreaTemp))
+                        {
+                            maxArea = maxAreaTemp;
+                        }
+                    }
+
+                    return p.Area >= minArea && p.Area <= maxArea;
+
+                }
+            ).ToList();
+
+            currentFlats = currentFlats.Where(p =>
+            {
+                var skyscraper = CbSkyscraper.SelectedItem as Skyscraper;
+                if (skyscraper.Name == "Все ЖК") return true;
+                return p.Skyscraper.IdSkyscraper == skyscraper.IdSkyscraper;
+            }).ToList();
+
+            currentFlats = currentFlats.Where(p =>
+            {
+                var district = CbDistrict.SelectedItem as District;
+                if (district.Name == "Все Районы") return true;
+                return p.Skyscraper.District.IdDistrict == district.IdDistrict;
+            }).ToList();
 
             LvFlats.ItemsSource = currentFlats.OrderByDescending(p => p.Price).ToList();
             LvFlats.SelectedIndex = 0;

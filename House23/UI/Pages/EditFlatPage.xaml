@@ -36,12 +36,16 @@
                 <TextBlock Text="Изображение" Grid.Row="6" Style="{StaticResource TbEditPageText}"></TextBlock>
                 <TextBlock Text="Высотный дом" Grid.Row="7" Style="{StaticResource TbEditPageText}"></TextBlock>
 
-                    <TextBox Text="{Binding BuildingNumberOfRoom}" Grid.Column="1" Grid.Row="0" Width="500" HorizontalAlignment="Left" 
+                <TextBox Text="{Binding BuildingNumberOfRoom}" Grid.Column="1" Grid.Row="0" Width="500" HorizontalAlignment="Left" 
                              Name="TbBuildingNumberOfRoom" 
-                             PreviewTextInput="TbBuildingNumberOfRoom_PreviewTextInput"></TextBox>
+                             PreviewTextInput="TbBuildingNumberOfRoom_PreviewTextInput"
+                             GotFocus="TextBox_GotFocus"
+                             SelectionChanged="TextBox_SelectionChanged"></TextBox>
                     <TextBox Text="{Binding Price}" Grid.Column="1" Grid.Row="1" Width="500" HorizontalAlignment="Left"
                              Name="TbPrice" 
-                             PreviewTextInput="TbPrice_PreviewTextInput"></TextBox>
+                             PreviewTextInput="TbPrice_PreviewTextInput"
+                             GotFocus="TextBox_GotFocus"
+                             SelectionChanged="TextBox_SelectionChanged"></TextBox>
                     <TextBox Text="{Binding NumberOfRooms}" Grid.Column="1" Grid.Row="2" Width="500" HorizontalAlignment="Left"
                              Name="TbNumberOfRooms" 
                              PreviewTextInput="TbNumberOfRooms_PreviewTextInput"></TextBox>

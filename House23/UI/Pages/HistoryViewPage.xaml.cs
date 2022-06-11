@@ -15,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using static House23.Logic.Utils.StringUtil;
+
 namespace House23.UI.Pages
 {
     /// <summary>
@@ -35,11 +37,27 @@ namespace House23.UI.Pages
                 cvTasks.SortDescriptions.Clear();
                 cvTasks.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Descending));
             }
+            UpdateLoginHistory();
         }
 
+        private string lastText;
+        private void UpdateLoginHistory()
+        {
+            bool flag = lastText == null || lastText.Length < TbSearch.Text.Length;
+            lastText = TbSearch.Text;
+
+            var currentShearchRequest = ContextManager.GetContext().LoginHistories.ToList();
+            currentShearchRequest = currentShearchRequest.Where(p => ContainsText(p.Employee.FullName.ToString(), TbSearch.Text)).ToList();
+            DgLoginHistory.ItemsSource = currentShearchRequest;
+
+            if (flag && currentShearchRequest.Count == 0)
+            {
+                MessageBox.Show("Сотрудник не найден", "Внимание", MessageBoxButton.OK, MessageBoxImage.Hand);
+            }
+        }
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            MessageBox.Show("fjh");
+            UpdateLoginHistory();
         }
 
         private void BtnPrint_Click(object sender, RoutedEventArgs e)

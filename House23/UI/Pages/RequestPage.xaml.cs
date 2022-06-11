@@ -69,13 +69,13 @@ namespace House23.UI.Pages
             bool flag = lastText == null || lastText.Length < TbSearch.Text.Length;
             lastText = TbSearch.Text;
 
-            var currentShearchRequest = ContextManager.GetContext().Flats.ToList();
-            currentShearchRequest = currentShearchRequest.Where(p => ContainsText(p.BuildingNumberOfRoom.ToString(), TbSearch.Text)).ToList();
+            var currentShearchRequest = ContextManager.GetContext().Requests.ToList();
+            currentShearchRequest = currentShearchRequest.Where(p => ContainsText(p.Client.FullName.ToString(), TbSearch.Text)).ToList();
             DgRequest.ItemsSource = currentShearchRequest;
 
             if (flag && currentShearchRequest.Count == 0)
             {
-                MessageBox.Show("Кварнтира не найдена", "Внимание", MessageBoxButton.OK, MessageBoxImage.Hand);
+                MessageBox.Show("Клиент не найдена", "Внимание", MessageBoxButton.OK, MessageBoxImage.Hand);
             }
         }
 
