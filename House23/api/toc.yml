@@ -1,0 +1,83 @@
+### YamlMime:TableOfContent
+- uid: House23
+  name: House23
+  items:
+  - uid: House23.App
+    name: App
+  - uid: House23.MainWindow
+    name: MainWindow
+- uid: House23.Logic.DataBase
+  name: House23.Logic.DataBase
+  items:
+  - uid: House23.Logic.DataBase.Client
+    name: Client
+  - uid: House23.Logic.DataBase.ContextManager
+    name: ContextManager
+  - uid: House23.Logic.DataBase.Developer
+    name: Developer
+  - uid: House23.Logic.DataBase.District
+    name: District
+  - uid: House23.Logic.DataBase.Employee
+    name: Employee
+  - uid: House23.Logic.DataBase.Flat
+    name: Flat
+  - uid: House23.Logic.DataBase.House23Entities
+    name: House23Entities
+  - uid: House23.Logic.DataBase.LoginHistory
+    name: LoginHistory
+  - uid: House23.Logic.DataBase.Material
+    name: Material
+  - uid: House23.Logic.DataBase.Request
+    name: Request
+  - uid: House23.Logic.DataBase.RequestStatu
+    name: RequestStatu
+  - uid: House23.Logic.DataBase.Role
+    name: Role
+  - uid: House23.Logic.DataBase.Skyscraper
+    name: Skyscraper
+  - uid: House23.Logic.DataBase.sysdiagram
+    name: sysdiagram
+- uid: House23.Logic.Utils
+  name: House23.Logic.Utils
+  items:
+  - uid: House23.Logic.Utils.StringUtil
+    name: StringUtil
+- uid: House23.UI.Pages
+  name: House23.UI.Pages
+  items:
+  - uid: House23.UI.Pages.AuthorizationPage
+    name: AuthorizationPage
+  - uid: House23.UI.Pages.ClientPage
+    name: ClientPage
+  - uid: House23.UI.Pages.DeveloperPage
+    name: DeveloperPage
+  - uid: House23.UI.Pages.EditClientPage
+    name: EditClientPage
+  - uid: House23.UI.Pages.EditClientPage.RefreshContent
+    name: EditClientPage.RefreshContent
+  - uid: House23.UI.Pages.EditDeveloperPage
+    name: EditDeveloperPage
+  - uid: House23.UI.Pages.EditFlatPage
+    name: EditFlatPage
+  - uid: House23.UI.Pages.EditRealtorPage
+    name: EditRealtorPage
+  - uid: House23.UI.Pages.EditRequestPage
+    name: EditRequestPage
+  - uid: House23.UI.Pages.EditSkyscraperPage
+    name: EditSkyscraperPage
+  - uid: House23.UI.Pages.FlatPage
+    name: FlatPage
+  - uid: House23.UI.Pages.LoginHistoryPage
+    name: LoginHistoryPage
+  - uid: House23.UI.Pages.MenuHRManagerPage
+    name: MenuHRManagerPage
+  - uid: House23.UI.Pages.MenuRealtorPage
+    name: MenuRealtorPage
+  - uid: House23.UI.Pages.RealtorPage
+    name: RealtorPage
+  - uid: House23.UI.Pages.RequestPage
+    name: RequestPage
+  - uid: House23.UI.Pages.SkyscraperPage
+    name: SkyscraperPage
+  - uid: House23.UI.Pages.ViewFlatPage
+    name: ViewFlatPage

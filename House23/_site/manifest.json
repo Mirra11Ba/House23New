@@ -1,0 +1,594 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/МИРРА/ККЭП учеба/3 курс/$$$Курсач/МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов/House23/House23",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.App.html",
+          "hash": "qTK/kMCYmhGuS90e6m2mSxfKSxz3rVn9/OHd+LXTHTI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.Client.html",
+          "hash": "qDnf4BT0k4opmiiOM9qpb8bkoX2dcWL3wjmOyp1FjBQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.ContextManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.ContextManager.html",
+          "hash": "gz/6PIHpS5zlW/HuQY8UFYwlNuD6j123sXvDwDNS5BA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.Developer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.Developer.html",
+          "hash": "QyekQRJrimaZFJQV+i/wh6n1S7J70rIsPWlOKs3BZV8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.District.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.District.html",
+          "hash": "9YVDr2W2Pj46woiwWAHlnGX3YetkBQRxZkLiCbV4XbQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.Employee.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.Employee.html",
+          "hash": "PZsZBTjP/ep8zDiQ3P/aYkdE6v4kk2OHp2Y4kbzXiTc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.Flat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.Flat.html",
+          "hash": "jrwgjRvAPWYSjbNJH2DEqd4atvOXxmmu6kEl5kha5T4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.House23Entities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.House23Entities.html",
+          "hash": "PK7N6HBAo/KKOzax83S39vVTTu0/XFAxMv/YKcjXfQ4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.LoginHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.LoginHistory.html",
+          "hash": "3tDm2+oPnf9TLjy2df4e/1/Ft3A1qSAvuLhFKmYM/Uw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.Material.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.Material.html",
+          "hash": "KWXomGqDq8/toDYIhvMNaWzr3pYjXMplLfycCVwyXg0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.Request.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.Request.html",
+          "hash": "CBgxW6geaBRu9xuC9twQXZQs5V57h2bH3d42hEEUx3k="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.RequestStatu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.RequestStatu.html",
+          "hash": "4wIQreGtrGDmbonKWAsHiMgF8Fzml+dDS+ifZZLIBao="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.Role.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.Role.html",
+          "hash": "zqq9MOiQsDzY85qvJrTiZ4lxKUUG+IZmMgWt5y2ikMQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.Skyscraper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.Skyscraper.html",
+          "hash": "VLs2PV89U6mxOq5ZMso1CfMijxbGdcEIKWZFSUKwP4k="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.sysdiagram.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.sysdiagram.html",
+          "hash": "IS688lVh5ps74YqOby1x33AfFLScfyR2d1qbkl9I54U="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.DataBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.DataBase.html",
+          "hash": "6XXKkmqfejqp6fH88drxSOhd7yi6Rw6FyE1Q/qgO4TQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.Utils.StringUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.Utils.StringUtil.html",
+          "hash": "FUcZXBzl7suK/H4fbpZlJYnZAySxXEPg8vl5o+TAcXI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.Logic.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.Logic.Utils.html",
+          "hash": "31DndPkQa+fv5V75rzRdOc38WyJzlmhvrCioOYwqFP0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.MainWindow.html",
+          "hash": "ZiAdshj/E6+ZjsPtzISSuSyhk3toETYI4/dHK8zlhYw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.AuthorizationPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.AuthorizationPage.html",
+          "hash": "3N9ky/Ruf0fWhVFv5uHamq1NBBI627A2RjG4qqk+jxU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.ClientPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.ClientPage.html",
+          "hash": "IJxM8xZSa3bto3dhp+s81Y4UrAckb7nGzrY1iaDCgsk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.DeveloperPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.DeveloperPage.html",
+          "hash": "v7ZYSzmc1j7dqQfk7zPKn14lA57HX1Cv+I7UsOZAkkA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.EditClientPage.RefreshContent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.EditClientPage.RefreshContent.html",
+          "hash": "mRt/9haXFGvIYcfyBIF7dT47ukdohmVu58bKQHrZZhY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.EditClientPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.EditClientPage.html",
+          "hash": "P22NGT5kGG/4hvmUcSAUJMmeg7nwH+vCGlvqN2A7Fps="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.EditDeveloperPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.EditDeveloperPage.html",
+          "hash": "SEfvwl46bB2YfoTFFP5Lx9Olo6UDwX+uYpzYNScdlbI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.EditFlatPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.EditFlatPage.html",
+          "hash": "HYRy3E9XUJUbc4RhKuLqSzKbGoym5yfM7QkbF8PGZ38="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.EditRealtorPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.EditRealtorPage.html",
+          "hash": "qiGXxxkDOOMoE4Oz492XEX9iRA8j0bpy80nPLgI8Ebo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.EditRequestPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.EditRequestPage.html",
+          "hash": "c5NFg1R8UW+66NbGb8RsgLyYikZpmAZAqp3JGnx/eew="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.EditSkyscraperPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.EditSkyscraperPage.html",
+          "hash": "xLVJPZ4RHnR5iuxgiNsJA50wO/nEWq2vaiH+BrjyHmc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.FlatPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.FlatPage.html",
+          "hash": "vpPkq2JtRvWFzHjigDdAbnIlR/LJeRVosBQCmlh8ODw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.LoginHistoryPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.LoginHistoryPage.html",
+          "hash": "/7Qu/xQkJTMsc8NslP+MtchFbELGKfgXGdm0nGLAWKY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.MenuHRManagerPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.MenuHRManagerPage.html",
+          "hash": "pJgEzl2dFCvIFEPsp7RUr2fnGcNxVSwKUjyu/UFn+rk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.MenuRealtorPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.MenuRealtorPage.html",
+          "hash": "0DBv0V1hAHkw478oza+6jryv8oP68Cf6CArNGynsnzI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.RealtorPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.RealtorPage.html",
+          "hash": "G77jRuYdnwSNkv8EQPEHjZ+4KPd7QZUQCEPszIeB+L4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.RequestPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.RequestPage.html",
+          "hash": "ITlIqacf97TsFFLRbPFEVFb2H6HZXYXxq02pvajV9mw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.SkyscraperPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.SkyscraperPage.html",
+          "hash": "P7THXfAePh6wWWc+PawxwKEVjPOy4AVs28ldfWXh83Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.ViewFlatPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.ViewFlatPage.html",
+          "hash": "34Yg0y/7mHp73CGPpPCfSeL8JeJ141LJVdQAP5NmxR0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.UI.Pages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.UI.Pages.html",
+          "hash": "YLPr2dwi5BZh1/02qjhM0K+FXP9odCkli21W1YSxIbM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/House23.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/House23.html",
+          "hash": "juSe0e9OBnSBbkCLepT/0RnXcTgAksI2XYM5bqS9LPM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "S6HH25ziEUKWJk9c1SDkf4tv9pt+s1Em+CanR3D4XJQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "Wks78ey+MzXwIQ5GfwE+bWIZ+fyghpDWzonbpxAjWYg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "aOy2sep6UZV26oOkupcIBXuDgHQsCVz7R3i+I6vFl6Y="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "J2Ucrckdx4dg4IZOx6kwfAACTTn8pqVwhGnYicz3XjE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "WSuRrYiGwKKMbtdG9z8W9fXmLoCyTnGg9AxbPKLXm2Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 39,
+          "skipped_file_count": 39
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

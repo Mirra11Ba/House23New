@@ -1,0 +1,1231 @@
+### YamlMime:ManagedReference
+items:
+- uid: House23.Logic.DataBase.Request
+  commentId: T:House23.Logic.DataBase.Request
+  id: Request
+  parent: House23.Logic.DataBase
+  children:
+  - House23.Logic.DataBase.Request.#ctor
+  - House23.Logic.DataBase.Request.Client
+  - House23.Logic.DataBase.Request.District
+  - House23.Logic.DataBase.Request.Employee
+  - House23.Logic.DataBase.Request.Flats
+  - House23.Logic.DataBase.Request.IdClient
+  - House23.Logic.DataBase.Request.IdDistrict
+  - House23.Logic.DataBase.Request.IdEmployee
+  - House23.Logic.DataBase.Request.IdRequest
+  - House23.Logic.DataBase.Request.IdRequestStatus
+  - House23.Logic.DataBase.Request.MaximumArea
+  - House23.Logic.DataBase.Request.MaximumPrice
+  - House23.Logic.DataBase.Request.MinimumArea
+  - House23.Logic.DataBase.Request.MinimumPrice
+  - House23.Logic.DataBase.Request.NumberOfRooms
+  - House23.Logic.DataBase.Request.RequestDate
+  - House23.Logic.DataBase.Request.RequestStatu
+  langs:
+  - csharp
+  - vb
+  name: Request
+  nameWithType: Request
+  fullName: House23.Logic.DataBase.Request
+  type: Class
+  source:
+    id: Request
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 14
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public class Request
+    content.vb: Public Class Request
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: House23.Logic.DataBase.Request.#ctor
+  commentId: M:House23.Logic.DataBase.Request.#ctor
+  id: '#ctor'
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: Request()
+  nameWithType: Request.Request()
+  fullName: House23.Logic.DataBase.Request.Request()
+  type: Constructor
+  source:
+    id: .ctor
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 16
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public Request()
+    content.vb: Public Sub New
+  overload: House23.Logic.DataBase.Request.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Request.IdRequest
+  commentId: P:House23.Logic.DataBase.Request.IdRequest
+  id: IdRequest
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: IdRequest
+  nameWithType: Request.IdRequest
+  fullName: House23.Logic.DataBase.Request.IdRequest
+  type: Property
+  source:
+    id: IdRequest
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 22
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public int IdRequest { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IdRequest As Integer
+  overload: House23.Logic.DataBase.Request.IdRequest*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Request.MinimumPrice
+  commentId: P:House23.Logic.DataBase.Request.MinimumPrice
+  id: MinimumPrice
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: MinimumPrice
+  nameWithType: Request.MinimumPrice
+  fullName: House23.Logic.DataBase.Request.MinimumPrice
+  type: Property
+  source:
+    id: MinimumPrice
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 23
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public decimal? MinimumPrice { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Decimal}
+    content.vb: Public Property MinimumPrice As Decimal?
+  overload: House23.Logic.DataBase.Request.MinimumPrice*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Request.MaximumPrice
+  commentId: P:House23.Logic.DataBase.Request.MaximumPrice
+  id: MaximumPrice
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: MaximumPrice
+  nameWithType: Request.MaximumPrice
+  fullName: House23.Logic.DataBase.Request.MaximumPrice
+  type: Property
+  source:
+    id: MaximumPrice
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 24
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public decimal MaximumPrice { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property MaximumPrice As Decimal
+  overload: House23.Logic.DataBase.Request.MaximumPrice*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Request.NumberOfRooms
+  commentId: P:House23.Logic.DataBase.Request.NumberOfRooms
+  id: NumberOfRooms
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: NumberOfRooms
+  nameWithType: Request.NumberOfRooms
+  fullName: House23.Logic.DataBase.Request.NumberOfRooms
+  type: Property
+  source:
+    id: NumberOfRooms
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 25
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public int NumberOfRooms { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NumberOfRooms As Integer
+  overload: House23.Logic.DataBase.Request.NumberOfRooms*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Request.MinimumArea
+  commentId: P:House23.Logic.DataBase.Request.MinimumArea
+  id: MinimumArea
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: MinimumArea
+  nameWithType: Request.MinimumArea
+  fullName: House23.Logic.DataBase.Request.MinimumArea
+  type: Property
+  source:
+    id: MinimumArea
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 26
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public int MinimumArea { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MinimumArea As Integer
+  overload: House23.Logic.DataBase.Request.MinimumArea*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Request.MaximumArea
+  commentId: P:House23.Logic.DataBase.Request.MaximumArea
+  id: MaximumArea
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: MaximumArea
+  nameWithType: Request.MaximumArea
+  fullName: House23.Logic.DataBase.Request.MaximumArea
+  type: Property
+  source:
+    id: MaximumArea
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 27
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public int? MaximumArea { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property MaximumArea As Integer?
+  overload: House23.Logic.DataBase.Request.MaximumArea*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Request.RequestDate
+  commentId: P:House23.Logic.DataBase.Request.RequestDate
+  id: RequestDate
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: RequestDate
+  nameWithType: Request.RequestDate
+  fullName: House23.Logic.DataBase.Request.RequestDate
+  type: Property
+  source:
+    id: RequestDate
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 28
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public DateTime RequestDate { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property RequestDate As Date
+  overload: House23.Logic.DataBase.Request.RequestDate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Request.IdDistrict
+  commentId: P:House23.Logic.DataBase.Request.IdDistrict
+  id: IdDistrict
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: IdDistrict
+  nameWithType: Request.IdDistrict
+  fullName: House23.Logic.DataBase.Request.IdDistrict
+  type: Property
+  source:
+    id: IdDistrict
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 29
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public int IdDistrict { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IdDistrict As Integer
+  overload: House23.Logic.DataBase.Request.IdDistrict*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Request.IdEmployee
+  commentId: P:House23.Logic.DataBase.Request.IdEmployee
+  id: IdEmployee
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: IdEmployee
+  nameWithType: Request.IdEmployee
+  fullName: House23.Logic.DataBase.Request.IdEmployee
+  type: Property
+  source:
+    id: IdEmployee
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 30
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public int IdEmployee { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IdEmployee As Integer
+  overload: House23.Logic.DataBase.Request.IdEmployee*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Request.IdClient
+  commentId: P:House23.Logic.DataBase.Request.IdClient
+  id: IdClient
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: IdClient
+  nameWithType: Request.IdClient
+  fullName: House23.Logic.DataBase.Request.IdClient
+  type: Property
+  source:
+    id: IdClient
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 31
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public int IdClient { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IdClient As Integer
+  overload: House23.Logic.DataBase.Request.IdClient*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Request.IdRequestStatus
+  commentId: P:House23.Logic.DataBase.Request.IdRequestStatus
+  id: IdRequestStatus
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: IdRequestStatus
+  nameWithType: Request.IdRequestStatus
+  fullName: House23.Logic.DataBase.Request.IdRequestStatus
+  type: Property
+  source:
+    id: IdRequestStatus
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 32
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public int IdRequestStatus { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IdRequestStatus As Integer
+  overload: House23.Logic.DataBase.Request.IdRequestStatus*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Request.Client
+  commentId: P:House23.Logic.DataBase.Request.Client
+  id: Client
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: Client
+  nameWithType: Request.Client
+  fullName: House23.Logic.DataBase.Request.Client
+  type: Property
+  source:
+    id: Client
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 34
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual Client Client { get; set; }
+    parameters: []
+    return:
+      type: House23.Logic.DataBase.Client
+    content.vb: Public Overridable Property Client As Client
+  overload: House23.Logic.DataBase.Request.Client*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.Request.District
+  commentId: P:House23.Logic.DataBase.Request.District
+  id: District
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: District
+  nameWithType: Request.District
+  fullName: House23.Logic.DataBase.Request.District
+  type: Property
+  source:
+    id: District
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 35
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual District District { get; set; }
+    parameters: []
+    return:
+      type: House23.Logic.DataBase.District
+    content.vb: Public Overridable Property District As District
+  overload: House23.Logic.DataBase.Request.District*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.Request.Employee
+  commentId: P:House23.Logic.DataBase.Request.Employee
+  id: Employee
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: Employee
+  nameWithType: Request.Employee
+  fullName: House23.Logic.DataBase.Request.Employee
+  type: Property
+  source:
+    id: Employee
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 36
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual Employee Employee { get; set; }
+    parameters: []
+    return:
+      type: House23.Logic.DataBase.Employee
+    content.vb: Public Overridable Property Employee As Employee
+  overload: House23.Logic.DataBase.Request.Employee*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.Request.RequestStatu
+  commentId: P:House23.Logic.DataBase.Request.RequestStatu
+  id: RequestStatu
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: RequestStatu
+  nameWithType: Request.RequestStatu
+  fullName: House23.Logic.DataBase.Request.RequestStatu
+  type: Property
+  source:
+    id: RequestStatu
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 37
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual RequestStatu RequestStatu { get; set; }
+    parameters: []
+    return:
+      type: House23.Logic.DataBase.RequestStatu
+    content.vb: Public Overridable Property RequestStatu As RequestStatu
+  overload: House23.Logic.DataBase.Request.RequestStatu*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.Request.Flats
+  commentId: P:House23.Logic.DataBase.Request.Flats
+  id: Flats
+  parent: House23.Logic.DataBase.Request
+  langs:
+  - csharp
+  - vb
+  name: Flats
+  nameWithType: Request.Flats
+  fullName: House23.Logic.DataBase.Request.Flats
+  type: Property
+  source:
+    id: Flats
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Request.cs
+    startLine: 38
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual ICollection<Flat> Flats { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{House23.Logic.DataBase.Flat}
+    content.vb: Public Overridable Property Flats As ICollection(Of Flat)
+  overload: House23.Logic.DataBase.Request.Flats*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: House23.Logic.DataBase
+  commentId: N:House23.Logic.DataBase
+  name: House23.Logic.DataBase
+  nameWithType: House23.Logic.DataBase
+  fullName: House23.Logic.DataBase
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: House23.Logic.DataBase.Request.#ctor*
+  commentId: Overload:House23.Logic.DataBase.Request.#ctor
+  name: Request
+  nameWithType: Request.Request
+  fullName: House23.Logic.DataBase.Request.Request
+- uid: House23.Logic.DataBase.Request.IdRequest*
+  commentId: Overload:House23.Logic.DataBase.Request.IdRequest
+  name: IdRequest
+  nameWithType: Request.IdRequest
+  fullName: House23.Logic.DataBase.Request.IdRequest
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: House23.Logic.DataBase.Request.MinimumPrice*
+  commentId: Overload:House23.Logic.DataBase.Request.MinimumPrice
+  name: MinimumPrice
+  nameWithType: Request.MinimumPrice
+  fullName: House23.Logic.DataBase.Request.MinimumPrice
+- uid: System.Nullable{System.Decimal}
+  commentId: T:System.Nullable{System.Decimal}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Decimal>
+  nameWithType: Nullable<Decimal>
+  fullName: System.Nullable<System.Decimal>
+  nameWithType.vb: Nullable(Of Decimal)
+  fullName.vb: System.Nullable(Of System.Decimal)
+  name.vb: Nullable(Of Decimal)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.Request.MaximumPrice*
+  commentId: Overload:House23.Logic.DataBase.Request.MaximumPrice
+  name: MaximumPrice
+  nameWithType: Request.MaximumPrice
+  fullName: House23.Logic.DataBase.Request.MaximumPrice
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: House23.Logic.DataBase.Request.NumberOfRooms*
+  commentId: Overload:House23.Logic.DataBase.Request.NumberOfRooms
+  name: NumberOfRooms
+  nameWithType: Request.NumberOfRooms
+  fullName: House23.Logic.DataBase.Request.NumberOfRooms
+- uid: House23.Logic.DataBase.Request.MinimumArea*
+  commentId: Overload:House23.Logic.DataBase.Request.MinimumArea
+  name: MinimumArea
+  nameWithType: Request.MinimumArea
+  fullName: House23.Logic.DataBase.Request.MinimumArea
+- uid: House23.Logic.DataBase.Request.MaximumArea*
+  commentId: Overload:House23.Logic.DataBase.Request.MaximumArea
+  name: MaximumArea
+  nameWithType: Request.MaximumArea
+  fullName: House23.Logic.DataBase.Request.MaximumArea
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.Request.RequestDate*
+  commentId: Overload:House23.Logic.DataBase.Request.RequestDate
+  name: RequestDate
+  nameWithType: Request.RequestDate
+  fullName: House23.Logic.DataBase.Request.RequestDate
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: House23.Logic.DataBase.Request.IdDistrict*
+  commentId: Overload:House23.Logic.DataBase.Request.IdDistrict
+  name: IdDistrict
+  nameWithType: Request.IdDistrict
+  fullName: House23.Logic.DataBase.Request.IdDistrict
+- uid: House23.Logic.DataBase.Request.IdEmployee*
+  commentId: Overload:House23.Logic.DataBase.Request.IdEmployee
+  name: IdEmployee
+  nameWithType: Request.IdEmployee
+  fullName: House23.Logic.DataBase.Request.IdEmployee
+- uid: House23.Logic.DataBase.Request.IdClient*
+  commentId: Overload:House23.Logic.DataBase.Request.IdClient
+  name: IdClient
+  nameWithType: Request.IdClient
+  fullName: House23.Logic.DataBase.Request.IdClient
+- uid: House23.Logic.DataBase.Request.IdRequestStatus*
+  commentId: Overload:House23.Logic.DataBase.Request.IdRequestStatus
+  name: IdRequestStatus
+  nameWithType: Request.IdRequestStatus
+  fullName: House23.Logic.DataBase.Request.IdRequestStatus
+- uid: House23.Logic.DataBase.Request.Client*
+  commentId: Overload:House23.Logic.DataBase.Request.Client
+  name: Client
+  nameWithType: Request.Client
+  fullName: House23.Logic.DataBase.Request.Client
+- uid: House23.Logic.DataBase.Client
+  commentId: T:House23.Logic.DataBase.Client
+  parent: House23.Logic.DataBase
+  name: Client
+  nameWithType: Client
+  fullName: House23.Logic.DataBase.Client
+- uid: House23.Logic.DataBase.Request.District*
+  commentId: Overload:House23.Logic.DataBase.Request.District
+  name: District
+  nameWithType: Request.District
+  fullName: House23.Logic.DataBase.Request.District
+- uid: House23.Logic.DataBase.District
+  commentId: T:House23.Logic.DataBase.District
+  parent: House23.Logic.DataBase
+  name: District
+  nameWithType: District
+  fullName: House23.Logic.DataBase.District
+- uid: House23.Logic.DataBase.Request.Employee*
+  commentId: Overload:House23.Logic.DataBase.Request.Employee
+  name: Employee
+  nameWithType: Request.Employee
+  fullName: House23.Logic.DataBase.Request.Employee
+- uid: House23.Logic.DataBase.Employee
+  commentId: T:House23.Logic.DataBase.Employee
+  parent: House23.Logic.DataBase
+  name: Employee
+  nameWithType: Employee
+  fullName: House23.Logic.DataBase.Employee
+- uid: House23.Logic.DataBase.Request.RequestStatu*
+  commentId: Overload:House23.Logic.DataBase.Request.RequestStatu
+  name: RequestStatu
+  nameWithType: Request.RequestStatu
+  fullName: House23.Logic.DataBase.Request.RequestStatu
+- uid: House23.Logic.DataBase.RequestStatu
+  commentId: T:House23.Logic.DataBase.RequestStatu
+  parent: House23.Logic.DataBase
+  name: RequestStatu
+  nameWithType: RequestStatu
+  fullName: House23.Logic.DataBase.RequestStatu
+- uid: House23.Logic.DataBase.Request.Flats*
+  commentId: Overload:House23.Logic.DataBase.Request.Flats
+  name: Flats
+  nameWithType: Request.Flats
+  fullName: House23.Logic.DataBase.Request.Flats
+- uid: System.Collections.Generic.ICollection{House23.Logic.DataBase.Flat}
+  commentId: T:System.Collections.Generic.ICollection{House23.Logic.DataBase.Flat}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Flat>
+  nameWithType: ICollection<Flat>
+  fullName: System.Collections.Generic.ICollection<House23.Logic.DataBase.Flat>
+  nameWithType.vb: ICollection(Of Flat)
+  fullName.vb: System.Collections.Generic.ICollection(Of House23.Logic.DataBase.Flat)
+  name.vb: ICollection(Of Flat)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.Flat
+    name: Flat
+    nameWithType: Flat
+    fullName: House23.Logic.DataBase.Flat
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.Flat
+    name: Flat
+    nameWithType: Flat
+    fullName: House23.Logic.DataBase.Flat
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

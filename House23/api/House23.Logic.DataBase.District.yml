@@ -1,0 +1,665 @@
+### YamlMime:ManagedReference
+items:
+- uid: House23.Logic.DataBase.District
+  commentId: T:House23.Logic.DataBase.District
+  id: District
+  parent: House23.Logic.DataBase
+  children:
+  - House23.Logic.DataBase.District.#ctor
+  - House23.Logic.DataBase.District.IdDistrict
+  - House23.Logic.DataBase.District.Name
+  - House23.Logic.DataBase.District.Requests
+  - House23.Logic.DataBase.District.Skyscrapers
+  langs:
+  - csharp
+  - vb
+  name: District
+  nameWithType: District
+  fullName: House23.Logic.DataBase.District
+  type: Class
+  source:
+    id: District
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\District.cs
+    startLine: 14
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public class District
+    content.vb: Public Class District
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: House23.Logic.DataBase.District.#ctor
+  commentId: M:House23.Logic.DataBase.District.#ctor
+  id: '#ctor'
+  parent: House23.Logic.DataBase.District
+  langs:
+  - csharp
+  - vb
+  name: District()
+  nameWithType: District.District()
+  fullName: House23.Logic.DataBase.District.District()
+  type: Constructor
+  source:
+    id: .ctor
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\District.cs
+    startLine: 16
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public District()
+    content.vb: Public Sub New
+  overload: House23.Logic.DataBase.District.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.District.IdDistrict
+  commentId: P:House23.Logic.DataBase.District.IdDistrict
+  id: IdDistrict
+  parent: House23.Logic.DataBase.District
+  langs:
+  - csharp
+  - vb
+  name: IdDistrict
+  nameWithType: District.IdDistrict
+  fullName: House23.Logic.DataBase.District.IdDistrict
+  type: Property
+  source:
+    id: IdDistrict
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\District.cs
+    startLine: 23
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public int IdDistrict { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IdDistrict As Integer
+  overload: House23.Logic.DataBase.District.IdDistrict*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.District.Name
+  commentId: P:House23.Logic.DataBase.District.Name
+  id: Name
+  parent: House23.Logic.DataBase.District
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: District.Name
+  fullName: House23.Logic.DataBase.District.Name
+  type: Property
+  source:
+    id: Name
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\District.cs
+    startLine: 24
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: House23.Logic.DataBase.District.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.District.Requests
+  commentId: P:House23.Logic.DataBase.District.Requests
+  id: Requests
+  parent: House23.Logic.DataBase.District
+  langs:
+  - csharp
+  - vb
+  name: Requests
+  nameWithType: District.Requests
+  fullName: House23.Logic.DataBase.District.Requests
+  type: Property
+  source:
+    id: Requests
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\District.cs
+    startLine: 26
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual ICollection<Request> Requests { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{House23.Logic.DataBase.Request}
+    content.vb: Public Overridable Property Requests As ICollection(Of Request)
+  overload: House23.Logic.DataBase.District.Requests*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.District.Skyscrapers
+  commentId: P:House23.Logic.DataBase.District.Skyscrapers
+  id: Skyscrapers
+  parent: House23.Logic.DataBase.District
+  langs:
+  - csharp
+  - vb
+  name: Skyscrapers
+  nameWithType: District.Skyscrapers
+  fullName: House23.Logic.DataBase.District.Skyscrapers
+  type: Property
+  source:
+    id: Skyscrapers
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\District.cs
+    startLine: 28
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual ICollection<Skyscraper> Skyscrapers { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{House23.Logic.DataBase.Skyscraper}
+    content.vb: Public Overridable Property Skyscrapers As ICollection(Of Skyscraper)
+  overload: House23.Logic.DataBase.District.Skyscrapers*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: House23.Logic.DataBase
+  commentId: N:House23.Logic.DataBase
+  name: House23.Logic.DataBase
+  nameWithType: House23.Logic.DataBase
+  fullName: House23.Logic.DataBase
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: House23.Logic.DataBase.District.#ctor*
+  commentId: Overload:House23.Logic.DataBase.District.#ctor
+  name: District
+  nameWithType: District.District
+  fullName: House23.Logic.DataBase.District.District
+- uid: House23.Logic.DataBase.District.IdDistrict*
+  commentId: Overload:House23.Logic.DataBase.District.IdDistrict
+  name: IdDistrict
+  nameWithType: District.IdDistrict
+  fullName: House23.Logic.DataBase.District.IdDistrict
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: House23.Logic.DataBase.District.Name*
+  commentId: Overload:House23.Logic.DataBase.District.Name
+  name: Name
+  nameWithType: District.Name
+  fullName: House23.Logic.DataBase.District.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: House23.Logic.DataBase.District.Requests*
+  commentId: Overload:House23.Logic.DataBase.District.Requests
+  name: Requests
+  nameWithType: District.Requests
+  fullName: House23.Logic.DataBase.District.Requests
+- uid: System.Collections.Generic.ICollection{House23.Logic.DataBase.Request}
+  commentId: T:System.Collections.Generic.ICollection{House23.Logic.DataBase.Request}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Request>
+  nameWithType: ICollection<Request>
+  fullName: System.Collections.Generic.ICollection<House23.Logic.DataBase.Request>
+  nameWithType.vb: ICollection(Of Request)
+  fullName.vb: System.Collections.Generic.ICollection(Of House23.Logic.DataBase.Request)
+  name.vb: ICollection(Of Request)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.Request
+    name: Request
+    nameWithType: Request
+    fullName: House23.Logic.DataBase.Request
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.Request
+    name: Request
+    nameWithType: Request
+    fullName: House23.Logic.DataBase.Request
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: House23.Logic.DataBase.District.Skyscrapers*
+  commentId: Overload:House23.Logic.DataBase.District.Skyscrapers
+  name: Skyscrapers
+  nameWithType: District.Skyscrapers
+  fullName: House23.Logic.DataBase.District.Skyscrapers
+- uid: System.Collections.Generic.ICollection{House23.Logic.DataBase.Skyscraper}
+  commentId: T:System.Collections.Generic.ICollection{House23.Logic.DataBase.Skyscraper}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Skyscraper>
+  nameWithType: ICollection<Skyscraper>
+  fullName: System.Collections.Generic.ICollection<House23.Logic.DataBase.Skyscraper>
+  nameWithType.vb: ICollection(Of Skyscraper)
+  fullName.vb: System.Collections.Generic.ICollection(Of House23.Logic.DataBase.Skyscraper)
+  name.vb: ICollection(Of Skyscraper)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.Skyscraper
+    name: Skyscraper
+    nameWithType: Skyscraper
+    fullName: House23.Logic.DataBase.Skyscraper
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.Skyscraper
+    name: Skyscraper
+    nameWithType: Skyscraper
+    fullName: House23.Logic.DataBase.Skyscraper
+  - name: )
+    nameWithType: )
+    fullName: )

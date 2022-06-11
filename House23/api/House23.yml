@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: House23
+  commentId: N:House23
+  id: House23
+  children:
+  - House23.App
+  - House23.MainWindow
+  langs:
+  - csharp
+  - vb
+  name: House23
+  nameWithType: House23
+  fullName: House23
+  type: Namespace
+  assemblies:
+  - House23
+references:
+- uid: House23.App
+  commentId: T:House23.App
+  name: App
+  nameWithType: App
+  fullName: House23.App
+- uid: House23.MainWindow
+  commentId: T:House23.MainWindow
+  name: MainWindow
+  nameWithType: MainWindow
+  fullName: House23.MainWindow

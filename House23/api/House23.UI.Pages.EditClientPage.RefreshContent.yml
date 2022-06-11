@@ -1,0 +1,36 @@
+### YamlMime:ManagedReference
+items:
+- uid: House23.UI.Pages.EditClientPage.RefreshContent
+  commentId: T:House23.UI.Pages.EditClientPage.RefreshContent
+  id: EditClientPage.RefreshContent
+  parent: House23.UI.Pages
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: EditClientPage.RefreshContent
+  nameWithType: EditClientPage.RefreshContent
+  fullName: House23.UI.Pages.EditClientPage.RefreshContent
+  type: Delegate
+  source:
+    id: RefreshContent
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\UI\Pages\EditClientPage.xaml.cs
+    startLine: 30
+  assemblies:
+  - House23
+  namespace: House23.UI.Pages
+  syntax:
+    content: public delegate void RefreshContent();
+    content.vb: Public Delegate Sub RefreshContent
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: House23.UI.Pages
+  commentId: N:House23.UI.Pages
+  name: House23.UI.Pages
+  nameWithType: House23.UI.Pages
+  fullName: House23.UI.Pages

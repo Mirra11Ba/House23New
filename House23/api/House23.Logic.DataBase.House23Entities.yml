@@ -1,0 +1,2093 @@
+### YamlMime:ManagedReference
+items:
+- uid: House23.Logic.DataBase.House23Entities
+  commentId: T:House23.Logic.DataBase.House23Entities
+  id: House23Entities
+  parent: House23.Logic.DataBase
+  children:
+  - House23.Logic.DataBase.House23Entities.#ctor
+  - House23.Logic.DataBase.House23Entities.Clients
+  - House23.Logic.DataBase.House23Entities.Developers
+  - House23.Logic.DataBase.House23Entities.Districts
+  - House23.Logic.DataBase.House23Entities.Employees
+  - House23.Logic.DataBase.House23Entities.Flats
+  - House23.Logic.DataBase.House23Entities.LoginHistories
+  - House23.Logic.DataBase.House23Entities.Materials
+  - House23.Logic.DataBase.House23Entities.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  - House23.Logic.DataBase.House23Entities.Requests
+  - House23.Logic.DataBase.House23Entities.RequestStatus
+  - House23.Logic.DataBase.House23Entities.Roles
+  - House23.Logic.DataBase.House23Entities.Skyscrapers
+  - House23.Logic.DataBase.House23Entities.sysdiagrams
+  langs:
+  - csharp
+  - vb
+  name: House23Entities
+  nameWithType: House23Entities
+  fullName: House23.Logic.DataBase.House23Entities
+  type: Class
+  source:
+    id: House23Entities
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 15
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: 'public class House23Entities : DbContext, IDisposable, IObjectContextAdapter'
+    content.vb: >-
+      Public Class House23Entities
+          Inherits DbContext
+          Implements IDisposable, IObjectContextAdapter
+  inheritance:
+  - System.Object
+  - System.Data.Entity.DbContext
+  implements:
+  - System.IDisposable
+  - System.Data.Entity.Infrastructure.IObjectContextAdapter
+  inheritedMembers:
+  - System.Data.Entity.DbContext.Set``1
+  - System.Data.Entity.DbContext.Set(System.Type)
+  - System.Data.Entity.DbContext.SaveChanges
+  - System.Data.Entity.DbContext.SaveChangesAsync
+  - System.Data.Entity.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  - System.Data.Entity.DbContext.GetValidationErrors
+  - System.Data.Entity.DbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)
+  - System.Data.Entity.DbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})
+  - System.Data.Entity.DbContext.Entry``1({TEntity})
+  - System.Data.Entity.DbContext.Entry(System.Object)
+  - System.Data.Entity.DbContext.Dispose
+  - System.Data.Entity.DbContext.Dispose(System.Boolean)
+  - System.Data.Entity.DbContext.Database
+  - System.Data.Entity.DbContext.System#Data#Entity#Infrastructure#IObjectContextAdapter#ObjectContext
+  - System.Data.Entity.DbContext.ChangeTracker
+  - System.Data.Entity.DbContext.Configuration
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: House23.Logic.DataBase.House23Entities.#ctor
+  commentId: M:House23.Logic.DataBase.House23Entities.#ctor
+  id: '#ctor'
+  parent: House23.Logic.DataBase.House23Entities
+  langs:
+  - csharp
+  - vb
+  name: House23Entities()
+  nameWithType: House23Entities.House23Entities()
+  fullName: House23.Logic.DataBase.House23Entities.House23Entities()
+  type: Constructor
+  source:
+    id: .ctor
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 17
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public House23Entities()
+    content.vb: Public Sub New
+  overload: House23.Logic.DataBase.House23Entities.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.House23Entities.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  commentId: M:House23.Logic.DataBase.House23Entities.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  id: OnModelCreating(System.Data.Entity.DbModelBuilder)
+  parent: House23.Logic.DataBase.House23Entities
+  langs:
+  - csharp
+  - vb
+  name: OnModelCreating(DbModelBuilder)
+  nameWithType: House23Entities.OnModelCreating(DbModelBuilder)
+  fullName: House23.Logic.DataBase.House23Entities.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  type: Method
+  source:
+    id: OnModelCreating
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 22
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    parameters:
+    - id: modelBuilder
+      type: System.Data.Entity.DbModelBuilder
+    content.vb: Protected Overrides Sub OnModelCreating(modelBuilder As DbModelBuilder)
+  overridden: System.Data.Entity.DbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  overload: House23.Logic.DataBase.House23Entities.OnModelCreating*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: House23.Logic.DataBase.House23Entities.Clients
+  commentId: P:House23.Logic.DataBase.House23Entities.Clients
+  id: Clients
+  parent: House23.Logic.DataBase.House23Entities
+  langs:
+  - csharp
+  - vb
+  name: Clients
+  nameWithType: House23Entities.Clients
+  fullName: House23.Logic.DataBase.House23Entities.Clients
+  type: Property
+  source:
+    id: Clients
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 27
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual DbSet<Client> Clients { get; set; }
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{House23.Logic.DataBase.Client}
+    content.vb: Public Overridable Property Clients As DbSet(Of Client)
+  overload: House23.Logic.DataBase.House23Entities.Clients*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.House23Entities.Developers
+  commentId: P:House23.Logic.DataBase.House23Entities.Developers
+  id: Developers
+  parent: House23.Logic.DataBase.House23Entities
+  langs:
+  - csharp
+  - vb
+  name: Developers
+  nameWithType: House23Entities.Developers
+  fullName: House23.Logic.DataBase.House23Entities.Developers
+  type: Property
+  source:
+    id: Developers
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 28
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual DbSet<Developer> Developers { get; set; }
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{House23.Logic.DataBase.Developer}
+    content.vb: Public Overridable Property Developers As DbSet(Of Developer)
+  overload: House23.Logic.DataBase.House23Entities.Developers*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.House23Entities.Districts
+  commentId: P:House23.Logic.DataBase.House23Entities.Districts
+  id: Districts
+  parent: House23.Logic.DataBase.House23Entities
+  langs:
+  - csharp
+  - vb
+  name: Districts
+  nameWithType: House23Entities.Districts
+  fullName: House23.Logic.DataBase.House23Entities.Districts
+  type: Property
+  source:
+    id: Districts
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 29
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual DbSet<District> Districts { get; set; }
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{House23.Logic.DataBase.District}
+    content.vb: Public Overridable Property Districts As DbSet(Of District)
+  overload: House23.Logic.DataBase.House23Entities.Districts*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.House23Entities.Employees
+  commentId: P:House23.Logic.DataBase.House23Entities.Employees
+  id: Employees
+  parent: House23.Logic.DataBase.House23Entities
+  langs:
+  - csharp
+  - vb
+  name: Employees
+  nameWithType: House23Entities.Employees
+  fullName: House23.Logic.DataBase.House23Entities.Employees
+  type: Property
+  source:
+    id: Employees
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 30
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual DbSet<Employee> Employees { get; set; }
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{House23.Logic.DataBase.Employee}
+    content.vb: Public Overridable Property Employees As DbSet(Of Employee)
+  overload: House23.Logic.DataBase.House23Entities.Employees*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.House23Entities.Flats
+  commentId: P:House23.Logic.DataBase.House23Entities.Flats
+  id: Flats
+  parent: House23.Logic.DataBase.House23Entities
+  langs:
+  - csharp
+  - vb
+  name: Flats
+  nameWithType: House23Entities.Flats
+  fullName: House23.Logic.DataBase.House23Entities.Flats
+  type: Property
+  source:
+    id: Flats
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 31
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual DbSet<Flat> Flats { get; set; }
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{House23.Logic.DataBase.Flat}
+    content.vb: Public Overridable Property Flats As DbSet(Of Flat)
+  overload: House23.Logic.DataBase.House23Entities.Flats*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.House23Entities.LoginHistories
+  commentId: P:House23.Logic.DataBase.House23Entities.LoginHistories
+  id: LoginHistories
+  parent: House23.Logic.DataBase.House23Entities
+  langs:
+  - csharp
+  - vb
+  name: LoginHistories
+  nameWithType: House23Entities.LoginHistories
+  fullName: House23.Logic.DataBase.House23Entities.LoginHistories
+  type: Property
+  source:
+    id: LoginHistories
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 32
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual DbSet<LoginHistory> LoginHistories { get; set; }
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{House23.Logic.DataBase.LoginHistory}
+    content.vb: Public Overridable Property LoginHistories As DbSet(Of LoginHistory)
+  overload: House23.Logic.DataBase.House23Entities.LoginHistories*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.House23Entities.Materials
+  commentId: P:House23.Logic.DataBase.House23Entities.Materials
+  id: Materials
+  parent: House23.Logic.DataBase.House23Entities
+  langs:
+  - csharp
+  - vb
+  name: Materials
+  nameWithType: House23Entities.Materials
+  fullName: House23.Logic.DataBase.House23Entities.Materials
+  type: Property
+  source:
+    id: Materials
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 33
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual DbSet<Material> Materials { get; set; }
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{House23.Logic.DataBase.Material}
+    content.vb: Public Overridable Property Materials As DbSet(Of Material)
+  overload: House23.Logic.DataBase.House23Entities.Materials*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.House23Entities.Requests
+  commentId: P:House23.Logic.DataBase.House23Entities.Requests
+  id: Requests
+  parent: House23.Logic.DataBase.House23Entities
+  langs:
+  - csharp
+  - vb
+  name: Requests
+  nameWithType: House23Entities.Requests
+  fullName: House23.Logic.DataBase.House23Entities.Requests
+  type: Property
+  source:
+    id: Requests
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 34
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual DbSet<Request> Requests { get; set; }
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{House23.Logic.DataBase.Request}
+    content.vb: Public Overridable Property Requests As DbSet(Of Request)
+  overload: House23.Logic.DataBase.House23Entities.Requests*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.House23Entities.RequestStatus
+  commentId: P:House23.Logic.DataBase.House23Entities.RequestStatus
+  id: RequestStatus
+  parent: House23.Logic.DataBase.House23Entities
+  langs:
+  - csharp
+  - vb
+  name: RequestStatus
+  nameWithType: House23Entities.RequestStatus
+  fullName: House23.Logic.DataBase.House23Entities.RequestStatus
+  type: Property
+  source:
+    id: RequestStatus
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 35
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual DbSet<RequestStatu> RequestStatus { get; set; }
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{House23.Logic.DataBase.RequestStatu}
+    content.vb: Public Overridable Property RequestStatus As DbSet(Of RequestStatu)
+  overload: House23.Logic.DataBase.House23Entities.RequestStatus*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.House23Entities.Roles
+  commentId: P:House23.Logic.DataBase.House23Entities.Roles
+  id: Roles
+  parent: House23.Logic.DataBase.House23Entities
+  langs:
+  - csharp
+  - vb
+  name: Roles
+  nameWithType: House23Entities.Roles
+  fullName: House23.Logic.DataBase.House23Entities.Roles
+  type: Property
+  source:
+    id: Roles
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 36
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual DbSet<Role> Roles { get; set; }
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{House23.Logic.DataBase.Role}
+    content.vb: Public Overridable Property Roles As DbSet(Of Role)
+  overload: House23.Logic.DataBase.House23Entities.Roles*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.House23Entities.Skyscrapers
+  commentId: P:House23.Logic.DataBase.House23Entities.Skyscrapers
+  id: Skyscrapers
+  parent: House23.Logic.DataBase.House23Entities
+  langs:
+  - csharp
+  - vb
+  name: Skyscrapers
+  nameWithType: House23Entities.Skyscrapers
+  fullName: House23.Logic.DataBase.House23Entities.Skyscrapers
+  type: Property
+  source:
+    id: Skyscrapers
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 37
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual DbSet<Skyscraper> Skyscrapers { get; set; }
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{House23.Logic.DataBase.Skyscraper}
+    content.vb: Public Overridable Property Skyscrapers As DbSet(Of Skyscraper)
+  overload: House23.Logic.DataBase.House23Entities.Skyscrapers*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.House23Entities.sysdiagrams
+  commentId: P:House23.Logic.DataBase.House23Entities.sysdiagrams
+  id: sysdiagrams
+  parent: House23.Logic.DataBase.House23Entities
+  langs:
+  - csharp
+  - vb
+  name: sysdiagrams
+  nameWithType: House23Entities.sysdiagrams
+  fullName: House23.Logic.DataBase.House23Entities.sysdiagrams
+  type: Property
+  source:
+    id: sysdiagrams
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\BaseModel.Context.cs
+    startLine: 38
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{House23.Logic.DataBase.sysdiagram}
+    content.vb: Public Overridable Property sysdiagrams As DbSet(Of sysdiagram)
+  overload: House23.Logic.DataBase.House23Entities.sysdiagrams*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: House23.Logic.DataBase
+  commentId: N:House23.Logic.DataBase
+  name: House23.Logic.DataBase
+  nameWithType: House23.Logic.DataBase
+  fullName: House23.Logic.DataBase
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Data.Entity.DbContext
+  commentId: T:System.Data.Entity.DbContext
+  parent: System.Data.Entity
+  isExternal: true
+  name: DbContext
+  nameWithType: DbContext
+  fullName: System.Data.Entity.DbContext
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Data.Entity.Infrastructure.IObjectContextAdapter
+  commentId: T:System.Data.Entity.Infrastructure.IObjectContextAdapter
+  parent: System.Data.Entity.Infrastructure
+  isExternal: true
+  name: IObjectContextAdapter
+  nameWithType: IObjectContextAdapter
+  fullName: System.Data.Entity.Infrastructure.IObjectContextAdapter
+- uid: System.Data.Entity.DbContext.Set``1
+  commentId: M:System.Data.Entity.DbContext.Set``1
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: Set<TEntity>()
+  nameWithType: DbContext.Set<TEntity>()
+  fullName: System.Data.Entity.DbContext.Set<TEntity>()
+  nameWithType.vb: DbContext.Set(Of TEntity)()
+  fullName.vb: System.Data.Entity.DbContext.Set(Of TEntity)()
+  name.vb: Set(Of TEntity)()
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.Set``1
+    name: Set<TEntity>
+    nameWithType: DbContext.Set<TEntity>
+    fullName: System.Data.Entity.DbContext.Set<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.Set``1
+    name: Set(Of TEntity)
+    nameWithType: DbContext.Set(Of TEntity)
+    fullName: System.Data.Entity.DbContext.Set(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.Set(System.Type)
+  commentId: M:System.Data.Entity.DbContext.Set(System.Type)
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: Set(Type)
+  nameWithType: DbContext.Set(Type)
+  fullName: System.Data.Entity.DbContext.Set(System.Type)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.Set(System.Type)
+    name: Set
+    nameWithType: DbContext.Set
+    fullName: System.Data.Entity.DbContext.Set
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.Set(System.Type)
+    name: Set
+    nameWithType: DbContext.Set
+    fullName: System.Data.Entity.DbContext.Set
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.SaveChanges
+  commentId: M:System.Data.Entity.DbContext.SaveChanges
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: SaveChanges()
+  nameWithType: DbContext.SaveChanges()
+  fullName: System.Data.Entity.DbContext.SaveChanges()
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.SaveChanges
+    name: SaveChanges
+    nameWithType: DbContext.SaveChanges
+    fullName: System.Data.Entity.DbContext.SaveChanges
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.SaveChanges
+    name: SaveChanges
+    nameWithType: DbContext.SaveChanges
+    fullName: System.Data.Entity.DbContext.SaveChanges
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.SaveChangesAsync
+  commentId: M:System.Data.Entity.DbContext.SaveChangesAsync
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: SaveChangesAsync()
+  nameWithType: DbContext.SaveChangesAsync()
+  fullName: System.Data.Entity.DbContext.SaveChangesAsync()
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.SaveChangesAsync
+    name: SaveChangesAsync
+    nameWithType: DbContext.SaveChangesAsync
+    fullName: System.Data.Entity.DbContext.SaveChangesAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.SaveChangesAsync
+    name: SaveChangesAsync
+    nameWithType: DbContext.SaveChangesAsync
+    fullName: System.Data.Entity.DbContext.SaveChangesAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  commentId: M:System.Data.Entity.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: SaveChangesAsync(CancellationToken)
+  nameWithType: DbContext.SaveChangesAsync(CancellationToken)
+  fullName: System.Data.Entity.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+    name: SaveChangesAsync
+    nameWithType: DbContext.SaveChangesAsync
+    fullName: System.Data.Entity.DbContext.SaveChangesAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+    name: SaveChangesAsync
+    nameWithType: DbContext.SaveChangesAsync
+    fullName: System.Data.Entity.DbContext.SaveChangesAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.GetValidationErrors
+  commentId: M:System.Data.Entity.DbContext.GetValidationErrors
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: GetValidationErrors()
+  nameWithType: DbContext.GetValidationErrors()
+  fullName: System.Data.Entity.DbContext.GetValidationErrors()
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.GetValidationErrors
+    name: GetValidationErrors
+    nameWithType: DbContext.GetValidationErrors
+    fullName: System.Data.Entity.DbContext.GetValidationErrors
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.GetValidationErrors
+    name: GetValidationErrors
+    nameWithType: DbContext.GetValidationErrors
+    fullName: System.Data.Entity.DbContext.GetValidationErrors
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)
+  commentId: M:System.Data.Entity.DbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: ShouldValidateEntity(DbEntityEntry)
+  nameWithType: DbContext.ShouldValidateEntity(DbEntityEntry)
+  fullName: System.Data.Entity.DbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)
+    name: ShouldValidateEntity
+    nameWithType: DbContext.ShouldValidateEntity
+    fullName: System.Data.Entity.DbContext.ShouldValidateEntity
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.Entity.Infrastructure.DbEntityEntry
+    name: DbEntityEntry
+    nameWithType: DbEntityEntry
+    fullName: System.Data.Entity.Infrastructure.DbEntityEntry
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)
+    name: ShouldValidateEntity
+    nameWithType: DbContext.ShouldValidateEntity
+    fullName: System.Data.Entity.DbContext.ShouldValidateEntity
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.Entity.Infrastructure.DbEntityEntry
+    name: DbEntityEntry
+    nameWithType: DbEntityEntry
+    fullName: System.Data.Entity.Infrastructure.DbEntityEntry
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})
+  commentId: M:System.Data.Entity.DbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: ValidateEntity(DbEntityEntry, IDictionary<Object, Object>)
+  nameWithType: DbContext.ValidateEntity(DbEntityEntry, IDictionary<Object, Object>)
+  fullName: System.Data.Entity.DbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry, System.Collections.Generic.IDictionary<System.Object, System.Object>)
+  nameWithType.vb: DbContext.ValidateEntity(DbEntityEntry, IDictionary(Of Object, Object))
+  fullName.vb: System.Data.Entity.DbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry, System.Collections.Generic.IDictionary(Of System.Object, System.Object))
+  name.vb: ValidateEntity(DbEntityEntry, IDictionary(Of Object, Object))
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})
+    name: ValidateEntity
+    nameWithType: DbContext.ValidateEntity
+    fullName: System.Data.Entity.DbContext.ValidateEntity
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.Entity.Infrastructure.DbEntityEntry
+    name: DbEntityEntry
+    nameWithType: DbEntityEntry
+    fullName: System.Data.Entity.Infrastructure.DbEntityEntry
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})
+    name: ValidateEntity
+    nameWithType: DbContext.ValidateEntity
+    fullName: System.Data.Entity.DbContext.ValidateEntity
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.Entity.Infrastructure.DbEntityEntry
+    name: DbEntityEntry
+    nameWithType: DbEntityEntry
+    fullName: System.Data.Entity.Infrastructure.DbEntityEntry
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.Entry``1({TEntity})
+  commentId: M:System.Data.Entity.DbContext.Entry``1(``0)
+  parent: System.Data.Entity.DbContext
+  definition: System.Data.Entity.DbContext.Entry``1(``0)
+  name: Entry<TEntity>(TEntity)
+  nameWithType: DbContext.Entry<TEntity>(TEntity)
+  fullName: System.Data.Entity.DbContext.Entry<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Entry(Of TEntity)(TEntity)
+  fullName.vb: System.Data.Entity.DbContext.Entry(Of TEntity)(TEntity)
+  name.vb: Entry(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.Entry``1(``0)
+    name: Entry<TEntity>
+    nameWithType: DbContext.Entry<TEntity>
+    fullName: System.Data.Entity.DbContext.Entry<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.Entry``1(``0)
+    name: Entry(Of TEntity)
+    nameWithType: DbContext.Entry(Of TEntity)
+    fullName: System.Data.Entity.DbContext.Entry(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.Entry(System.Object)
+  commentId: M:System.Data.Entity.DbContext.Entry(System.Object)
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: Entry(Object)
+  nameWithType: DbContext.Entry(Object)
+  fullName: System.Data.Entity.DbContext.Entry(System.Object)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.Entry(System.Object)
+    name: Entry
+    nameWithType: DbContext.Entry
+    fullName: System.Data.Entity.DbContext.Entry
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.Entry(System.Object)
+    name: Entry
+    nameWithType: DbContext.Entry
+    fullName: System.Data.Entity.DbContext.Entry
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.Dispose
+  commentId: M:System.Data.Entity.DbContext.Dispose
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: Dispose()
+  nameWithType: DbContext.Dispose()
+  fullName: System.Data.Entity.DbContext.Dispose()
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.Dispose
+    name: Dispose
+    nameWithType: DbContext.Dispose
+    fullName: System.Data.Entity.DbContext.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.Dispose
+    name: Dispose
+    nameWithType: DbContext.Dispose
+    fullName: System.Data.Entity.DbContext.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.Dispose(System.Boolean)
+  commentId: M:System.Data.Entity.DbContext.Dispose(System.Boolean)
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: Dispose(Boolean)
+  nameWithType: DbContext.Dispose(Boolean)
+  fullName: System.Data.Entity.DbContext.Dispose(System.Boolean)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: DbContext.Dispose
+    fullName: System.Data.Entity.DbContext.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: DbContext.Dispose
+    fullName: System.Data.Entity.DbContext.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.Database
+  commentId: P:System.Data.Entity.DbContext.Database
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: Database
+  nameWithType: DbContext.Database
+  fullName: System.Data.Entity.DbContext.Database
+- uid: System.Data.Entity.DbContext.System#Data#Entity#Infrastructure#IObjectContextAdapter#ObjectContext
+  commentId: P:System.Data.Entity.DbContext.System#Data#Entity#Infrastructure#IObjectContextAdapter#ObjectContext
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: IObjectContextAdapter.ObjectContext
+  nameWithType: DbContext.IObjectContextAdapter.ObjectContext
+  fullName: System.Data.Entity.DbContext.System.Data.Entity.Infrastructure.IObjectContextAdapter.ObjectContext
+  nameWithType.vb: DbContext.System.Data.Entity.Infrastructure.IObjectContextAdapter.ObjectContext
+  name.vb: System.Data.Entity.Infrastructure.IObjectContextAdapter.ObjectContext
+- uid: System.Data.Entity.DbContext.ChangeTracker
+  commentId: P:System.Data.Entity.DbContext.ChangeTracker
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: ChangeTracker
+  nameWithType: DbContext.ChangeTracker
+  fullName: System.Data.Entity.DbContext.ChangeTracker
+- uid: System.Data.Entity.DbContext.Configuration
+  commentId: P:System.Data.Entity.DbContext.Configuration
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: Configuration
+  nameWithType: DbContext.Configuration
+  fullName: System.Data.Entity.DbContext.Configuration
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Data.Entity
+  commentId: N:System.Data.Entity
+  isExternal: true
+  name: System.Data.Entity
+  nameWithType: System.Data.Entity
+  fullName: System.Data.Entity
+- uid: System.Data.Entity.Infrastructure
+  commentId: N:System.Data.Entity.Infrastructure
+  isExternal: true
+  name: System.Data.Entity.Infrastructure
+  nameWithType: System.Data.Entity.Infrastructure
+  fullName: System.Data.Entity.Infrastructure
+- uid: System.Data.Entity.DbContext.Entry``1(``0)
+  commentId: M:System.Data.Entity.DbContext.Entry``1(``0)
+  isExternal: true
+  name: Entry<TEntity>(TEntity)
+  nameWithType: DbContext.Entry<TEntity>(TEntity)
+  fullName: System.Data.Entity.DbContext.Entry<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Entry(Of TEntity)(TEntity)
+  fullName.vb: System.Data.Entity.DbContext.Entry(Of TEntity)(TEntity)
+  name.vb: Entry(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.Entry``1(``0)
+    name: Entry<TEntity>
+    nameWithType: DbContext.Entry<TEntity>
+    fullName: System.Data.Entity.DbContext.Entry<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.Entry``1(``0)
+    name: Entry(Of TEntity)
+    nameWithType: DbContext.Entry(Of TEntity)
+    fullName: System.Data.Entity.DbContext.Entry(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.House23Entities.#ctor*
+  commentId: Overload:House23.Logic.DataBase.House23Entities.#ctor
+  name: House23Entities
+  nameWithType: House23Entities.House23Entities
+  fullName: House23.Logic.DataBase.House23Entities.House23Entities
+- uid: System.Data.Entity.DbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  commentId: M:System.Data.Entity.DbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: OnModelCreating(DbModelBuilder)
+  nameWithType: DbContext.OnModelCreating(DbModelBuilder)
+  fullName: System.Data.Entity.DbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+    name: OnModelCreating
+    nameWithType: DbContext.OnModelCreating
+    fullName: System.Data.Entity.DbContext.OnModelCreating
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.Entity.DbModelBuilder
+    name: DbModelBuilder
+    nameWithType: DbModelBuilder
+    fullName: System.Data.Entity.DbModelBuilder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+    name: OnModelCreating
+    nameWithType: DbContext.OnModelCreating
+    fullName: System.Data.Entity.DbContext.OnModelCreating
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.Entity.DbModelBuilder
+    name: DbModelBuilder
+    nameWithType: DbModelBuilder
+    fullName: System.Data.Entity.DbModelBuilder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.House23Entities.OnModelCreating*
+  commentId: Overload:House23.Logic.DataBase.House23Entities.OnModelCreating
+  name: OnModelCreating
+  nameWithType: House23Entities.OnModelCreating
+  fullName: House23.Logic.DataBase.House23Entities.OnModelCreating
+- uid: System.Data.Entity.DbModelBuilder
+  commentId: T:System.Data.Entity.DbModelBuilder
+  parent: System.Data.Entity
+  isExternal: true
+  name: DbModelBuilder
+  nameWithType: DbModelBuilder
+  fullName: System.Data.Entity.DbModelBuilder
+- uid: House23.Logic.DataBase.House23Entities.Clients*
+  commentId: Overload:House23.Logic.DataBase.House23Entities.Clients
+  name: Clients
+  nameWithType: House23Entities.Clients
+  fullName: House23.Logic.DataBase.House23Entities.Clients
+- uid: System.Data.Entity.DbSet{House23.Logic.DataBase.Client}
+  commentId: T:System.Data.Entity.DbSet{House23.Logic.DataBase.Client}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<Client>
+  nameWithType: DbSet<Client>
+  fullName: System.Data.Entity.DbSet<House23.Logic.DataBase.Client>
+  nameWithType.vb: DbSet(Of Client)
+  fullName.vb: System.Data.Entity.DbSet(Of House23.Logic.DataBase.Client)
+  name.vb: DbSet(Of Client)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.Client
+    name: Client
+    nameWithType: Client
+    fullName: House23.Logic.DataBase.Client
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.Client
+    name: Client
+    nameWithType: Client
+    fullName: House23.Logic.DataBase.Client
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbSet`1
+  commentId: T:System.Data.Entity.DbSet`1
+  isExternal: true
+  name: DbSet<TEntity>
+  nameWithType: DbSet<TEntity>
+  fullName: System.Data.Entity.DbSet<TEntity>
+  nameWithType.vb: DbSet(Of TEntity)
+  fullName.vb: System.Data.Entity.DbSet(Of TEntity)
+  name.vb: DbSet(Of TEntity)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.House23Entities.Developers*
+  commentId: Overload:House23.Logic.DataBase.House23Entities.Developers
+  name: Developers
+  nameWithType: House23Entities.Developers
+  fullName: House23.Logic.DataBase.House23Entities.Developers
+- uid: System.Data.Entity.DbSet{House23.Logic.DataBase.Developer}
+  commentId: T:System.Data.Entity.DbSet{House23.Logic.DataBase.Developer}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<Developer>
+  nameWithType: DbSet<Developer>
+  fullName: System.Data.Entity.DbSet<House23.Logic.DataBase.Developer>
+  nameWithType.vb: DbSet(Of Developer)
+  fullName.vb: System.Data.Entity.DbSet(Of House23.Logic.DataBase.Developer)
+  name.vb: DbSet(Of Developer)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.Developer
+    name: Developer
+    nameWithType: Developer
+    fullName: House23.Logic.DataBase.Developer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.Developer
+    name: Developer
+    nameWithType: Developer
+    fullName: House23.Logic.DataBase.Developer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.House23Entities.Districts*
+  commentId: Overload:House23.Logic.DataBase.House23Entities.Districts
+  name: Districts
+  nameWithType: House23Entities.Districts
+  fullName: House23.Logic.DataBase.House23Entities.Districts
+- uid: System.Data.Entity.DbSet{House23.Logic.DataBase.District}
+  commentId: T:System.Data.Entity.DbSet{House23.Logic.DataBase.District}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<District>
+  nameWithType: DbSet<District>
+  fullName: System.Data.Entity.DbSet<House23.Logic.DataBase.District>
+  nameWithType.vb: DbSet(Of District)
+  fullName.vb: System.Data.Entity.DbSet(Of House23.Logic.DataBase.District)
+  name.vb: DbSet(Of District)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.District
+    name: District
+    nameWithType: District
+    fullName: House23.Logic.DataBase.District
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.District
+    name: District
+    nameWithType: District
+    fullName: House23.Logic.DataBase.District
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.House23Entities.Employees*
+  commentId: Overload:House23.Logic.DataBase.House23Entities.Employees
+  name: Employees
+  nameWithType: House23Entities.Employees
+  fullName: House23.Logic.DataBase.House23Entities.Employees
+- uid: System.Data.Entity.DbSet{House23.Logic.DataBase.Employee}
+  commentId: T:System.Data.Entity.DbSet{House23.Logic.DataBase.Employee}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<Employee>
+  nameWithType: DbSet<Employee>
+  fullName: System.Data.Entity.DbSet<House23.Logic.DataBase.Employee>
+  nameWithType.vb: DbSet(Of Employee)
+  fullName.vb: System.Data.Entity.DbSet(Of House23.Logic.DataBase.Employee)
+  name.vb: DbSet(Of Employee)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.Employee
+    name: Employee
+    nameWithType: Employee
+    fullName: House23.Logic.DataBase.Employee
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.Employee
+    name: Employee
+    nameWithType: Employee
+    fullName: House23.Logic.DataBase.Employee
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.House23Entities.Flats*
+  commentId: Overload:House23.Logic.DataBase.House23Entities.Flats
+  name: Flats
+  nameWithType: House23Entities.Flats
+  fullName: House23.Logic.DataBase.House23Entities.Flats
+- uid: System.Data.Entity.DbSet{House23.Logic.DataBase.Flat}
+  commentId: T:System.Data.Entity.DbSet{House23.Logic.DataBase.Flat}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<Flat>
+  nameWithType: DbSet<Flat>
+  fullName: System.Data.Entity.DbSet<House23.Logic.DataBase.Flat>
+  nameWithType.vb: DbSet(Of Flat)
+  fullName.vb: System.Data.Entity.DbSet(Of House23.Logic.DataBase.Flat)
+  name.vb: DbSet(Of Flat)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.Flat
+    name: Flat
+    nameWithType: Flat
+    fullName: House23.Logic.DataBase.Flat
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.Flat
+    name: Flat
+    nameWithType: Flat
+    fullName: House23.Logic.DataBase.Flat
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.House23Entities.LoginHistories*
+  commentId: Overload:House23.Logic.DataBase.House23Entities.LoginHistories
+  name: LoginHistories
+  nameWithType: House23Entities.LoginHistories
+  fullName: House23.Logic.DataBase.House23Entities.LoginHistories
+- uid: System.Data.Entity.DbSet{House23.Logic.DataBase.LoginHistory}
+  commentId: T:System.Data.Entity.DbSet{House23.Logic.DataBase.LoginHistory}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<LoginHistory>
+  nameWithType: DbSet<LoginHistory>
+  fullName: System.Data.Entity.DbSet<House23.Logic.DataBase.LoginHistory>
+  nameWithType.vb: DbSet(Of LoginHistory)
+  fullName.vb: System.Data.Entity.DbSet(Of House23.Logic.DataBase.LoginHistory)
+  name.vb: DbSet(Of LoginHistory)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.LoginHistory
+    name: LoginHistory
+    nameWithType: LoginHistory
+    fullName: House23.Logic.DataBase.LoginHistory
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.LoginHistory
+    name: LoginHistory
+    nameWithType: LoginHistory
+    fullName: House23.Logic.DataBase.LoginHistory
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.House23Entities.Materials*
+  commentId: Overload:House23.Logic.DataBase.House23Entities.Materials
+  name: Materials
+  nameWithType: House23Entities.Materials
+  fullName: House23.Logic.DataBase.House23Entities.Materials
+- uid: System.Data.Entity.DbSet{House23.Logic.DataBase.Material}
+  commentId: T:System.Data.Entity.DbSet{House23.Logic.DataBase.Material}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<Material>
+  nameWithType: DbSet<Material>
+  fullName: System.Data.Entity.DbSet<House23.Logic.DataBase.Material>
+  nameWithType.vb: DbSet(Of Material)
+  fullName.vb: System.Data.Entity.DbSet(Of House23.Logic.DataBase.Material)
+  name.vb: DbSet(Of Material)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.Material
+    name: Material
+    nameWithType: Material
+    fullName: House23.Logic.DataBase.Material
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.Material
+    name: Material
+    nameWithType: Material
+    fullName: House23.Logic.DataBase.Material
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.House23Entities.Requests*
+  commentId: Overload:House23.Logic.DataBase.House23Entities.Requests
+  name: Requests
+  nameWithType: House23Entities.Requests
+  fullName: House23.Logic.DataBase.House23Entities.Requests
+- uid: System.Data.Entity.DbSet{House23.Logic.DataBase.Request}
+  commentId: T:System.Data.Entity.DbSet{House23.Logic.DataBase.Request}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<Request>
+  nameWithType: DbSet<Request>
+  fullName: System.Data.Entity.DbSet<House23.Logic.DataBase.Request>
+  nameWithType.vb: DbSet(Of Request)
+  fullName.vb: System.Data.Entity.DbSet(Of House23.Logic.DataBase.Request)
+  name.vb: DbSet(Of Request)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.Request
+    name: Request
+    nameWithType: Request
+    fullName: House23.Logic.DataBase.Request
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.Request
+    name: Request
+    nameWithType: Request
+    fullName: House23.Logic.DataBase.Request
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.House23Entities.RequestStatus*
+  commentId: Overload:House23.Logic.DataBase.House23Entities.RequestStatus
+  name: RequestStatus
+  nameWithType: House23Entities.RequestStatus
+  fullName: House23.Logic.DataBase.House23Entities.RequestStatus
+- uid: System.Data.Entity.DbSet{House23.Logic.DataBase.RequestStatu}
+  commentId: T:System.Data.Entity.DbSet{House23.Logic.DataBase.RequestStatu}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<RequestStatu>
+  nameWithType: DbSet<RequestStatu>
+  fullName: System.Data.Entity.DbSet<House23.Logic.DataBase.RequestStatu>
+  nameWithType.vb: DbSet(Of RequestStatu)
+  fullName.vb: System.Data.Entity.DbSet(Of House23.Logic.DataBase.RequestStatu)
+  name.vb: DbSet(Of RequestStatu)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.RequestStatu
+    name: RequestStatu
+    nameWithType: RequestStatu
+    fullName: House23.Logic.DataBase.RequestStatu
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.RequestStatu
+    name: RequestStatu
+    nameWithType: RequestStatu
+    fullName: House23.Logic.DataBase.RequestStatu
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.House23Entities.Roles*
+  commentId: Overload:House23.Logic.DataBase.House23Entities.Roles
+  name: Roles
+  nameWithType: House23Entities.Roles
+  fullName: House23.Logic.DataBase.House23Entities.Roles
+- uid: System.Data.Entity.DbSet{House23.Logic.DataBase.Role}
+  commentId: T:System.Data.Entity.DbSet{House23.Logic.DataBase.Role}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<Role>
+  nameWithType: DbSet<Role>
+  fullName: System.Data.Entity.DbSet<House23.Logic.DataBase.Role>
+  nameWithType.vb: DbSet(Of Role)
+  fullName.vb: System.Data.Entity.DbSet(Of House23.Logic.DataBase.Role)
+  name.vb: DbSet(Of Role)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.Role
+    name: Role
+    nameWithType: Role
+    fullName: House23.Logic.DataBase.Role
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.Role
+    name: Role
+    nameWithType: Role
+    fullName: House23.Logic.DataBase.Role
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.House23Entities.Skyscrapers*
+  commentId: Overload:House23.Logic.DataBase.House23Entities.Skyscrapers
+  name: Skyscrapers
+  nameWithType: House23Entities.Skyscrapers
+  fullName: House23.Logic.DataBase.House23Entities.Skyscrapers
+- uid: System.Data.Entity.DbSet{House23.Logic.DataBase.Skyscraper}
+  commentId: T:System.Data.Entity.DbSet{House23.Logic.DataBase.Skyscraper}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<Skyscraper>
+  nameWithType: DbSet<Skyscraper>
+  fullName: System.Data.Entity.DbSet<House23.Logic.DataBase.Skyscraper>
+  nameWithType.vb: DbSet(Of Skyscraper)
+  fullName.vb: System.Data.Entity.DbSet(Of House23.Logic.DataBase.Skyscraper)
+  name.vb: DbSet(Of Skyscraper)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.Skyscraper
+    name: Skyscraper
+    nameWithType: Skyscraper
+    fullName: House23.Logic.DataBase.Skyscraper
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.Skyscraper
+    name: Skyscraper
+    nameWithType: Skyscraper
+    fullName: House23.Logic.DataBase.Skyscraper
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.House23Entities.sysdiagrams*
+  commentId: Overload:House23.Logic.DataBase.House23Entities.sysdiagrams
+  name: sysdiagrams
+  nameWithType: House23Entities.sysdiagrams
+  fullName: House23.Logic.DataBase.House23Entities.sysdiagrams
+- uid: System.Data.Entity.DbSet{House23.Logic.DataBase.sysdiagram}
+  commentId: T:System.Data.Entity.DbSet{House23.Logic.DataBase.sysdiagram}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<sysdiagram>
+  nameWithType: DbSet<sysdiagram>
+  fullName: System.Data.Entity.DbSet<House23.Logic.DataBase.sysdiagram>
+  nameWithType.vb: DbSet(Of sysdiagram)
+  fullName.vb: System.Data.Entity.DbSet(Of House23.Logic.DataBase.sysdiagram)
+  name.vb: DbSet(Of sysdiagram)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.sysdiagram
+    name: sysdiagram
+    nameWithType: sysdiagram
+    fullName: House23.Logic.DataBase.sysdiagram
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.sysdiagram
+    name: sysdiagram
+    nameWithType: sysdiagram
+    fullName: House23.Logic.DataBase.sysdiagram
+  - name: )
+    nameWithType: )
+    fullName: )

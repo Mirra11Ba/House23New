@@ -1,0 +1,1050 @@
+### YamlMime:ManagedReference
+items:
+- uid: House23.Logic.DataBase.Employee
+  commentId: T:House23.Logic.DataBase.Employee
+  id: Employee
+  parent: House23.Logic.DataBase
+  children:
+  - House23.Logic.DataBase.Employee.#ctor
+  - House23.Logic.DataBase.Employee.Clients
+  - House23.Logic.DataBase.Employee.FirstName
+  - House23.Logic.DataBase.Employee.FullName
+  - House23.Logic.DataBase.Employee.IdEmployee
+  - House23.Logic.DataBase.Employee.IdRole
+  - House23.Logic.DataBase.Employee.LastName
+  - House23.Logic.DataBase.Employee.Login
+  - House23.Logic.DataBase.Employee.LoginHistories
+  - House23.Logic.DataBase.Employee.Password
+  - House23.Logic.DataBase.Employee.Patronymic
+  - House23.Logic.DataBase.Employee.Phone
+  - House23.Logic.DataBase.Employee.Requests
+  - House23.Logic.DataBase.Employee.Role
+  langs:
+  - csharp
+  - vb
+  name: Employee
+  nameWithType: Employee
+  fullName: House23.Logic.DataBase.Employee
+  type: Class
+  source:
+    id: Employee
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\EmployeePartial.cs
+    startLine: 8
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public class Employee
+    content.vb: Public Class Employee
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: House23.Logic.DataBase.Employee.#ctor
+  commentId: M:House23.Logic.DataBase.Employee.#ctor
+  id: '#ctor'
+  parent: House23.Logic.DataBase.Employee
+  langs:
+  - csharp
+  - vb
+  name: Employee()
+  nameWithType: Employee.Employee()
+  fullName: House23.Logic.DataBase.Employee.Employee()
+  type: Constructor
+  source:
+    id: .ctor
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Employee.cs
+    startLine: 16
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public Employee()
+    content.vb: Public Sub New
+  overload: House23.Logic.DataBase.Employee.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Employee.IdEmployee
+  commentId: P:House23.Logic.DataBase.Employee.IdEmployee
+  id: IdEmployee
+  parent: House23.Logic.DataBase.Employee
+  langs:
+  - csharp
+  - vb
+  name: IdEmployee
+  nameWithType: Employee.IdEmployee
+  fullName: House23.Logic.DataBase.Employee.IdEmployee
+  type: Property
+  source:
+    id: IdEmployee
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Employee.cs
+    startLine: 24
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public int IdEmployee { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IdEmployee As Integer
+  overload: House23.Logic.DataBase.Employee.IdEmployee*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Employee.FirstName
+  commentId: P:House23.Logic.DataBase.Employee.FirstName
+  id: FirstName
+  parent: House23.Logic.DataBase.Employee
+  langs:
+  - csharp
+  - vb
+  name: FirstName
+  nameWithType: Employee.FirstName
+  fullName: House23.Logic.DataBase.Employee.FirstName
+  type: Property
+  source:
+    id: FirstName
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Employee.cs
+    startLine: 25
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public string FirstName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FirstName As String
+  overload: House23.Logic.DataBase.Employee.FirstName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Employee.LastName
+  commentId: P:House23.Logic.DataBase.Employee.LastName
+  id: LastName
+  parent: House23.Logic.DataBase.Employee
+  langs:
+  - csharp
+  - vb
+  name: LastName
+  nameWithType: Employee.LastName
+  fullName: House23.Logic.DataBase.Employee.LastName
+  type: Property
+  source:
+    id: LastName
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Employee.cs
+    startLine: 26
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public string LastName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LastName As String
+  overload: House23.Logic.DataBase.Employee.LastName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Employee.Patronymic
+  commentId: P:House23.Logic.DataBase.Employee.Patronymic
+  id: Patronymic
+  parent: House23.Logic.DataBase.Employee
+  langs:
+  - csharp
+  - vb
+  name: Patronymic
+  nameWithType: Employee.Patronymic
+  fullName: House23.Logic.DataBase.Employee.Patronymic
+  type: Property
+  source:
+    id: Patronymic
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Employee.cs
+    startLine: 27
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public string Patronymic { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Patronymic As String
+  overload: House23.Logic.DataBase.Employee.Patronymic*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Employee.Phone
+  commentId: P:House23.Logic.DataBase.Employee.Phone
+  id: Phone
+  parent: House23.Logic.DataBase.Employee
+  langs:
+  - csharp
+  - vb
+  name: Phone
+  nameWithType: Employee.Phone
+  fullName: House23.Logic.DataBase.Employee.Phone
+  type: Property
+  source:
+    id: Phone
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Employee.cs
+    startLine: 28
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public string Phone { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Phone As String
+  overload: House23.Logic.DataBase.Employee.Phone*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Employee.Login
+  commentId: P:House23.Logic.DataBase.Employee.Login
+  id: Login
+  parent: House23.Logic.DataBase.Employee
+  langs:
+  - csharp
+  - vb
+  name: Login
+  nameWithType: Employee.Login
+  fullName: House23.Logic.DataBase.Employee.Login
+  type: Property
+  source:
+    id: Login
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Employee.cs
+    startLine: 29
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public string Login { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Login As String
+  overload: House23.Logic.DataBase.Employee.Login*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Employee.Password
+  commentId: P:House23.Logic.DataBase.Employee.Password
+  id: Password
+  parent: House23.Logic.DataBase.Employee
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: Employee.Password
+  fullName: House23.Logic.DataBase.Employee.Password
+  type: Property
+  source:
+    id: Password
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Employee.cs
+    startLine: 30
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public string Password { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: House23.Logic.DataBase.Employee.Password*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Employee.IdRole
+  commentId: P:House23.Logic.DataBase.Employee.IdRole
+  id: IdRole
+  parent: House23.Logic.DataBase.Employee
+  langs:
+  - csharp
+  - vb
+  name: IdRole
+  nameWithType: Employee.IdRole
+  fullName: House23.Logic.DataBase.Employee.IdRole
+  type: Property
+  source:
+    id: IdRole
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Employee.cs
+    startLine: 31
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public int IdRole { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IdRole As Integer
+  overload: House23.Logic.DataBase.Employee.IdRole*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: House23.Logic.DataBase.Employee.Role
+  commentId: P:House23.Logic.DataBase.Employee.Role
+  id: Role
+  parent: House23.Logic.DataBase.Employee
+  langs:
+  - csharp
+  - vb
+  name: Role
+  nameWithType: Employee.Role
+  fullName: House23.Logic.DataBase.Employee.Role
+  type: Property
+  source:
+    id: Role
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Employee.cs
+    startLine: 33
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual Role Role { get; set; }
+    parameters: []
+    return:
+      type: House23.Logic.DataBase.Role
+    content.vb: Public Overridable Property Role As Role
+  overload: House23.Logic.DataBase.Employee.Role*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.Employee.LoginHistories
+  commentId: P:House23.Logic.DataBase.Employee.LoginHistories
+  id: LoginHistories
+  parent: House23.Logic.DataBase.Employee
+  langs:
+  - csharp
+  - vb
+  name: LoginHistories
+  nameWithType: Employee.LoginHistories
+  fullName: House23.Logic.DataBase.Employee.LoginHistories
+  type: Property
+  source:
+    id: LoginHistories
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Employee.cs
+    startLine: 34
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual ICollection<LoginHistory> LoginHistories { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{House23.Logic.DataBase.LoginHistory}
+    content.vb: Public Overridable Property LoginHistories As ICollection(Of LoginHistory)
+  overload: House23.Logic.DataBase.Employee.LoginHistories*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.Employee.Requests
+  commentId: P:House23.Logic.DataBase.Employee.Requests
+  id: Requests
+  parent: House23.Logic.DataBase.Employee
+  langs:
+  - csharp
+  - vb
+  name: Requests
+  nameWithType: Employee.Requests
+  fullName: House23.Logic.DataBase.Employee.Requests
+  type: Property
+  source:
+    id: Requests
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Employee.cs
+    startLine: 36
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual ICollection<Request> Requests { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{House23.Logic.DataBase.Request}
+    content.vb: Public Overridable Property Requests As ICollection(Of Request)
+  overload: House23.Logic.DataBase.Employee.Requests*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.Employee.Clients
+  commentId: P:House23.Logic.DataBase.Employee.Clients
+  id: Clients
+  parent: House23.Logic.DataBase.Employee
+  langs:
+  - csharp
+  - vb
+  name: Clients
+  nameWithType: Employee.Clients
+  fullName: House23.Logic.DataBase.Employee.Clients
+  type: Property
+  source:
+    id: Clients
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\Employee.cs
+    startLine: 38
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public virtual ICollection<Client> Clients { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{House23.Logic.DataBase.Client}
+    content.vb: Public Overridable Property Clients As ICollection(Of Client)
+  overload: House23.Logic.DataBase.Employee.Clients*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: House23.Logic.DataBase.Employee.FullName
+  commentId: P:House23.Logic.DataBase.Employee.FullName
+  id: FullName
+  parent: House23.Logic.DataBase.Employee
+  langs:
+  - csharp
+  - vb
+  name: FullName
+  nameWithType: Employee.FullName
+  fullName: House23.Logic.DataBase.Employee.FullName
+  type: Property
+  source:
+    id: FullName
+    path: D:\МИРРА\ККЭП учеба\3 курс\$$$Курсач\МЕТ материалы по КП 09.02.07 3 курс 2021_2022 год для студентов\House23\House23\Logic\DataBase\EmployeePartial.cs
+    startLine: 10
+  assemblies:
+  - House23
+  namespace: House23.Logic.DataBase
+  syntax:
+    content: public string FullName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property FullName As String
+  overload: House23.Logic.DataBase.Employee.FullName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: House23.Logic.DataBase
+  commentId: N:House23.Logic.DataBase
+  name: House23.Logic.DataBase
+  nameWithType: House23.Logic.DataBase
+  fullName: House23.Logic.DataBase
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: House23.Logic.DataBase.Employee.#ctor*
+  commentId: Overload:House23.Logic.DataBase.Employee.#ctor
+  name: Employee
+  nameWithType: Employee.Employee
+  fullName: House23.Logic.DataBase.Employee.Employee
+- uid: House23.Logic.DataBase.Employee.IdEmployee*
+  commentId: Overload:House23.Logic.DataBase.Employee.IdEmployee
+  name: IdEmployee
+  nameWithType: Employee.IdEmployee
+  fullName: House23.Logic.DataBase.Employee.IdEmployee
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: House23.Logic.DataBase.Employee.FirstName*
+  commentId: Overload:House23.Logic.DataBase.Employee.FirstName
+  name: FirstName
+  nameWithType: Employee.FirstName
+  fullName: House23.Logic.DataBase.Employee.FirstName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: House23.Logic.DataBase.Employee.LastName*
+  commentId: Overload:House23.Logic.DataBase.Employee.LastName
+  name: LastName
+  nameWithType: Employee.LastName
+  fullName: House23.Logic.DataBase.Employee.LastName
+- uid: House23.Logic.DataBase.Employee.Patronymic*
+  commentId: Overload:House23.Logic.DataBase.Employee.Patronymic
+  name: Patronymic
+  nameWithType: Employee.Patronymic
+  fullName: House23.Logic.DataBase.Employee.Patronymic
+- uid: House23.Logic.DataBase.Employee.Phone*
+  commentId: Overload:House23.Logic.DataBase.Employee.Phone
+  name: Phone
+  nameWithType: Employee.Phone
+  fullName: House23.Logic.DataBase.Employee.Phone
+- uid: House23.Logic.DataBase.Employee.Login*
+  commentId: Overload:House23.Logic.DataBase.Employee.Login
+  name: Login
+  nameWithType: Employee.Login
+  fullName: House23.Logic.DataBase.Employee.Login
+- uid: House23.Logic.DataBase.Employee.Password*
+  commentId: Overload:House23.Logic.DataBase.Employee.Password
+  name: Password
+  nameWithType: Employee.Password
+  fullName: House23.Logic.DataBase.Employee.Password
+- uid: House23.Logic.DataBase.Employee.IdRole*
+  commentId: Overload:House23.Logic.DataBase.Employee.IdRole
+  name: IdRole
+  nameWithType: Employee.IdRole
+  fullName: House23.Logic.DataBase.Employee.IdRole
+- uid: House23.Logic.DataBase.Employee.Role*
+  commentId: Overload:House23.Logic.DataBase.Employee.Role
+  name: Role
+  nameWithType: Employee.Role
+  fullName: House23.Logic.DataBase.Employee.Role
+- uid: House23.Logic.DataBase.Role
+  commentId: T:House23.Logic.DataBase.Role
+  parent: House23.Logic.DataBase
+  name: Role
+  nameWithType: Role
+  fullName: House23.Logic.DataBase.Role
+- uid: House23.Logic.DataBase.Employee.LoginHistories*
+  commentId: Overload:House23.Logic.DataBase.Employee.LoginHistories
+  name: LoginHistories
+  nameWithType: Employee.LoginHistories
+  fullName: House23.Logic.DataBase.Employee.LoginHistories
+- uid: System.Collections.Generic.ICollection{House23.Logic.DataBase.LoginHistory}
+  commentId: T:System.Collections.Generic.ICollection{House23.Logic.DataBase.LoginHistory}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<LoginHistory>
+  nameWithType: ICollection<LoginHistory>
+  fullName: System.Collections.Generic.ICollection<House23.Logic.DataBase.LoginHistory>
+  nameWithType.vb: ICollection(Of LoginHistory)
+  fullName.vb: System.Collections.Generic.ICollection(Of House23.Logic.DataBase.LoginHistory)
+  name.vb: ICollection(Of LoginHistory)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.LoginHistory
+    name: LoginHistory
+    nameWithType: LoginHistory
+    fullName: House23.Logic.DataBase.LoginHistory
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.LoginHistory
+    name: LoginHistory
+    nameWithType: LoginHistory
+    fullName: House23.Logic.DataBase.LoginHistory
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: House23.Logic.DataBase.Employee.Requests*
+  commentId: Overload:House23.Logic.DataBase.Employee.Requests
+  name: Requests
+  nameWithType: Employee.Requests
+  fullName: House23.Logic.DataBase.Employee.Requests
+- uid: System.Collections.Generic.ICollection{House23.Logic.DataBase.Request}
+  commentId: T:System.Collections.Generic.ICollection{House23.Logic.DataBase.Request}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Request>
+  nameWithType: ICollection<Request>
+  fullName: System.Collections.Generic.ICollection<House23.Logic.DataBase.Request>
+  nameWithType.vb: ICollection(Of Request)
+  fullName.vb: System.Collections.Generic.ICollection(Of House23.Logic.DataBase.Request)
+  name.vb: ICollection(Of Request)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.Request
+    name: Request
+    nameWithType: Request
+    fullName: House23.Logic.DataBase.Request
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.Request
+    name: Request
+    nameWithType: Request
+    fullName: House23.Logic.DataBase.Request
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.Employee.Clients*
+  commentId: Overload:House23.Logic.DataBase.Employee.Clients
+  name: Clients
+  nameWithType: Employee.Clients
+  fullName: House23.Logic.DataBase.Employee.Clients
+- uid: System.Collections.Generic.ICollection{House23.Logic.DataBase.Client}
+  commentId: T:System.Collections.Generic.ICollection{House23.Logic.DataBase.Client}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Client>
+  nameWithType: ICollection<Client>
+  fullName: System.Collections.Generic.ICollection<House23.Logic.DataBase.Client>
+  nameWithType.vb: ICollection(Of Client)
+  fullName.vb: System.Collections.Generic.ICollection(Of House23.Logic.DataBase.Client)
+  name.vb: ICollection(Of Client)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: House23.Logic.DataBase.Client
+    name: Client
+    nameWithType: Client
+    fullName: House23.Logic.DataBase.Client
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: House23.Logic.DataBase.Client
+    name: Client
+    nameWithType: Client
+    fullName: House23.Logic.DataBase.Client
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: House23.Logic.DataBase.Employee.FullName*
+  commentId: Overload:House23.Logic.DataBase.Employee.FullName
+  name: FullName
+  nameWithType: Employee.FullName
+  fullName: House23.Logic.DataBase.Employee.FullName
