@@ -33,6 +33,10 @@ namespace House23.UI.Pages
         {
             FrameHandler.HRManagerContentFrame.Navigate(new RealtorPage());
         }
+        private void BtnHistoryView_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHandler.HRManagerContentFrame.Navigate(new HistoryViewPage());
+        }
 
         private void BtnChangeAccount_Click(object sender, RoutedEventArgs e)
         {
@@ -43,5 +47,6 @@ namespace House23.UI.Pages
         {
             Application.Current.Shutdown();
         }
+
     }
 }

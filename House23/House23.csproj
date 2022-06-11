@@ -158,6 +158,9 @@
     <Compile Include="UI\Pages\FlatPage.xaml.cs">
       <DependentUpon>FlatPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Pages\HistoryViewPage.xaml.cs">
+      <DependentUpon>HistoryViewPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\Pages\MenuHRManagerPage.xaml.cs">
       <DependentUpon>MenuHRManagerPage.xaml</DependentUpon>
     </Compile>
@@ -225,6 +228,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\Pages\FlatPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\HistoryViewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
