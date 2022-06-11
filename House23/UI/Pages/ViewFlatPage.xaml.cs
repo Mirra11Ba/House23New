@@ -17,6 +17,12 @@ using House23.Logic.Handlers;
 using House23.Logic.DataBase;
 using static House23.Logic.Utils.StringUtil;
 using House23.Logic.Utils.Linq;
+using House23.Logic.Utils;
+using System.IO;
+using CsvHelper;
+using System.Globalization;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace House23.UI.Pages
 {
@@ -26,6 +32,7 @@ namespace House23.UI.Pages
     public partial class ViewFlatPage : Page
     {
         private bool constructorFinal = false;
+        private List<Flat> flats;
 
         public ViewFlatPage()
         {
@@ -66,11 +73,6 @@ namespace House23.UI.Pages
                 return;
             }
             var currentFlats = ContextManager.GetContext().Flats.ToList();
-
-            if (CbSkyscraper.SelectedIndex > 0)
-            {
-                //currentFlats = currentFlats.Where(p => p.Skyscrapers.Contains(CbSkyscraper.SelectedItem as Skyscraper)).ToList();
-            }
 
             currentFlats = currentFlats.Where(p => p.BuildingNumberOfRoom.ToString().Contains(TbSearchRoomNumber.Text.ToLower())).ToList();
             currentFlats = currentFlats.Where(p => p.NumberOfRooms.ToString().Contains(TbSearchNumberOfRooms.Text.ToLower())).ToList();
@@ -141,6 +143,8 @@ namespace House23.UI.Pages
 
             LvFlats.ItemsSource = currentFlats.OrderByDescending(p => p.Price).ToList();
             LvFlats.SelectedIndex = 0;
+
+            flats = currentFlats;
         }
 
         private void TbSearchNumberOfRooms_TextChanged(object sender, TextChangedEventArgs e)
@@ -191,7 +195,77 @@ namespace House23.UI.Pages
 
         private void BtnSaveListOfFlat_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("в разработке");
+            var flatConverts = new List<FlatConvert>();
+
+            foreach (var flat in flats)
+            {
+                flatConverts.Add(new FlatConvert(flat));
+            }
+
+            try
+            {
+                //csv
+                using (var writer = new StreamWriter("Подбор квартир.csv", false, Encoding.GetEncoding(1251)))
+                using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+                {
+                    csv.WriteRecords(flatConverts);
+                }
+
+                //pdf
+                Document doc = new Document();
+
+                PdfWriter.GetInstance(doc, new FileStream("Подбор квартир.pdf", FileMode.Create));
+                doc.Open();
+                BaseFont baseFont = BaseFont.CreateFont("C:\\Windows\\Fonts\\arial.ttf", BaseFont.IDENTITY_H,
+                    BaseFont.NOT_EMBEDDED);
+                Font font = new Font(baseFont, Font.DEFAULTSIZE, Font.NORMAL);
+
+
+                string[] headers = new[]
+                {
+                   "Цена", "Количество комнат", "Площадь", "Этаж", "Подъезд", "Здание"
+                };
+                var columnsCount = headers.Length;
+                PdfPTable table = new PdfPTable(columnsCount);
+                var cell = new PdfPCell(new Phrase("ABC анализ", font))
+                {
+                    Colspan = columnsCount,
+                    HorizontalAlignment = 1,
+                    Border = 0
+                };
+                table.AddCell(cell);
+
+
+                for (int j = 0; j < columnsCount; j++)
+                {
+                    cell = new PdfPCell(new Phrase(headers[j], font))
+                    {
+                        NoWrap = false,
+                        BackgroundColor = BaseColor.LIGHT_GRAY
+                    };
+                    table.AddCell(cell);
+                }
+
+                foreach (var flat in flatConverts)
+                {
+                    table.AddCell(new Phrase(flat.Price.ToString("#.##"), font));
+                    table.AddCell(new Phrase(flat.NumberOfRooms.ToString("#.##"), font));
+                    table.AddCell(new Phrase(flat.Area.ToString("#.##"), font));
+                    table.AddCell(new Phrase(flat.FloorNumber.ToString("#.##"), font));
+                    table.AddCell(new Phrase(flat.EntranceNumber.ToString("#.##"), font));
+                    table.AddCell(new Phrase(flat.SkyscraperName, font));
+                }
+
+                doc.Add(table);
+                doc.Close();
+                MessageBox.Show("Я сохранил");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Есть шанс что выгруженные файлы открыты, но я точно не знаю");
+            }
+
+
         }
 
         private void TbSearchRoomNumber_PreviewTextInput(object sender, TextCompositionEventArgs e)

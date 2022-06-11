@@ -139,7 +139,7 @@ namespace House23.UI.Pages
             CheckIsNumeric(e, messageText, messageTitle);
         }
 
-        //додклать
+
         private bool isFocused = false;
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {

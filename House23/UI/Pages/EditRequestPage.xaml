@@ -40,19 +40,29 @@
             <ComboBox x:Name="CbClient" DisplayMemberPath="FullName" Grid.Row="0" Grid.Column="1" Width="500" HorizontalAlignment="Left" SelectionChanged="CbClient_SelectionChanged"></ComboBox>
             <TextBox Text="{Binding MinimumPrice}" MaxLength="30" Grid.Column="1" Grid.Row="1" Width="500" HorizontalAlignment="Left" 
                      Name="TbMinimumPrice"
-                     PreviewTextInput="TbMinimumPrice_PreviewTextInput"></TextBox>
+                     PreviewTextInput="TbMinimumPrice_PreviewTextInput"
+                     GotFocus="TextBox_GotFocus"
+                     SelectionChanged="TextBox_SelectionChanged"></TextBox>
             <TextBox Text="{Binding MaximumPrice}" MaxLength="20" Grid.Column="1" Grid.Row="2" Width="500" HorizontalAlignment="Left"
                      Name="TbMaximumPrice"
-                     PreviewTextInput="TbMaximumPrice_PreviewTextInput"></TextBox>
+                     PreviewTextInput="TbMaximumPrice_PreviewTextInput"
+                     GotFocus="TextBox_GotFocus"
+                     SelectionChanged="TextBox_SelectionChanged"></TextBox>
             <TextBox Text="{Binding NumberOfRooms}" MaxLength="20" Grid.Column="1" Grid.Row="3" Width="500" HorizontalAlignment="Left"
                      Name="TbNumberOfRooms"
-                     PreviewTextInput="TbNumberOfRooms_PreviewTextInput"></TextBox>
+                     PreviewTextInput="TbNumberOfRooms_PreviewTextInput"
+                     GotFocus="TextBox_GotFocus"
+                     SelectionChanged="TextBox_SelectionChanged"></TextBox>
             <TextBox Text="{Binding MinimumArea}" MaxLength="11" Grid.Column="1" Grid.Row="4" Width="500" HorizontalAlignment="Left"
                      Name="TbMinimumArea"
-                     PreviewTextInput="TbMinimumArea_PreviewTextInput"></TextBox>
+                     PreviewTextInput="TbMinimumArea_PreviewTextInput"
+                     GotFocus="TextBox_GotFocus"
+                     SelectionChanged="TextBox_SelectionChanged"></TextBox>
             <TextBox Text="{Binding MaximumArea}" MaxLength="15" Grid.Column="1" Grid.Row="5" Width="500" HorizontalAlignment="Left"
                      Name="TbMaximumArea"
-                     PreviewTextInput="TbMaximumArea_PreviewTextInput"></TextBox>
+                     PreviewTextInput="TbMaximumArea_PreviewTextInput"
+                     GotFocus="TextBox_GotFocus"
+                     SelectionChanged="TextBox_SelectionChanged"></TextBox>
             <DatePicker Name="DpDateOfRequest" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left"></DatePicker>
             <ComboBox x:Name="CbDistrict" SelectedItem="{Binding District}" DisplayMemberPath="Name" Grid.Row="7" Grid.Column="1" Width="500" HorizontalAlignment="Left"></ComboBox>
             <ComboBox x:Name="CbRequestStatus" SelectedItem="{Binding RequestStatu}"  DisplayMemberPath="Status" Grid.Row="8" Grid.Column="1" Width="500" HorizontalAlignment="Left"></ComboBox>

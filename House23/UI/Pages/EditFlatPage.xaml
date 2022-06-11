@@ -48,19 +48,27 @@
                              SelectionChanged="TextBox_SelectionChanged"></TextBox>
                     <TextBox Text="{Binding NumberOfRooms}" Grid.Column="1" Grid.Row="2" Width="500" HorizontalAlignment="Left"
                              Name="TbNumberOfRooms" 
-                             PreviewTextInput="TbNumberOfRooms_PreviewTextInput"></TextBox>
+                             PreviewTextInput="TbNumberOfRooms_PreviewTextInput"
+                             GotFocus="TextBox_GotFocus"
+                             SelectionChanged="TextBox_SelectionChanged"></TextBox>
                     <TextBox Text="{Binding Area}" Grid.Column="1" Grid.Row="3" Width="500" HorizontalAlignment="Left"
                              Name="TbArea" 
-                             PreviewTextInput="TbArea_PreviewTextInput"></TextBox>
+                             PreviewTextInput="TbArea_PreviewTextInput"
+                             GotFocus="TextBox_GotFocus"
+                             SelectionChanged="TextBox_SelectionChanged"></TextBox>
                     <TextBox Text="{Binding FloorNumber}" Grid.Column="1" Grid.Row="4" Width="500" HorizontalAlignment="Left"
                              Name="TbFloorNumber" 
-                             PreviewTextInput="TbFloorNumber_PreviewTextInput"></TextBox>
+                             PreviewTextInput="TbFloorNumber_PreviewTextInput"
+                             GotFocus="TextBox_GotFocus"
+                             SelectionChanged="TextBox_SelectionChanged"></TextBox>
                     <TextBox Text="{Binding EntranceNumber}" Grid.Column="1" Grid.Row="5" Width="500" HorizontalAlignment="Left"
                              Name="TbEntranceNumber" 
-                             PreviewTextInput="TbEntranceNumber_PreviewTextInput"></TextBox>
+                             PreviewTextInput="TbEntranceNumber_PreviewTextInput"
+                             GotFocus="TextBox_GotFocus"
+                             SelectionChanged="TextBox_SelectionChanged"></TextBox>
                     <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
                         <Button Content="Выбрать файл" Name="BtnSelectImage" Click="BtnSelectImage_Click"></Button>
-                        <Image Source="{Binding ImagePreview}" x:Name="ImDynamicFlat" Height="30" Width="350" HorizontalAlignment="Left"></Image>
+                        <Image Source="{Binding ImagePreview}" x:Name="ImDynamicFlat" Height="80" Width="350" HorizontalAlignment="Left"></Image>
                     </StackPanel>
                     <ComboBox SelectedItem="{Binding Skyscraper}" x:Name="CbSkyscraper" DisplayMemberPath="Name" Grid.Row="7" Grid.Column="1" Width="500" HorizontalAlignment="Left"></ComboBox>
                     <Button Name="BtnSave" Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="9" Click="BtnSave_Click"></Button>
