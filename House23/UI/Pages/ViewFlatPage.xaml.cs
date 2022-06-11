@@ -187,11 +187,11 @@ namespace House23.UI.Pages
             UpdateFlats();
         }
 
-        private void BtnSelectFlat_Click(object sender, RoutedEventArgs e)
-        {
-            var currentFlats = ContextManager.GetContext().Flats.ToList();
-            var selectedFlat = currentFlats.Where(p => p == LvFlats.SelectedItem).ToList();
-        }
+        //private void BtnSelectFlat_Click(object sender, RoutedEventArgs e)
+        //{
+        //    var currentFlats = ContextManager.GetContext().Flats.ToList();
+        //    var selectedFlat = currentFlats.Where(p => p == LvFlats.SelectedItem).ToList();
+        //}
 
         private void BtnSaveListOfFlat_Click(object sender, RoutedEventArgs e)
         {
@@ -258,14 +258,12 @@ namespace House23.UI.Pages
 
                 doc.Add(table);
                 doc.Close();
-                MessageBox.Show("Я сохранил");
+                MessageBox.Show("Файлы сохранены в формате pdf и csv\nОни находятся в папке с .exe", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception)
             {
-                MessageBox.Show("Есть шанс что выгруженные файлы открыты, но я точно не знаю");
+                MessageBox.Show("Есть шанс что выгруженные файлы открыты, но я точно не знаю", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-
-
         }
 
         private void TbSearchRoomNumber_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -308,6 +306,11 @@ namespace House23.UI.Pages
             string messageText = "Можно вводить только цифры";
             string messageTitle = "Внимание";
             CheckIsNumeric(e, messageText, messageTitle);
+        }
+
+        private void BtnPrint_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("алориари");
         }
     }
 }

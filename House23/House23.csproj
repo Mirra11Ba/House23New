@@ -209,6 +209,9 @@
     <Compile Include="UI\Pages\SkyscraperPage.xaml.cs">
       <DependentUpon>SkyscraperPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Pages\ViewChartPage.xaml.cs">
+      <DependentUpon>ViewChartPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\Pages\ViewFlatPage.xaml.cs">
       <DependentUpon>ViewFlatPage.xaml</DependentUpon>
     </Compile>
@@ -285,6 +288,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\Pages\SkyscraperPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Pages\ViewChartPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

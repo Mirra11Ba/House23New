@@ -44,8 +44,8 @@
                 <ComboBox VerticalAlignment="Center" x:Name="CbDistrict" SelectionChanged="CbDistrict_SelectionChanged" DisplayMemberPath="Name"></ComboBox>
                 <TextBlock VerticalAlignment="Center" Text="Выберите ЖК:" Width="175" TextAlignment="Left"></TextBlock>
                 <ComboBox VerticalAlignment="Center" x:Name="CbSkyscraper" SelectionChanged="CbSkyscraper_SelectionChanged" DisplayMemberPath="Name"></ComboBox>
-                <Button x:Name="BtnSelectFlat" Content="Выбрать квартиру" Click="BtnSelectFlat_Click" Margin="5,10,5,5"></Button>
                 <Button x:Name="BtnSaveListOfFlat" Content="Сохранить список" Click="BtnSaveListOfFlat_Click" Margin="5,25,5,5"></Button>
+                <Button Name="BtnPrint" Content="Печать" Click="BtnPrint_Click"></Button>
             </StackPanel>
         </WrapPanel>
         <ListView SelectionMode="Single" Grid.Column="1" Name="LvFlats" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
