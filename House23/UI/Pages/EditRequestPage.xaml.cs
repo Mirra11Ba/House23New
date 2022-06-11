@@ -23,6 +23,9 @@ namespace House23.UI.Pages
             InitializeComponent();
             if (selectedRequest != null)
                 currentRequest = selectedRequest;
+            
+            DpDateOfRequest.SelectedDate = DateTime.Now;
+
             DataContext = currentRequest;
             var clients = ContextManager.GetContext().Clients.ToList();
             var clientsFil = new List<Client>();
@@ -69,6 +72,8 @@ namespace House23.UI.Pages
                 return;
             }
 
+            DpDateOfRequest.SelectedDate = currentRequest.RequestDate;
+ 
             if (currentRequest.IdRequest == 0)
                 currentRequest.Employee = ContextManager.GetContext().Employees.Attach(EmployeeHandler.EmployeeActive);
                 ContextManager.GetContext().Requests.Add(currentRequest);
@@ -122,6 +127,20 @@ namespace House23.UI.Pages
         private void CbClient_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             currentRequest.Client = (Client)CbClient.SelectedItem;
+        }
+
+        private bool isFocused = false;
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            isFocused = true;
+        }
+        private void TextBox_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            if (isFocused)
+            {
+                isFocused = false;
+                (sender as TextBox).SelectAll();
+            }
         }
     }
 }

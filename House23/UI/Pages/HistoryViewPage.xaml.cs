@@ -15,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using static House23.Logic.Utils.StringUtil;
+
 namespace House23.UI.Pages
 {
     /// <summary>
@@ -35,16 +37,84 @@ namespace House23.UI.Pages
                 cvTasks.SortDescriptions.Clear();
                 cvTasks.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Descending));
             }
+            UpdateLoginHistory();
         }
 
+        private string lastText;
+        private void UpdateLoginHistory()
+        {
+            bool flag = lastText == null || lastText.Length < TbSearch.Text.Length;
+            lastText = TbSearch.Text;
+
+            var currentShearchRequest = ContextManager.GetContext().LoginHistories.ToList();
+            currentShearchRequest = currentShearchRequest.Where(p => ContainsText(p.Employee.FullName.ToString(), TbSearch.Text)).ToList();
+            DgLoginHistory.ItemsSource = currentShearchRequest;
+
+            if (flag && currentShearchRequest.Count == 0)
+            {
+                MessageBox.Show("Сотрудник не найден", "Внимание", MessageBoxButton.OK, MessageBoxImage.Hand);
+            }
+        }
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            MessageBox.Show("fjh");
+            UpdateLoginHistory();
         }
 
         private void BtnPrint_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("fjh");
+            //живое
+            PrintDialog printDialog = new PrintDialog();
+            if (printDialog.ShowDialog() == true)
+            {
+                printDialog.PrintVisual(DgLoginHistory, "Распечатываем элемент DgLoginHistoryCanvas");
+            }
+
+            //PrintDialog printDialog = new PrintDialog();
+            //if (printDialog.ShowDialog() == true)
+            //{
+            //    printDialog.PrintDocument(
+            //           ((IDocumentPaginatorSource)docViewer.Document).DocumentPaginator,
+            //           "A Flow Document");
+            //}
+
+            //public static bool PrintWholeDocument(string xpsFilePath, bool hidePrintDialog = false)
+            //{
+            //    // Create the print dialog object and set options.
+            //    PrintDialog printDialog = new();
+
+            //    if (!hidePrintDialog)
+            //    {
+            //        // Display the dialog. This returns true if the user presses the Print button.
+            //        bool? isPrinted = printDialog.ShowDialog();
+            //        if (isPrinted != true)
+            //            return false;
+            //    }
+
+            //    // Print the whole document.
+            //    try
+            //    {
+            //        // Open the selected document.
+            //        XpsDocument xpsDocument = new(xpsFilePath, FileAccess.Read);
+
+            //        // Get a fixed document sequence for the selected document.
+            //        FixedDocumentSequence fixedDocSeq = xpsDocument.GetFixedDocumentSequence();
+
+            //        // Create a paginator for all pages in the selected document.
+            //        DocumentPaginator docPaginator = fixedDocSeq.DocumentPaginator;
+
+            //        // Print to a new file.
+            //        printDialog.PrintDocument(docPaginator, $"Printing {Path.GetFileName(xpsFilePath)}");
+
+            //        return true;
+            //    }
+            //    catch (Exception e)
+            //    {
+            //        MessageBox.Show(e.Message);
+
+            //        return false;
+            //    }
+            //}
+
         }
     }
 }
