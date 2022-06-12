@@ -159,7 +159,7 @@ namespace House23.UI.Pages
 
         private void TbSearchMaxPrice_TextChanged(object sender, TextChangedEventArgs e)
         {
-            UpdateFlats(); 
+            UpdateFlats();
         }
 
         private void TbSearchMinArea_TextChanged(object sender, TextChangedEventArgs e)
@@ -186,12 +186,6 @@ namespace House23.UI.Pages
         {
             UpdateFlats();
         }
-
-        //private void BtnSelectFlat_Click(object sender, RoutedEventArgs e)
-        //{
-        //    var currentFlats = ContextManager.GetContext().Flats.ToList();
-        //    var selectedFlat = currentFlats.Where(p => p == LvFlats.SelectedItem).ToList();
-        //}
 
         private void BtnSaveListOfFlat_Click(object sender, RoutedEventArgs e)
         {
@@ -306,11 +300,6 @@ namespace House23.UI.Pages
             string messageText = "Можно вводить только цифры";
             string messageTitle = "Внимание";
             CheckIsNumeric(e, messageText, messageTitle);
-        }
-
-        private void BtnPrint_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("алориари");
         }
     }
 }

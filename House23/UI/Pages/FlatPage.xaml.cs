@@ -28,7 +28,7 @@ namespace House23.UI.Pages
         {
             InitializeComponent();
         }
-        private void BtnAddFlat_Click(object sender, RoutedEventArgs e)
+        private void BtnADgFlat_Click(object sender, RoutedEventArgs e)
         {
             FrameHandler.MainFrame.Navigate(new EditFlatPage(null));
         }
@@ -39,7 +39,7 @@ namespace House23.UI.Pages
         }
         private void BtnDeleteFlat_Click(object sender, RoutedEventArgs e)
         {
-            var flatsForRemoving = DdFlat.SelectedItems.Cast<Flat>().ToList();
+            var flatsForRemoving = DgFlat.SelectedItems.Cast<Flat>().ToList();
 
             if (MessageBox.Show($"Вы точно хотите удалить следующие {flatsForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
@@ -48,7 +48,7 @@ namespace House23.UI.Pages
                     ContextManager.GetContext().Flats.RemoveRange(flatsForRemoving);
                     ContextManager.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены!");
-                    DdFlat.ItemsSource = ContextManager.GetContext().Flats.ToList();
+                    DgFlat.ItemsSource = ContextManager.GetContext().Flats.ToList();
                 }
                 catch (Exception ex)
                 {
@@ -61,7 +61,7 @@ namespace House23.UI.Pages
             if (Visibility == Visibility.Visible)
             {
                 ContextManager.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DdFlat.ItemsSource = ContextManager.GetContext().Flats.ToList();
+                DgFlat.ItemsSource = ContextManager.GetContext().Flats.ToList();
             }
         }
 
@@ -74,7 +74,7 @@ namespace House23.UI.Pages
 
             var currentShearchFlat = ContextManager.GetContext().Flats.ToList();
             currentShearchFlat = currentShearchFlat.Where(p => ContainsText(p.BuildingNumberOfRoom.ToString(), TbSearch.Text)).ToList();
-            DdFlat.ItemsSource = currentShearchFlat;
+            DgFlat.ItemsSource = currentShearchFlat;
 
             if (flag && currentShearchFlat.Count == 0)
             {

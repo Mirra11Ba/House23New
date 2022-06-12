@@ -29,7 +29,7 @@ namespace House23.UI.Pages
             InitializeComponent();
             UpdateDeveloper();
         }
-        private void BtnAddDeveloper_Click(object sender, RoutedEventArgs e)
+        private void BtnADgDeveloper_Click(object sender, RoutedEventArgs e)
         {
             FrameHandler.RealtorContentFrame.Navigate(new EditDeveloperPage(null));
         }
@@ -41,7 +41,7 @@ namespace House23.UI.Pages
 
         private void BtnDeleteDeveloper_Click(object sender, RoutedEventArgs e)
         {
-            var developersForRemoving = DdDeveloper.SelectedItems.Cast<Developer>().ToList();
+            var developersForRemoving = DgDeveloper.SelectedItems.Cast<Developer>().ToList();
 
             if (MessageBox.Show($"Вы точно хотите удалить следующие {developersForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
@@ -50,7 +50,7 @@ namespace House23.UI.Pages
                     ContextManager.GetContext().Developers.RemoveRange(developersForRemoving);
                     ContextManager.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены!");
-                    DdDeveloper.ItemsSource = ContextManager.GetContext().Developers.ToList();
+                    DgDeveloper.ItemsSource = ContextManager.GetContext().Developers.ToList();
                 }
                 catch (Exception ex)
                 {
@@ -64,7 +64,7 @@ namespace House23.UI.Pages
             if (Visibility == Visibility.Visible)
             {
                 ContextManager.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DdDeveloper.ItemsSource = ContextManager.GetContext().Developers.ToList();
+                DgDeveloper.ItemsSource = ContextManager.GetContext().Developers.ToList();
             }
         }
 
@@ -77,7 +77,7 @@ namespace House23.UI.Pages
 
             var currentShearchDeveloper = ContextManager.GetContext().Developers.ToList();
             currentShearchDeveloper = currentShearchDeveloper.Where(p => ContainsText(p.Name, TbSearch.Text)).ToList();
-            DdDeveloper.ItemsSource = currentShearchDeveloper;
+            DgDeveloper.ItemsSource = currentShearchDeveloper;
 
             if (flag && currentShearchDeveloper.Count == 0)
             {

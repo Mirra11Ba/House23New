@@ -21,7 +21,7 @@
                    Style="{StaticResource PlaceholderTextBox}" Tag="Введите название застройщика">
             </TextBox>
         </Grid>
-        <DataGrid x:Name="DdDeveloper" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="2">
+        <DataGrid x:Name="DgDeveloper" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название организации" Binding="{Binding Name}" Width="*" MinWidth="120"></DataGridTextColumn>
                 <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="*" MinWidth="120">
@@ -45,7 +45,7 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="BtnAddDeveloper" Grid.Row="3" HorizontalAlignment="Left" Click="BtnAddDeveloper_Click"
+        <Button Name="BtnADgDeveloper" Grid.Row="3" HorizontalAlignment="Left" Click="BtnADgDeveloper_Click"
                 Background="white" BorderBrush="Transparent" 
                 Width="40" Height="40" Foreground="Black">
             <Image Source="/Resources/plus.png" Width="25" Height="25"></Image>

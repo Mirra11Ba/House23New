@@ -40,13 +40,13 @@ namespace House23.UI.Pages
         }
         private void BtnDeleteRequest_Click(object sender, RoutedEventArgs e)
         {
-            var requestsForRemoving = DgRequest.SelectedItems.Cast<Flat>().ToList();
+            var requestsForRemoving = DgRequest.SelectedItems.Cast<Request>().ToList();
 
             if (MessageBox.Show($"Вы точно хотите удалить следующие {requestsForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {
-                    ContextManager.GetContext().Flats.RemoveRange(requestsForRemoving);
+                    ContextManager.GetContext().Requests.RemoveRange(requestsForRemoving);
                     ContextManager.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены!");
                     DgRequest.ItemsSource = ContextManager.GetContext().Requests.ToList();

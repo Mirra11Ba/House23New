@@ -42,7 +42,7 @@ namespace House23.UI.Pages
 
         private void BtnDeleteRealtor_Click(object sender, RoutedEventArgs e)
         {
-            var emloyeesForRemoving = DdEmployee.SelectedItems.Cast<Employee>().ToList();
+            var emloyeesForRemoving = DgEmployee.SelectedItems.Cast<Employee>().ToList();
 
             if (MessageBox.Show($"Вы точно хотите удалить следующие {emloyeesForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
@@ -51,7 +51,7 @@ namespace House23.UI.Pages
                     ContextManager.GetContext().Employees.RemoveRange(emloyeesForRemoving);
                     ContextManager.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены!");
-                    DdEmployee.ItemsSource = ContextManager.GetContext().Employees.ToList();
+                    DgEmployee.ItemsSource = ContextManager.GetContext().Employees.ToList();
                 }
                 catch (Exception ex)
                 {
@@ -65,7 +65,7 @@ namespace House23.UI.Pages
             if (Visibility == Visibility.Visible)
             {
                 ContextManager.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DdEmployee.ItemsSource = ContextManager.GetContext().Employees.ToList();
+                DgEmployee.ItemsSource = ContextManager.GetContext().Employees.ToList();
             }
         }
 
@@ -85,21 +85,21 @@ namespace House23.UI.Pages
             {
                 case 1:
                     currentShearchEmployee = currentShearchEmployee.Where(p => ContainsText(p.LastName, nameList[0])).ToList();
-                    DdEmployee.ItemsSource = currentShearchEmployee;
+                    DgEmployee.ItemsSource = currentShearchEmployee;
                     break;
                 case 2:
                     currentShearchEmployee = currentShearchEmployee.Where(p => ContainsText(p.LastName, nameList[0])).
                         Where(p => ContainsText(p.FirstName, nameList[1])).ToList();
-                    DdEmployee.ItemsSource = currentShearchEmployee;
+                    DgEmployee.ItemsSource = currentShearchEmployee;
                     break;
                 case 3:
                     currentShearchEmployee = currentShearchEmployee.Where(p => ContainsText(p.LastName, nameList[0])).
                         Where(p => ContainsText(p.FirstName, nameList[1])).
                             Where(p => ContainsText(p.Patronymic, nameList[2])).ToList();
-                    DdEmployee.ItemsSource = currentShearchEmployee;
+                    DgEmployee.ItemsSource = currentShearchEmployee;
                     break;
                 default:
-                    DdEmployee.ItemsSource = currentShearchEmployee;
+                    DgEmployee.ItemsSource = currentShearchEmployee;
                     break;
             }
             if (flag && currentShearchEmployee.Count == 0)
