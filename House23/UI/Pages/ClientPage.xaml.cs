@@ -19,7 +19,7 @@ namespace House23.UI.Pages
             InitializeComponent();
             UpdateClient();
         }
-        private void BtnADgClient_Click(object sender, RoutedEventArgs e)
+        private void BtnAddClient_Click(object sender, RoutedEventArgs e)
         {
             FrameHandler.MainFrame.Navigate(new EditClientPage(null, RefreshContent));
         }
@@ -27,6 +27,7 @@ namespace House23.UI.Pages
         {
             FrameHandler.MainFrame.Navigate(new EditClientPage((sender as Button).DataContext as Client, RefreshContent));
         }
+        //не удаляется клиент
         private void BtnDeleteClient_Click(object sender, RoutedEventArgs e)
         {
             var emloyeesForRemoving = DgClient.SelectedItems.Cast<Employee>().ToList();

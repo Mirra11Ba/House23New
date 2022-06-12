@@ -47,7 +47,7 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="BtnADgClient" Grid.Row="3" HorizontalAlignment="Left" Click="BtnADgClient_Click"
+        <Button Name="BtnAddClient" Grid.Row="3" HorizontalAlignment="Left" Click="BtnAddClient_Click"
                 Background="white" BorderBrush="Transparent" 
                 Width="40" Height="40" Foreground="Black">
             <Image Source="/Resources/plus.png" Width="25" Height="25"></Image>

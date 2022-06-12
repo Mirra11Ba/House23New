@@ -40,7 +40,7 @@ namespace House23.UI.Pages
         {
             var skyscraperForRemoving = DgSkyscraper.SelectedItems.Cast<Skyscraper>().ToList();
 
-            if (MessageBox.Show($"Вы точно хотите удалить следующие {skyscraperForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {skyscraperForRemoving.Count()} элементов?\n\nЕсли вы удалите высотный дом, все квартиры, котрые с ним связаны будут также удалены.", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {

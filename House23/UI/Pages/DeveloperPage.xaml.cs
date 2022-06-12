@@ -29,7 +29,7 @@ namespace House23.UI.Pages
             InitializeComponent();
             UpdateDeveloper();
         }
-        private void BtnADgDeveloper_Click(object sender, RoutedEventArgs e)
+        private void BtnAddDeveloper_Click(object sender, RoutedEventArgs e)
         {
             FrameHandler.RealtorContentFrame.Navigate(new EditDeveloperPage(null));
         }

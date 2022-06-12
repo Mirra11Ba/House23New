@@ -28,7 +28,7 @@ namespace House23.UI.Pages
         {
             InitializeComponent();
         }
-        private void BtnADgFlat_Click(object sender, RoutedEventArgs e)
+        private void BtnAddFlat_Click(object sender, RoutedEventArgs e)
         {
             FrameHandler.MainFrame.Navigate(new EditFlatPage(null));
         }
