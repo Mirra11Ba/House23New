@@ -204,6 +204,7 @@
     <Compile Include="UI\Pages\MenuRealtorPage.xaml.cs">
       <DependentUpon>MenuRealtorPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Pages\Proba.cs" />
     <Compile Include="UI\Pages\RealtorPage.xaml.cs">
       <DependentUpon>RealtorPage.xaml</DependentUpon>
     </Compile>

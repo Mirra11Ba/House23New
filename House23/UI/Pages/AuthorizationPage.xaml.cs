@@ -35,7 +35,7 @@ namespace House23.UI.Pages
             else MessageBox.Show("Введите логин", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
-        private void UserAuthorization(string login, string password)
+        public static bool UserAuthorization(string login, string password)
         {
             var emloyee = ContextManager.GetContext().Employees;
             var currentEmployee = emloyee.Where(p => p.Login.Equals(login)).ToList();
@@ -62,12 +62,14 @@ namespace House23.UI.Pages
                     context.LoginHistories.Add(lh);
                     context.SaveChanges();
                     EmployeeHandler.EmployeeActive = currentEmployee[0];
+                    return true;
                 }
                 else
                     MessageBox.Show("Некорректный пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
                 MessageBox.Show("Некорректный логин", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            return false;
         }
 
         private void BtnHelp_Click(object sender, RoutedEventArgs e)
