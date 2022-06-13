@@ -27,18 +27,20 @@ namespace House23.UI.Pages
         {
             FrameHandler.MainFrame.Navigate(new EditClientPage((sender as Button).DataContext as Client, RefreshContent));
         }
+
         private void BtnDeleteClient_Click(object sender, RoutedEventArgs e)
         {
-            var emloyeesForRemoving = DdClient.SelectedItems.Cast<Employee>().ToList();
-
-            if (MessageBox.Show($"Вы точно хотите удалить следующие {emloyeesForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {DgClient.SelectedItems.Count} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {
-                    ContextManager.GetContext().Employees.RemoveRange(emloyeesForRemoving);
+                    foreach (Client client in DgClient.SelectedItems)
+                    {
+                        ContextManager.GetContext().Clients.Remove(client);
+                    }
                     ContextManager.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены!");
-                    DdClient.ItemsSource = ContextManager.GetContext().Clients.ToList();
+                    UpdateClient();
                 }
                 catch (Exception ex)
                 {
@@ -51,7 +53,7 @@ namespace House23.UI.Pages
         {
             if (Visibility == Visibility.Visible)
             {
-                DdClient.ItemsSource = EmployeeHandler.EmployeeActive.Clients;
+                DgClient.ItemsSource = EmployeeHandler.EmployeeActive.Clients;
             }
         }
 
@@ -68,21 +70,21 @@ namespace House23.UI.Pages
             {
                 case 1:
                     currentShearchClient = currentShearchClient.Where(p => ContainsText(p.LastName, nameList[0])).ToList();
-                    DdClient.ItemsSource = currentShearchClient;
+                    DgClient.ItemsSource = currentShearchClient;
                     break;
                 case 2:
                     currentShearchClient = currentShearchClient.Where(p => ContainsText(p.LastName, nameList[0])).
                         Where(p => ContainsText(p.FirstName, nameList[1])).ToList();
-                    DdClient.ItemsSource = currentShearchClient;
+                    DgClient.ItemsSource = currentShearchClient;
                     break;
                 case 3:
                     currentShearchClient = currentShearchClient.Where(p => ContainsText(p.LastName, nameList[0])).
                         Where(p => ContainsText(p.FirstName, nameList[1])).
                             Where(p => ContainsText(p.Patronymic, nameList[2])).ToList();
-                    DdClient.ItemsSource = currentShearchClient;
+                    DgClient.ItemsSource = currentShearchClient;
                     break;
                 default:
-                    DdClient.ItemsSource = currentShearchClient;
+                    DgClient.ItemsSource = currentShearchClient;
                     break;
             }
             if (flag && currentShearchClient.Count == 0)

@@ -40,13 +40,13 @@ namespace House23.UI.Pages
         }
         private void BtnDeleteRequest_Click(object sender, RoutedEventArgs e)
         {
-            var requestsForRemoving = DgRequest.SelectedItems.Cast<Flat>().ToList();
+            var requestsForRemoving = DgRequest.SelectedItems.Cast<Request>().ToList();
 
             if (MessageBox.Show($"Вы точно хотите удалить следующие {requestsForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {
-                    ContextManager.GetContext().Flats.RemoveRange(requestsForRemoving);
+                    ContextManager.GetContext().Requests.RemoveRange(requestsForRemoving);
                     ContextManager.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены!");
                     DgRequest.ItemsSource = ContextManager.GetContext().Requests.ToList();
@@ -71,7 +71,25 @@ namespace House23.UI.Pages
 
             var currentShearchRequest = ContextManager.GetContext().Requests.ToList();
             currentShearchRequest = currentShearchRequest.Where(p => ContainsText(p.Client.FullName.ToString(), TbSearch.Text)).ToList();
-            DgRequest.ItemsSource = currentShearchRequest;
+            var currents = new List<Request>();
+            foreach (var request in currentShearchRequest)
+            {
+                bool flag1 = false;
+                foreach (var employee in request.Client.Employees)
+                {
+                    if (employee.IdEmployee == EmployeeHandler.EmployeeActive.IdEmployee)
+                    {
+                        flag1 = true;
+                        break;
+                    }
+                }
+
+                if (flag1)
+                {
+                    currents.Add(request);
+                }
+            }
+            DgRequest.ItemsSource = currents;
 
             if (flag && currentShearchRequest.Count == 0)
             {
@@ -85,7 +103,7 @@ namespace House23.UI.Pages
             if (Visibility == Visibility.Visible)
             {
                 ContextManager.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DgRequest.ItemsSource = ContextManager.GetContext().Requests.ToList();
+                UpdateRequest();
             }
         }
     }

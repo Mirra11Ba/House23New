@@ -21,7 +21,7 @@
                    Style="{StaticResource PlaceholderTextBox}" Tag="Введите название застройщика">
             </TextBox>
         </Grid>
-        <DataGrid x:Name="DdDeveloper" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="2">
+        <DataGrid x:Name="DgDeveloper" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название организации" Binding="{Binding Name}" Width="*" MinWidth="120"></DataGridTextColumn>
                 <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="*" MinWidth="120">

@@ -37,7 +37,10 @@ namespace House23.UI.Pages
         {
             FrameHandler.HRManagerContentFrame.Navigate(new HistoryViewPage());
         }
-
+        private void BtnChart_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHandler.HRManagerContentFrame.Navigate(new ViewChartPage());
+        }
         private void BtnChangeAccount_Click(object sender, RoutedEventArgs e)
         {
             FrameHandler.MainFrame.Navigate(new AuthorizationPage());

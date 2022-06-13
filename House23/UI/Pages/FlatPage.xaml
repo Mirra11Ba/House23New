@@ -21,7 +21,7 @@
                    Style="{StaticResource PlaceholderTextBox}" Tag="Введите строительный №">
             </TextBox>
         </Grid>
-        <DataGrid x:Name="DdFlat" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="2">
+        <DataGrid x:Name="DgFlat" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Строительный №" Binding="{Binding BuildingNumberOfRoom}" Width="*" MinWidth="100"></DataGridTextColumn>
                 <DataGridTextColumn Header="Цена (руб)" Binding="{Binding Price}" Width="*" MinWidth="100"></DataGridTextColumn>

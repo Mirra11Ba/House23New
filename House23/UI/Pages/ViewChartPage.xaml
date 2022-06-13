@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:House23.UI.Pages"
+      xmlns:charts="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ViewChartPage">
@@ -14,11 +15,17 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <TextBlock Text="Сотрудник" Width="125" Margin="5" VerticalAlignment="Center" TextAlignment="Right"></TextBlock>
-            <ComboBox Name="CbCharEmployee" SelectedIndex="0" DisplayMemberPath="FullName"></ComboBox>
-            
             <TextBlock Text="Тип диаграммы" Width="125" Margin="5" VerticalAlignment="Center" TextAlignment="Right"></TextBlock>
-            <ComboBox Name="CbCharTypes" SelectedIndex="0"></ComboBox>
+            <ComboBox Name="CbCharTypes" SelectedIndex="0" SelectionChanged="UpdateChart"></ComboBox>
         </StackPanel>
+        <WindowsFormsHost Grid.Row="1" Margin="5">
+            <charts:Chart x:Name="ChartEmployeeClients">
+                <charts:Chart.Legends>
+                    <charts:Legend>
+                        
+                    </charts:Legend>
+                </charts:Chart.Legends>
+            </charts:Chart>
+        </WindowsFormsHost>
     </Grid>
 </Page>

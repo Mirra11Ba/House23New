@@ -5,9 +5,8 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <Style TargetType="Window" x:Key="BaseWindow">
-            <Setter Property="Width" Value="1100"></Setter>
-            <Setter Property="Height" Value="700"></Setter>
-            <!--<Setter Property="FontSize" Value="16"/>-->
+            <Setter Property="Width" Value="1250"></Setter>
+            <Setter Property="Height" Value="800"></Setter>
         </Style>
 
         <!--MultiTrigger для измнения цвета текста кнопки при нажатии-->
