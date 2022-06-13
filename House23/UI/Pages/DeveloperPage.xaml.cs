@@ -31,12 +31,12 @@ namespace House23.UI.Pages
         }
         private void BtnAddDeveloper_Click(object sender, RoutedEventArgs e)
         {
-            FrameHandler.RealtorContentFrame.Navigate(new EditDeveloperPage(null));
+            FrameHandler.MainFrame.Navigate(new EditDeveloperPage(null));
         }
 
         private void BtnEditDeveloper_Click(object sender, RoutedEventArgs e)
         {
-            FrameHandler.RealtorContentFrame.Navigate(new EditDeveloperPage((sender as Button).DataContext as Developer));
+            FrameHandler.MainFrame.Navigate(new EditDeveloperPage((sender as Button).DataContext as Developer));
         }
 
         private void BtnDeleteDeveloper_Click(object sender, RoutedEventArgs e)

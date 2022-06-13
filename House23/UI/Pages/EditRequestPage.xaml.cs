@@ -22,9 +22,15 @@ namespace House23.UI.Pages
         {
             InitializeComponent();
             if (selectedRequest != null)
+            {
                 currentRequest = selectedRequest;
-            
-            DpDateOfRequest.SelectedDate = DateTime.Now;
+                DpDateOfRequest.SelectedDate = selectedRequest.RequestDate;
+            }
+            else
+            {
+             DpDateOfRequest.SelectedDate = DateTime.Now;
+
+            }            
 
             DataContext = currentRequest;
             var clients = ContextManager.GetContext().Clients.ToList();
@@ -40,7 +46,12 @@ namespace House23.UI.Pages
             }
 
             CbClient.ItemsSource = clientsFil;
-            CbClient.SelectedIndex = 0;
+            if (selectedRequest != null)
+            {
+                CbClient.SelectedItem = selectedRequest.Client;
+            }
+            else
+                CbClient.SelectedIndex = 0;
             CbDistrict.ItemsSource = ContextManager.GetContext().Districts.ToList();
             CbRequestStatus.ItemsSource = ContextManager.GetContext().RequestStatus.ToList();
         }
@@ -72,11 +83,13 @@ namespace House23.UI.Pages
                 return;
             }
 
-            DpDateOfRequest.SelectedDate = currentRequest.RequestDate;
- 
+            currentRequest.RequestDate = DpDateOfRequest.SelectedDate.Value;
+
             if (currentRequest.IdRequest == 0)
+            {
                 currentRequest.Employee = ContextManager.GetContext().Employees.Attach(EmployeeHandler.EmployeeActive);
                 ContextManager.GetContext().Requests.Add(currentRequest);
+            }
             try
             {
                 ContextManager.GetContext().SaveChanges();

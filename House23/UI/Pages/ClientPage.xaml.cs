@@ -27,19 +27,20 @@ namespace House23.UI.Pages
         {
             FrameHandler.MainFrame.Navigate(new EditClientPage((sender as Button).DataContext as Client, RefreshContent));
         }
-        //не удаляется клиент
+
         private void BtnDeleteClient_Click(object sender, RoutedEventArgs e)
         {
-            var emloyeesForRemoving = DgClient.SelectedItems.Cast<Employee>().ToList();
-
-            if (MessageBox.Show($"Вы точно хотите удалить следующие {emloyeesForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {DgClient.SelectedItems.Count} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {
-                    ContextManager.GetContext().Employees.RemoveRange(emloyeesForRemoving);
+                    foreach (Client client in DgClient.SelectedItems)
+                    {
+                        ContextManager.GetContext().Clients.Remove(client);
+                    }
                     ContextManager.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены!");
-                    DgClient.ItemsSource = ContextManager.GetContext().Clients.ToList();
+                    UpdateClient();
                 }
                 catch (Exception ex)
                 {

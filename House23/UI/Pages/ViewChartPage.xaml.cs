@@ -28,12 +28,32 @@ namespace House23.UI.Pages
         {
             InitializeComponent();
 
-            //ChartEmployeeClients.ChartAreas.Add(new ChartArea("Main"));
+            ChartEmployeeClients.ChartAreas.Add(new ChartArea("Main"));
 
-            //var currentSeries = new Series("Paymets");
-            //{
-            //    IsValueShownAsLabel = true
-            //};
+            var currentSeries = new Series("ChartEmployeeClients")
+            {
+                IsValueShownAsLabel = true
+            };
+            ChartEmployeeClients.Series.Add(currentSeries);
+
+            CbCharTypes.ItemsSource = Enum.GetValues(typeof(SeriesChartType));
+            CbCharTypes.SelectedIndex = 1;
+        }
+
+        private void UpdateChart(object sender, SelectionChangedEventArgs e)
+        {
+            if (CbCharTypes.SelectedItem is SeriesChartType currentType)
+            {
+                Series currentSeries = ChartEmployeeClients.Series.FirstOrDefault();
+                currentSeries.ChartType = currentType;
+                currentSeries.Points.Clear();
+                var employees = ContextManager.GetContext().Employees.ToList();
+                foreach (var employee in employees)
+                {
+                    currentSeries.Points.AddXY(employee.FullName,
+                        employee.Clients.Count);
+                }
+            }
         }
     }
 }

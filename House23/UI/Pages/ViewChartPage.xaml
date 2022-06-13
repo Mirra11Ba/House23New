@@ -15,11 +15,8 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <TextBlock Text="Сотрудник" Width="125" Margin="5" VerticalAlignment="Center" TextAlignment="Right"></TextBlock>
-            <ComboBox Name="CbCharEmployee" SelectedIndex="0" DisplayMemberPath="FullName"></ComboBox>
-            
             <TextBlock Text="Тип диаграммы" Width="125" Margin="5" VerticalAlignment="Center" TextAlignment="Right"></TextBlock>
-            <ComboBox Name="CbCharTypes" SelectedIndex="0"></ComboBox>
+            <ComboBox Name="CbCharTypes" SelectedIndex="0" SelectionChanged="UpdateChart"></ComboBox>
         </StackPanel>
         <WindowsFormsHost Grid.Row="1" Margin="5">
             <charts:Chart x:Name="ChartEmployeeClients">

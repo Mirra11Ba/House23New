@@ -221,7 +221,7 @@ namespace House23.UI.Pages
                 };
                 var columnsCount = headers.Length;
                 PdfPTable table = new PdfPTable(columnsCount);
-                var cell = new PdfPCell(new Phrase("ABC анализ", font))
+                var cell = new PdfPCell(new Phrase("Подбор квартир", font))
                 {
                     Colspan = columnsCount,
                     HorizontalAlignment = 1,
