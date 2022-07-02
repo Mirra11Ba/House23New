@@ -1,28 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-using House23.Logic.Handlers;
+﻿using CsvHelper;
 using House23.Logic.DataBase;
-using static House23.Logic.Utils.StringUtil;
-using House23.Logic.Utils.Linq;
 using House23.Logic.Utils;
-using System.IO;
-using CsvHelper;
-using System.Globalization;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using static House23.Logic.Utils.StringUtil;
 
 namespace House23.UI.Pages
 {
@@ -37,32 +27,25 @@ namespace House23.UI.Pages
         public ViewFlatPage()
         {
             InitializeComponent();
-            try
-            {
-                var allDistricts = ContextManager.GetContext().Districts.ToList();
-                var allSkyscrapers = ContextManager.GetContext().Skyscrapers.ToList();
-                
-                allDistricts.Insert(0, new District
-                {
-                    Name = "Все Районы"
-                });
-                allSkyscrapers.Insert(0, new Skyscraper
-                {
-                    Name = "Все ЖК"
-                });
 
-                CbDistrict.ItemsSource = allDistricts;
-                CbSkyscraper.ItemsSource = allSkyscrapers;
+            var allDistricts = ContextManager.GetContext().Districts.ToList();
+            var allSkyscrapers = ContextManager.GetContext().Skyscrapers.ToList();
 
-                CbDistrict.SelectedIndex = 0;
-                CbSkyscraper.SelectedIndex = 0;
-                constructorFinal = true;
-            }
-            catch (Exception e)
+            allDistricts.Insert(0, new District
             {
-                System.Console.WriteLine(e);
-                throw;
-            }
+                Name = "Все Районы"
+            });
+            allSkyscrapers.Insert(0, new Skyscraper
+            {
+                Name = "Все ЖК"
+            });
+
+            CbDistrict.ItemsSource = allDistricts;
+            CbSkyscraper.ItemsSource = allSkyscrapers;
+
+            CbDistrict.SelectedIndex = 0;
+            CbSkyscraper.SelectedIndex = 0;
+            constructorFinal = true;
 
             UpdateFlats();
         }
@@ -97,8 +80,8 @@ namespace House23.UI.Pages
                         }
                     }
                     return p.Price >= minPrice && p.Price <= maxPrice;
-                
-                } 
+
+                }
              ).ToList();
 
             currentFlats = currentFlats.Where(p =>

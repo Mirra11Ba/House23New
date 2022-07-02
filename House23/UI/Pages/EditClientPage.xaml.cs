@@ -26,9 +26,9 @@ namespace House23.UI.Pages
     public partial class EditClientPage : Page
     {
         private Client currentClient = new Client(); // создание объекта класса
-        private readonly RefreshContent refreshContent;
+        private readonly RefreshContent refreshContent;//ссылка делегата
 
-        public delegate void RefreshContent();
+        public delegate void RefreshContent();//пример методы для ссылки
         public EditClientPage(Client selectedClient, RefreshContent refreshContent)
         {
             InitializeComponent();

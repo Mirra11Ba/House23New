@@ -21,7 +21,7 @@
             <TextBlock Text="Меню:" HorizontalAlignment="Center" FontSize="20"></TextBlock>
             <Button x:Name="BtnUsers" Content="Пользователи" Click="BtnUsers_Click"></Button>
             <Button x:Name="BtnHistoryView" Content="История входа" Click="BtnHistoryView_Click"></Button>
-            <Button x:Name="BtnChart" Content="Диа" Click="BtnChart_Click"></Button>
+            <Button x:Name="BtnChart" Content="Диаграмма" Click="BtnChart_Click"></Button>
             <Button x:Name="BtnChangeAccount" Content="Сменить аккаунт" Click="BtnChangeAccount_Click" Margin="5,20,5,7"/>
             <Button x:Name="BtnExit" Content="Выйти" Click="BtnExit_Click"></Button>
             <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="7" Text="Роль: HR-Manager" VerticalAlignment="Top" TextWrapping="Wrap"></TextBlock>

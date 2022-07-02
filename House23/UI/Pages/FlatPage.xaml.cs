@@ -71,12 +71,30 @@ namespace House23.UI.Pages
         {
             bool flag = lastText == null || lastText.Length < TbSearch.Text.Length;
             lastText = TbSearch.Text;
+            //поиск по номеру
+            var currentShearchFlatByNumber = ContextManager.GetContext().Flats.ToList();
+            currentShearchFlatByNumber = currentShearchFlatByNumber.Where(p => ContainsText(p.BuildingNumberOfRoom.ToString(), TbSearch.Text)).ToList();
+            //поиск по количеству комнат
+            var currentShearchFlatByRooms = ContextManager.GetContext().Flats.ToList();
+            currentShearchFlatByRooms = currentShearchFlatByRooms.Where(p => ContainsText(p.NumberOfRooms.ToString(), TbSearch.Text)).ToList();
+            //поиск по цене
+            var currentShearchFlatByPrice = ContextManager.GetContext().Flats.ToList();
+            currentShearchFlatByPrice = currentShearchFlatByPrice.Where(p => ContainsText(p.Price.ToString(), TbSearch.Text)).ToList();
 
-            var currentShearchFlat = ContextManager.GetContext().Flats.ToList();
-            currentShearchFlat = currentShearchFlat.Where(p => ContainsText(p.BuildingNumberOfRoom.ToString(), TbSearch.Text)).ToList();
-            DgFlat.ItemsSource = currentShearchFlat;
+            if (currentShearchFlatByNumber.Count != 0)
+            {
+                DgFlat.ItemsSource = currentShearchFlatByNumber;
+            }
+            if (currentShearchFlatByRooms.Count != 0)
+            {
+                DgFlat.ItemsSource = currentShearchFlatByRooms;
+            }
+            if (currentShearchFlatByPrice.Count != 0)
+            {
+                DgFlat.ItemsSource = currentShearchFlatByPrice;
+            }
 
-            if (flag && currentShearchFlat.Count == 0)
+            if (flag && currentShearchFlatByNumber.Count == 0 && currentShearchFlatByRooms.Count == 0 && currentShearchFlatByPrice.Count == 0)
             {
                 MessageBox.Show("Кварнтира не найдена", "Внимание", MessageBoxButton.OK, MessageBoxImage.Hand);
             }

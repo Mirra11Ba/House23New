@@ -53,6 +53,10 @@ namespace House23.UI.Pages
         {
             FrameHandler.MainFrame.Navigate(new ViewFlatPage());
         }
+        private void BtnChart_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHandler.MainFrame.Navigate(new ViewChartPage());
+        }
         private void BtnChangeAccount_Click(object sender, RoutedEventArgs e)
         {
             FrameHandler.MainFrame.Navigate(new AuthorizationPage());
@@ -61,5 +65,6 @@ namespace House23.UI.Pages
         {
             Application.Current.Shutdown();
         }
+
     }
 }

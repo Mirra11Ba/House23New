@@ -75,11 +75,24 @@ namespace House23.UI.Pages
             bool flag = lastText == null || lastText.Length < TbSearch.Text.Length;
             lastText = TbSearch.Text;
 
+            //поиск по названию застройщика
             var currentShearchDeveloper = ContextManager.GetContext().Developers.ToList();
             currentShearchDeveloper = currentShearchDeveloper.Where(p => ContainsText(p.Name, TbSearch.Text)).ToList();
-            DgDeveloper.ItemsSource = currentShearchDeveloper;
+            
+            //поиск по описанию застройщика
+            var currentShearchDescriptionDeveloper = ContextManager.GetContext().Developers.ToList();
+            currentShearchDescriptionDeveloper = currentShearchDescriptionDeveloper.Where(p => ContainsText(p.Description, TbSearch.Text)).ToList();
 
-            if (flag && currentShearchDeveloper.Count == 0)
+            if (currentShearchDeveloper.Count != 0)
+            {
+                DgDeveloper.ItemsSource = currentShearchDeveloper;
+            }
+            else
+            {
+                DgDeveloper.ItemsSource = currentShearchDescriptionDeveloper;
+            }
+
+            if (flag && currentShearchDeveloper.Count == 0 && currentShearchDescriptionDeveloper.Count == 0)
             {
                 MessageBox.Show("Застройщик не найден", "Внимание", MessageBoxButton.OK, MessageBoxImage.Hand);
             }

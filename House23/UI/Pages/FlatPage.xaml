@@ -18,7 +18,7 @@
         <TextBlock Text="Управление квартирами" Style="{StaticResource TbBigSlimTitle}" HorizontalAlignment="Center"></TextBlock>
         <Grid Grid.Row="1">
             <TextBox x:Name="TbSearch" Width="Auto" VerticalAlignment="Center" TextChanged="TbSearch_TextChanged" 
-                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите строительный №">
+                   Style="{StaticResource PlaceholderTextBox}" Tag="Введите строительный №/количество комнат/цену">
             </TextBox>
         </Grid>
         <DataGrid x:Name="DgFlat" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="2">

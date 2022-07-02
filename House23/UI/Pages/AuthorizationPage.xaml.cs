@@ -16,7 +16,6 @@ namespace House23.UI.Pages
         public AuthorizationPage()
         {
             InitializeComponent();
-
         }
 
         private void BtnLoginIn_Click(object sender, RoutedEventArgs e)
